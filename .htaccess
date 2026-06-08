@@ -1,0 +1,849 @@
+# Voyage-Ed SEO — 301 redirects from legacy query-string URLs to new clean URLs
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^id=bali$
+RewriteRule ^package\.html$ /bali-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=bali&p=1$
+RewriteRule ^package\.html$ /bali-packages/bali-beach-getaway-kuta-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=bali&p=2$
+RewriteRule ^package\.html$ /bali-packages/kuta-ubud-classic-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=bali&p=3$
+RewriteRule ^package\.html$ /bali-packages/seminyak-ubud-couple-retreat-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=bali&p=4$
+RewriteRule ^package\.html$ /bali-packages/kuta-ubud-nusa-penida-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=bali&p=5$
+RewriteRule ^package\.html$ /bali-packages/seminyak-ubud-gili-islands-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=bali&p=6$
+RewriteRule ^package\.html$ /bali-packages/amazing-islands-of-bali-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=bali&p=7$
+RewriteRule ^package\.html$ /bali-packages/nusa-dua-ubud-luxury-honeymoon-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand$
+RewriteRule ^package\.html$ /thailand-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand&p=1$
+RewriteRule ^package\.html$ /thailand-packages/bangkok-pattaya-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand&p=2$
+RewriteRule ^package\.html$ /thailand-packages/bangkok-pattaya-extended-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand&p=3$
+RewriteRule ^package\.html$ /thailand-packages/phuket-krabi-beach-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand&p=4$
+RewriteRule ^package\.html$ /thailand-packages/phuket-beach-getaway-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand&p=5$
+RewriteRule ^package\.html$ /thailand-packages/bangkok-pattaya-phuket-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand&p=6$
+RewriteRule ^package\.html$ /thailand-packages/phuket-krabi-phi-phi-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=thailand&p=7$
+RewriteRule ^package\.html$ /thailand-packages/koh-samui-phuket-luxury-escape-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives$
+RewriteRule ^package\.html$ /maldives-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives&p=1$
+RewriteRule ^package\.html$ /maldives-packages/maafushi-local-island-budget-3-nights-4-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives&p=2$
+RewriteRule ^package\.html$ /maldives-packages/maafushi-north-male-combo-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives&p=3$
+RewriteRule ^package\.html$ /maldives-packages/beach-resort-getaway-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives&p=4$
+RewriteRule ^package\.html$ /maldives-packages/beach-villa-extended-stay-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives&p=5$
+RewriteRule ^package\.html$ /maldives-packages/water-villa-experience-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives&p=6$
+RewriteRule ^package\.html$ /maldives-packages/water-villa-honeymoon-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=maldives&p=7$
+RewriteRule ^package\.html$ /maldives-packages/premium-water-villa-all-inclusive-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi&p=1$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages/dubai-express-3-nights-4-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi&p=2$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages/dubai-city-desert-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi&p=3$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages/dubai-abu-dhabi-combo-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi&p=4$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages/dubai-family-with-theme-parks-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi&p=5$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages/dubai-abu-dhabi-mini-cruise-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi&p=6$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages/dubai-abu-dhabi-ras-al-khaimah-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=dubai-abu-dhabi&p=7$
+RewriteRule ^package\.html$ /dubai-abu-dhabi-packages/dubai-luxury-burj-atlantis-palm-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia$
+RewriteRule ^package\.html$ /singapore-malaysia-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia&p=1$
+RewriteRule ^package\.html$ /singapore-malaysia-packages/singapore-express-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia&p=2$
+RewriteRule ^package\.html$ /singapore-malaysia-packages/kuala-lumpur-genting-highlands-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia&p=3$
+RewriteRule ^package\.html$ /singapore-malaysia-packages/singapore-kuala-lumpur-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia&p=4$
+RewriteRule ^package\.html$ /singapore-malaysia-packages/singapore-genting-dream-cruise-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia&p=5$
+RewriteRule ^package\.html$ /singapore-malaysia-packages/singapore-kl-genting-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia&p=6$
+RewriteRule ^package\.html$ /singapore-malaysia-packages/singapore-kl-langkawi-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=singapore-malaysia&p=7$
+RewriteRule ^package\.html$ /singapore-malaysia-packages/singapore-disney-cruise-kl-luxury-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kashmir$
+RewriteRule ^package\.html$ /kashmir-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kashmir&p=1$
+RewriteRule ^package\.html$ /kashmir-packages/srinagar-houseboat-experience-3-nights-4-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kashmir&p=2$
+RewriteRule ^package\.html$ /kashmir-packages/kashmir-classic-srinagar-gulmarg-pahalgam-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kashmir&p=3$
+RewriteRule ^package\.html$ /kashmir-packages/kashmir-premium-4-valleys-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kashmir&p=4$
+RewriteRule ^package\.html$ /kashmir-packages/kashmir-luxury-grand-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=goa$
+RewriteRule ^package\.html$ /goa-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=goa&p=1$
+RewriteRule ^package\.html$ /goa-packages/goa-tour-package-2-nights-3-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=goa&p=2$
+RewriteRule ^package\.html$ /goa-packages/goa-tour-package-3-nights-4-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=goa&p=3$
+RewriteRule ^package\.html$ /goa-packages/goa-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=goa&p=4$
+RewriteRule ^package\.html$ /goa-packages/goa-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rajasthan$
+RewriteRule ^package\.html$ /rajasthan-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rajasthan&p=1$
+RewriteRule ^package\.html$ /rajasthan-packages/rajasthan-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rajasthan&p=2$
+RewriteRule ^package\.html$ /rajasthan-packages/rajasthan-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rajasthan&p=3$
+RewriteRule ^package\.html$ /rajasthan-packages/rajasthan-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rajasthan&p=4$
+RewriteRule ^package\.html$ /rajasthan-packages/rajasthan-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=ladakh$
+RewriteRule ^package\.html$ /ladakh-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=ladakh&p=1$
+RewriteRule ^package\.html$ /ladakh-packages/ladakh-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=ladakh&p=2$
+RewriteRule ^package\.html$ /ladakh-packages/ladakh-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=ladakh&p=3$
+RewriteRule ^package\.html$ /ladakh-packages/ladakh-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=ladakh&p=4$
+RewriteRule ^package\.html$ /ladakh-packages/ladakh-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=himachal$
+RewriteRule ^package\.html$ /himachal-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=himachal&p=1$
+RewriteRule ^package\.html$ /himachal-packages/himachal-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=himachal&p=2$
+RewriteRule ^package\.html$ /himachal-packages/himachal-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=himachal&p=3$
+RewriteRule ^package\.html$ /himachal-packages/himachal-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=himachal&p=4$
+RewriteRule ^package\.html$ /himachal-packages/himachal-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kerala$
+RewriteRule ^package\.html$ /kerala-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kerala&p=1$
+RewriteRule ^package\.html$ /kerala-packages/kerala-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kerala&p=2$
+RewriteRule ^package\.html$ /kerala-packages/kerala-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kerala&p=3$
+RewriteRule ^package\.html$ /kerala-packages/kerala-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kerala&p=4$
+RewriteRule ^package\.html$ /kerala-packages/kerala-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uttarakhand$
+RewriteRule ^package\.html$ /uttarakhand-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uttarakhand&p=1$
+RewriteRule ^package\.html$ /uttarakhand-packages/uttarakhand-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uttarakhand&p=2$
+RewriteRule ^package\.html$ /uttarakhand-packages/uttarakhand-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uttarakhand&p=3$
+RewriteRule ^package\.html$ /uttarakhand-packages/uttarakhand-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uttarakhand&p=4$
+RewriteRule ^package\.html$ /uttarakhand-packages/uttarakhand-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=delhi-agra-varanasi$
+RewriteRule ^package\.html$ /delhi-agra-varanasi-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=delhi-agra-varanasi&p=1$
+RewriteRule ^package\.html$ /delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=delhi-agra-varanasi&p=2$
+RewriteRule ^package\.html$ /delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=delhi-agra-varanasi&p=3$
+RewriteRule ^package\.html$ /delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=delhi-agra-varanasi&p=4$
+RewriteRule ^package\.html$ /delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=tamil-nadu$
+RewriteRule ^package\.html$ /tamil-nadu-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=tamil-nadu&p=1$
+RewriteRule ^package\.html$ /tamil-nadu-packages/tamil-nadu-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=tamil-nadu&p=2$
+RewriteRule ^package\.html$ /tamil-nadu-packages/tamil-nadu-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=tamil-nadu&p=3$
+RewriteRule ^package\.html$ /tamil-nadu-packages/tamil-nadu-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=tamil-nadu&p=4$
+RewriteRule ^package\.html$ /tamil-nadu-packages/tamil-nadu-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=karnataka$
+RewriteRule ^package\.html$ /karnataka-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=karnataka&p=1$
+RewriteRule ^package\.html$ /karnataka-packages/karnataka-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=karnataka&p=2$
+RewriteRule ^package\.html$ /karnataka-packages/karnataka-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=karnataka&p=3$
+RewriteRule ^package\.html$ /karnataka-packages/karnataka-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=karnataka&p=4$
+RewriteRule ^package\.html$ /karnataka-packages/karnataka-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=gujarat$
+RewriteRule ^package\.html$ /gujarat-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=gujarat&p=1$
+RewriteRule ^package\.html$ /gujarat-packages/gujarat-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=gujarat&p=2$
+RewriteRule ^package\.html$ /gujarat-packages/gujarat-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=gujarat&p=3$
+RewriteRule ^package\.html$ /gujarat-packages/gujarat-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=gujarat&p=4$
+RewriteRule ^package\.html$ /gujarat-packages/gujarat-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=andaman-nicobar$
+RewriteRule ^package\.html$ /andaman-nicobar-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=andaman-nicobar&p=1$
+RewriteRule ^package\.html$ /andaman-nicobar-packages/andaman-nicobar-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=andaman-nicobar&p=2$
+RewriteRule ^package\.html$ /andaman-nicobar-packages/andaman-nicobar-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=andaman-nicobar&p=3$
+RewriteRule ^package\.html$ /andaman-nicobar-packages/andaman-nicobar-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=andaman-nicobar&p=4$
+RewriteRule ^package\.html$ /andaman-nicobar-packages/andaman-nicobar-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sikkim-darjeeling$
+RewriteRule ^package\.html$ /sikkim-darjeeling-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sikkim-darjeeling&p=1$
+RewriteRule ^package\.html$ /sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sikkim-darjeeling&p=2$
+RewriteRule ^package\.html$ /sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sikkim-darjeeling&p=3$
+RewriteRule ^package\.html$ /sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sikkim-darjeeling&p=4$
+RewriteRule ^package\.html$ /sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=arunachal-meghalaya$
+RewriteRule ^package\.html$ /arunachal-meghalaya-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=arunachal-meghalaya&p=1$
+RewriteRule ^package\.html$ /arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=arunachal-meghalaya&p=2$
+RewriteRule ^package\.html$ /arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=arunachal-meghalaya&p=3$
+RewriteRule ^package\.html$ /arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=arunachal-meghalaya&p=4$
+RewriteRule ^package\.html$ /arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=madhya-pradesh$
+RewriteRule ^package\.html$ /madhya-pradesh-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=madhya-pradesh&p=1$
+RewriteRule ^package\.html$ /madhya-pradesh-packages/madhya-pradesh-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=madhya-pradesh&p=2$
+RewriteRule ^package\.html$ /madhya-pradesh-packages/madhya-pradesh-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=madhya-pradesh&p=3$
+RewriteRule ^package\.html$ /madhya-pradesh-packages/madhya-pradesh-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=madhya-pradesh&p=4$
+RewriteRule ^package\.html$ /madhya-pradesh-packages/madhya-pradesh-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam$
+RewriteRule ^package\.html$ /vietnam-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam&p=1$
+RewriteRule ^package\.html$ /vietnam-packages/vietnam-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam&p=2$
+RewriteRule ^package\.html$ /vietnam-packages/vietnam-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam&p=3$
+RewriteRule ^package\.html$ /vietnam-packages/vietnam-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam&p=4$
+RewriteRule ^package\.html$ /vietnam-packages/vietnam-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam&p=5$
+RewriteRule ^package\.html$ /vietnam-packages/vietnam-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam&p=6$
+RewriteRule ^package\.html$ /vietnam-packages/vietnam-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=vietnam&p=7$
+RewriteRule ^package\.html$ /vietnam-packages/vietnam-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka$
+RewriteRule ^package\.html$ /sri-lanka-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka&p=1$
+RewriteRule ^package\.html$ /sri-lanka-packages/sri-lanka-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka&p=2$
+RewriteRule ^package\.html$ /sri-lanka-packages/sri-lanka-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka&p=3$
+RewriteRule ^package\.html$ /sri-lanka-packages/sri-lanka-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka&p=4$
+RewriteRule ^package\.html$ /sri-lanka-packages/sri-lanka-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka&p=5$
+RewriteRule ^package\.html$ /sri-lanka-packages/sri-lanka-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka&p=6$
+RewriteRule ^package\.html$ /sri-lanka-packages/sri-lanka-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=sri-lanka&p=7$
+RewriteRule ^package\.html$ /sri-lanka-packages/sri-lanka-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea$
+RewriteRule ^package\.html$ /japan-korea-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea&p=1$
+RewriteRule ^package\.html$ /japan-korea-packages/japan-south-korea-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea&p=2$
+RewriteRule ^package\.html$ /japan-korea-packages/japan-south-korea-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea&p=3$
+RewriteRule ^package\.html$ /japan-korea-packages/japan-south-korea-tour-package-8-nights-9-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea&p=4$
+RewriteRule ^package\.html$ /japan-korea-packages/japan-south-korea-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea&p=5$
+RewriteRule ^package\.html$ /japan-korea-packages/japan-south-korea-tour-package-8-nights-9-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea&p=6$
+RewriteRule ^package\.html$ /japan-korea-packages/japan-south-korea-tour-package-9-nights-10-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=japan-korea&p=7$
+RewriteRule ^package\.html$ /japan-korea-packages/japan-south-korea-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa$
+RewriteRule ^package\.html$ /south-africa-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa&p=1$
+RewriteRule ^package\.html$ /south-africa-packages/south-africa-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa&p=2$
+RewriteRule ^package\.html$ /south-africa-packages/south-africa-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa&p=3$
+RewriteRule ^package\.html$ /south-africa-packages/south-africa-tour-package-8-nights-9-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa&p=4$
+RewriteRule ^package\.html$ /south-africa-packages/south-africa-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa&p=5$
+RewriteRule ^package\.html$ /south-africa-packages/south-africa-tour-package-8-nights-9-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa&p=6$
+RewriteRule ^package\.html$ /south-africa-packages/south-africa-tour-package-9-nights-10-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=south-africa&p=7$
+RewriteRule ^package\.html$ /south-africa-packages/south-africa-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya$
+RewriteRule ^package\.html$ /kenya-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya&p=1$
+RewriteRule ^package\.html$ /kenya-packages/kenya-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya&p=2$
+RewriteRule ^package\.html$ /kenya-packages/kenya-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya&p=3$
+RewriteRule ^package\.html$ /kenya-packages/kenya-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya&p=4$
+RewriteRule ^package\.html$ /kenya-packages/kenya-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya&p=5$
+RewriteRule ^package\.html$ /kenya-packages/kenya-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya&p=6$
+RewriteRule ^package\.html$ /kenya-packages/kenya-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kenya&p=7$
+RewriteRule ^package\.html$ /kenya-packages/kenya-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius$
+RewriteRule ^package\.html$ /mauritius-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius&p=1$
+RewriteRule ^package\.html$ /mauritius-packages/mauritius-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius&p=2$
+RewriteRule ^package\.html$ /mauritius-packages/mauritius-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius&p=3$
+RewriteRule ^package\.html$ /mauritius-packages/mauritius-tour-package-5-nights-6-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius&p=4$
+RewriteRule ^package\.html$ /mauritius-packages/mauritius-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius&p=5$
+RewriteRule ^package\.html$ /mauritius-packages/mauritius-tour-package-5-nights-6-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius&p=6$
+RewriteRule ^package\.html$ /mauritius-packages/mauritius-tour-package-6-nights-7-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=mauritius&p=7$
+RewriteRule ^package\.html$ /mauritius-packages/mauritius-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles$
+RewriteRule ^package\.html$ /seychelles-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles&p=1$
+RewriteRule ^package\.html$ /seychelles-packages/seychelles-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles&p=2$
+RewriteRule ^package\.html$ /seychelles-packages/seychelles-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles&p=3$
+RewriteRule ^package\.html$ /seychelles-packages/seychelles-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles&p=4$
+RewriteRule ^package\.html$ /seychelles-packages/seychelles-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles&p=5$
+RewriteRule ^package\.html$ /seychelles-packages/seychelles-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles&p=6$
+RewriteRule ^package\.html$ /seychelles-packages/seychelles-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=seychelles&p=7$
+RewriteRule ^package\.html$ /seychelles-packages/seychelles-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt$
+RewriteRule ^package\.html$ /egypt-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt&p=1$
+RewriteRule ^package\.html$ /egypt-packages/egypt-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt&p=2$
+RewriteRule ^package\.html$ /egypt-packages/egypt-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt&p=3$
+RewriteRule ^package\.html$ /egypt-packages/egypt-tour-package-7-nights-8-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt&p=4$
+RewriteRule ^package\.html$ /egypt-packages/egypt-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt&p=5$
+RewriteRule ^package\.html$ /egypt-packages/egypt-tour-package-7-nights-8-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt&p=6$
+RewriteRule ^package\.html$ /egypt-packages/egypt-tour-package-8-nights-9-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=egypt&p=7$
+RewriteRule ^package\.html$ /egypt-packages/egypt-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls$
+RewriteRule ^package\.html$ /victoria-falls-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls&p=1$
+RewriteRule ^package\.html$ /victoria-falls-packages/victoria-falls-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls&p=2$
+RewriteRule ^package\.html$ /victoria-falls-packages/victoria-falls-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls&p=3$
+RewriteRule ^package\.html$ /victoria-falls-packages/victoria-falls-tour-package-5-nights-6-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls&p=4$
+RewriteRule ^package\.html$ /victoria-falls-packages/victoria-falls-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls&p=5$
+RewriteRule ^package\.html$ /victoria-falls-packages/victoria-falls-tour-package-5-nights-6-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls&p=6$
+RewriteRule ^package\.html$ /victoria-falls-packages/victoria-falls-tour-package-6-nights-7-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=victoria-falls&p=7$
+RewriteRule ^package\.html$ /victoria-falls-packages/victoria-falls-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy&p=1$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages/france-switzerland-italy-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy&p=2$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages/france-switzerland-italy-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy&p=3$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages/france-switzerland-italy-tour-package-10-nights-11-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy&p=4$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages/france-switzerland-italy-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy&p=5$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages/france-switzerland-italy-tour-package-10-nights-11-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy&p=6$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages/france-switzerland-italy-tour-package-11-nights-12-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=france-switzerland-italy&p=7$
+RewriteRule ^package\.html$ /france-switzerland-italy-packages/france-switzerland-italy-tour-package-12-nights-13-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary&p=1$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages/germany-austria-hungary-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary&p=2$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages/germany-austria-hungary-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary&p=3$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages/germany-austria-hungary-tour-package-9-nights-10-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary&p=4$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages/germany-austria-hungary-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary&p=5$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages/germany-austria-hungary-tour-package-9-nights-10-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary&p=6$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages/germany-austria-hungary-tour-package-10-nights-11-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=germany-austria-hungary&p=7$
+RewriteRule ^package\.html$ /germany-austria-hungary-packages/germany-austria-hungary-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland&p=1$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages/prague-budapest-poland-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland&p=2$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages/prague-budapest-poland-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland&p=3$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages/prague-budapest-poland-tour-package-9-nights-10-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland&p=4$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages/prague-budapest-poland-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland&p=5$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages/prague-budapest-poland-tour-package-9-nights-10-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland&p=6$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages/prague-budapest-poland-tour-package-10-nights-11-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=prague-budapest-poland&p=7$
+RewriteRule ^package\.html$ /prague-budapest-poland-packages/prague-budapest-poland-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland$
+RewriteRule ^package\.html$ /norway-finland-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland&p=1$
+RewriteRule ^package\.html$ /norway-finland-packages/norway-finland-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland&p=2$
+RewriteRule ^package\.html$ /norway-finland-packages/norway-finland-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland&p=3$
+RewriteRule ^package\.html$ /norway-finland-packages/norway-finland-tour-package-8-nights-9-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland&p=4$
+RewriteRule ^package\.html$ /norway-finland-packages/norway-finland-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland&p=5$
+RewriteRule ^package\.html$ /norway-finland-packages/norway-finland-tour-package-8-nights-9-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland&p=6$
+RewriteRule ^package\.html$ /norway-finland-packages/norway-finland-tour-package-9-nights-10-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=norway-finland&p=7$
+RewriteRule ^package\.html$ /norway-finland-packages/norway-finland-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland$
+RewriteRule ^package\.html$ /uk-ireland-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland&p=1$
+RewriteRule ^package\.html$ /uk-ireland-packages/uk-ireland-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland&p=2$
+RewriteRule ^package\.html$ /uk-ireland-packages/uk-ireland-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland&p=3$
+RewriteRule ^package\.html$ /uk-ireland-packages/uk-ireland-tour-package-9-nights-10-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland&p=4$
+RewriteRule ^package\.html$ /uk-ireland-packages/uk-ireland-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland&p=5$
+RewriteRule ^package\.html$ /uk-ireland-packages/uk-ireland-tour-package-9-nights-10-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland&p=6$
+RewriteRule ^package\.html$ /uk-ireland-packages/uk-ireland-tour-package-10-nights-11-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=uk-ireland&p=7$
+RewriteRule ^package\.html$ /uk-ireland-packages/uk-ireland-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece$
+RewriteRule ^package\.html$ /greece-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece&p=1$
+RewriteRule ^package\.html$ /greece-packages/greece-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece&p=2$
+RewriteRule ^package\.html$ /greece-packages/greece-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece&p=3$
+RewriteRule ^package\.html$ /greece-packages/greece-tour-package-7-nights-8-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece&p=4$
+RewriteRule ^package\.html$ /greece-packages/greece-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece&p=5$
+RewriteRule ^package\.html$ /greece-packages/greece-tour-package-7-nights-8-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece&p=6$
+RewriteRule ^package\.html$ /greece-packages/greece-tour-package-8-nights-9-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=greece&p=7$
+RewriteRule ^package\.html$ /greece-packages/greece-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey$
+RewriteRule ^package\.html$ /turkey-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey&p=1$
+RewriteRule ^package\.html$ /turkey-packages/turkey-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey&p=2$
+RewriteRule ^package\.html$ /turkey-packages/turkey-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey&p=3$
+RewriteRule ^package\.html$ /turkey-packages/turkey-tour-package-7-nights-8-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey&p=4$
+RewriteRule ^package\.html$ /turkey-packages/turkey-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey&p=5$
+RewriteRule ^package\.html$ /turkey-packages/turkey-tour-package-7-nights-8-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey&p=6$
+RewriteRule ^package\.html$ /turkey-packages/turkey-tour-package-8-nights-9-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=turkey&p=7$
+RewriteRule ^package\.html$ /turkey-packages/turkey-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast$
+RewriteRule ^package\.html$ /us-east-coast-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast&p=1$
+RewriteRule ^package\.html$ /us-east-coast-packages/usa-east-coast-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast&p=2$
+RewriteRule ^package\.html$ /us-east-coast-packages/usa-east-coast-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast&p=3$
+RewriteRule ^package\.html$ /us-east-coast-packages/usa-east-coast-tour-package-8-nights-9-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast&p=4$
+RewriteRule ^package\.html$ /us-east-coast-packages/usa-east-coast-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast&p=5$
+RewriteRule ^package\.html$ /us-east-coast-packages/usa-east-coast-tour-package-8-nights-9-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast&p=6$
+RewriteRule ^package\.html$ /us-east-coast-packages/usa-east-coast-tour-package-9-nights-10-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-east-coast&p=7$
+RewriteRule ^package\.html$ /us-east-coast-packages/usa-east-coast-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast$
+RewriteRule ^package\.html$ /us-west-coast-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast&p=1$
+RewriteRule ^package\.html$ /us-west-coast-packages/usa-west-coast-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast&p=2$
+RewriteRule ^package\.html$ /us-west-coast-packages/usa-west-coast-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast&p=3$
+RewriteRule ^package\.html$ /us-west-coast-packages/usa-west-coast-tour-package-9-nights-10-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast&p=4$
+RewriteRule ^package\.html$ /us-west-coast-packages/usa-west-coast-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast&p=5$
+RewriteRule ^package\.html$ /us-west-coast-packages/usa-west-coast-tour-package-9-nights-10-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast&p=6$
+RewriteRule ^package\.html$ /us-west-coast-packages/usa-west-coast-tour-package-10-nights-11-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-west-coast&p=7$
+RewriteRule ^package\.html$ /us-west-coast-packages/usa-west-coast-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks$
+RewriteRule ^package\.html$ /us-national-parks-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks&p=1$
+RewriteRule ^package\.html$ /us-national-parks-packages/usa-national-parks-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks&p=2$
+RewriteRule ^package\.html$ /us-national-parks-packages/usa-national-parks-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks&p=3$
+RewriteRule ^package\.html$ /us-national-parks-packages/usa-national-parks-tour-package-10-nights-11-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks&p=4$
+RewriteRule ^package\.html$ /us-national-parks-packages/usa-national-parks-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks&p=5$
+RewriteRule ^package\.html$ /us-national-parks-packages/usa-national-parks-tour-package-10-nights-11-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks&p=6$
+RewriteRule ^package\.html$ /us-national-parks-packages/usa-national-parks-tour-package-11-nights-12-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=us-national-parks&p=7$
+RewriteRule ^package\.html$ /us-national-parks-packages/usa-national-parks-tour-package-12-nights-13-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando$
+RewriteRule ^package\.html$ /orlando-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando&p=1$
+RewriteRule ^package\.html$ /orlando-packages/orlando-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando&p=2$
+RewriteRule ^package\.html$ /orlando-packages/orlando-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando&p=3$
+RewriteRule ^package\.html$ /orlando-packages/orlando-tour-package-7-nights-8-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando&p=4$
+RewriteRule ^package\.html$ /orlando-packages/orlando-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando&p=5$
+RewriteRule ^package\.html$ /orlando-packages/orlando-tour-package-7-nights-8-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando&p=6$
+RewriteRule ^package\.html$ /orlando-packages/orlando-tour-package-8-nights-9-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=orlando&p=7$
+RewriteRule ^package\.html$ /orlando-packages/orlando-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada$
+RewriteRule ^package\.html$ /eastern-canada-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada&p=1$
+RewriteRule ^package\.html$ /eastern-canada-packages/eastern-canada-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada&p=2$
+RewriteRule ^package\.html$ /eastern-canada-packages/eastern-canada-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada&p=3$
+RewriteRule ^package\.html$ /eastern-canada-packages/eastern-canada-tour-package-8-nights-9-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada&p=4$
+RewriteRule ^package\.html$ /eastern-canada-packages/eastern-canada-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada&p=5$
+RewriteRule ^package\.html$ /eastern-canada-packages/eastern-canada-tour-package-8-nights-9-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada&p=6$
+RewriteRule ^package\.html$ /eastern-canada-packages/eastern-canada-tour-package-9-nights-10-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=eastern-canada&p=7$
+RewriteRule ^package\.html$ /eastern-canada-packages/eastern-canada-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada$
+RewriteRule ^package\.html$ /western-canada-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada&p=1$
+RewriteRule ^package\.html$ /western-canada-packages/western-canada-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada&p=2$
+RewriteRule ^package\.html$ /western-canada-packages/western-canada-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada&p=3$
+RewriteRule ^package\.html$ /western-canada-packages/western-canada-tour-package-9-nights-10-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada&p=4$
+RewriteRule ^package\.html$ /western-canada-packages/western-canada-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada&p=5$
+RewriteRule ^package\.html$ /western-canada-packages/western-canada-tour-package-9-nights-10-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada&p=6$
+RewriteRule ^package\.html$ /western-canada-packages/western-canada-tour-package-10-nights-11-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=western-canada&p=7$
+RewriteRule ^package\.html$ /western-canada-packages/western-canada-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer&p=1$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages/rocky-mountaineer-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer&p=2$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages/rocky-mountaineer-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer&p=3$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages/rocky-mountaineer-tour-package-9-nights-10-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer&p=4$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages/rocky-mountaineer-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer&p=5$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages/rocky-mountaineer-tour-package-9-nights-10-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer&p=6$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages/rocky-mountaineer-tour-package-10-nights-11-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=rocky-mountaineer&p=7$
+RewriteRule ^package\.html$ /rocky-mountaineer-packages/rocky-mountaineer-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall$
+RewriteRule ^package\.html$ /autumn-fall-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall&p=1$
+RewriteRule ^package\.html$ /autumn-fall-packages/autumn-fall-colours-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall&p=2$
+RewriteRule ^package\.html$ /autumn-fall-packages/autumn-fall-colours-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall&p=3$
+RewriteRule ^package\.html$ /autumn-fall-packages/autumn-fall-colours-tour-package-7-nights-8-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall&p=4$
+RewriteRule ^package\.html$ /autumn-fall-packages/autumn-fall-colours-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall&p=5$
+RewriteRule ^package\.html$ /autumn-fall-packages/autumn-fall-colours-tour-package-7-nights-8-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall&p=6$
+RewriteRule ^package\.html$ /autumn-fall-packages/autumn-fall-colours-tour-package-8-nights-9-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=autumn-fall&p=7$
+RewriteRule ^package\.html$ /autumn-fall-packages/autumn-fall-colours-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne&p=1$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages/sydney-melbourne-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne&p=2$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages/sydney-melbourne-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne&p=3$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages/sydney-melbourne-tour-package-8-nights-9-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne&p=4$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages/sydney-melbourne-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne&p=5$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages/sydney-melbourne-tour-package-8-nights-9-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne&p=6$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages/sydney-melbourne-tour-package-9-nights-10-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-sydney-melbourne&p=7$
+RewriteRule ^package\.html$ /australia-sydney-melbourne-packages/sydney-melbourne-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast$
+RewriteRule ^package\.html$ /australia-gold-coast-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast&p=1$
+RewriteRule ^package\.html$ /australia-gold-coast-packages/gold-coast-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast&p=2$
+RewriteRule ^package\.html$ /australia-gold-coast-packages/gold-coast-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast&p=3$
+RewriteRule ^package\.html$ /australia-gold-coast-packages/gold-coast-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast&p=4$
+RewriteRule ^package\.html$ /australia-gold-coast-packages/gold-coast-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast&p=5$
+RewriteRule ^package\.html$ /australia-gold-coast-packages/gold-coast-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast&p=6$
+RewriteRule ^package\.html$ /australia-gold-coast-packages/gold-coast-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-gold-coast&p=7$
+RewriteRule ^package\.html$ /australia-gold-coast-packages/gold-coast-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef&p=1$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages/great-barrier-reef-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef&p=2$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages/great-barrier-reef-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef&p=3$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages/great-barrier-reef-tour-package-7-nights-8-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef&p=4$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages/great-barrier-reef-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef&p=5$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages/great-barrier-reef-tour-package-7-nights-8-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef&p=6$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages/great-barrier-reef-tour-package-8-nights-9-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-great-barrier-reef&p=7$
+RewriteRule ^package\.html$ /australia-great-barrier-reef-packages/great-barrier-reef-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive&p=1$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages/luxury-self-drive-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive&p=2$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages/luxury-self-drive-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive&p=3$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages/luxury-self-drive-tour-package-10-nights-11-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive&p=4$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages/luxury-self-drive-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive&p=5$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages/luxury-self-drive-tour-package-10-nights-11-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive&p=6$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages/luxury-self-drive-tour-package-11-nights-12-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=australia-luxury-self-drive&p=7$
+RewriteRule ^package\.html$ /australia-luxury-self-drive-packages/luxury-self-drive-tour-package-12-nights-13-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south$
+RewriteRule ^package\.html$ /nz-north-south-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south&p=1$
+RewriteRule ^package\.html$ /nz-north-south-packages/north-south-combo-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south&p=2$
+RewriteRule ^package\.html$ /nz-north-south-packages/north-south-combo-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south&p=3$
+RewriteRule ^package\.html$ /nz-north-south-packages/north-south-combo-tour-package-10-nights-11-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south&p=4$
+RewriteRule ^package\.html$ /nz-north-south-packages/north-south-combo-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south&p=5$
+RewriteRule ^package\.html$ /nz-north-south-packages/north-south-combo-tour-package-10-nights-11-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south&p=6$
+RewriteRule ^package\.html$ /nz-north-south-packages/north-south-combo-tour-package-11-nights-12-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-north-south&p=7$
+RewriteRule ^package\.html$ /nz-north-south-packages/north-south-combo-tour-package-12-nights-13-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown$
+RewriteRule ^package\.html$ /nz-queenstown-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown&p=1$
+RewriteRule ^package\.html$ /nz-queenstown-packages/queenstown-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown&p=2$
+RewriteRule ^package\.html$ /nz-queenstown-packages/queenstown-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown&p=3$
+RewriteRule ^package\.html$ /nz-queenstown-packages/queenstown-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown&p=4$
+RewriteRule ^package\.html$ /nz-queenstown-packages/queenstown-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown&p=5$
+RewriteRule ^package\.html$ /nz-queenstown-packages/queenstown-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown&p=6$
+RewriteRule ^package\.html$ /nz-queenstown-packages/queenstown-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-queenstown&p=7$
+RewriteRule ^package\.html$ /nz-queenstown-packages/queenstown-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive$
+RewriteRule ^package\.html$ /nz-self-drive-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive&p=1$
+RewriteRule ^package\.html$ /nz-self-drive-packages/self-drive-scenic-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive&p=2$
+RewriteRule ^package\.html$ /nz-self-drive-packages/self-drive-scenic-tour-package-12-nights-13-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive&p=3$
+RewriteRule ^package\.html$ /nz-self-drive-packages/self-drive-scenic-tour-package-12-nights-13-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive&p=4$
+RewriteRule ^package\.html$ /nz-self-drive-packages/self-drive-scenic-tour-package-13-nights-14-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive&p=5$
+RewriteRule ^package\.html$ /nz-self-drive-packages/self-drive-scenic-tour-package-12-nights-13-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive&p=6$
+RewriteRule ^package\.html$ /nz-self-drive-packages/self-drive-scenic-tour-package-13-nights-14-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-self-drive&p=7$
+RewriteRule ^package\.html$ /nz-self-drive-packages/self-drive-scenic-tour-package-14-nights-15-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature&p=1$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages/luxury-nature-escapes-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature&p=2$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages/luxury-nature-escapes-tour-package-9-nights-10-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature&p=3$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages/luxury-nature-escapes-tour-package-9-nights-10-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature&p=4$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages/luxury-nature-escapes-tour-package-10-nights-11-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature&p=5$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages/luxury-nature-escapes-tour-package-9-nights-10-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature&p=6$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages/luxury-nature-escapes-tour-package-10-nights-11-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=nz-luxury-nature&p=7$
+RewriteRule ^package\.html$ /nz-luxury-nature-packages/luxury-nature-escapes-tour-package-11-nights-12-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan$
+RewriteRule ^package\.html$ /azerbaijan-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan&p=1$
+RewriteRule ^package\.html$ /azerbaijan-packages/azerbaijan-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan&p=2$
+RewriteRule ^package\.html$ /azerbaijan-packages/azerbaijan-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan&p=3$
+RewriteRule ^package\.html$ /azerbaijan-packages/azerbaijan-tour-package-5-nights-6-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan&p=4$
+RewriteRule ^package\.html$ /azerbaijan-packages/azerbaijan-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan&p=5$
+RewriteRule ^package\.html$ /azerbaijan-packages/azerbaijan-tour-package-5-nights-6-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan&p=6$
+RewriteRule ^package\.html$ /azerbaijan-packages/azerbaijan-tour-package-6-nights-7-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=azerbaijan&p=7$
+RewriteRule ^package\.html$ /azerbaijan-packages/azerbaijan-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan$
+RewriteRule ^package\.html$ /kazakhstan-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan&p=1$
+RewriteRule ^package\.html$ /kazakhstan-packages/kazakhstan-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan&p=2$
+RewriteRule ^package\.html$ /kazakhstan-packages/kazakhstan-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan&p=3$
+RewriteRule ^package\.html$ /kazakhstan-packages/kazakhstan-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan&p=4$
+RewriteRule ^package\.html$ /kazakhstan-packages/kazakhstan-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan&p=5$
+RewriteRule ^package\.html$ /kazakhstan-packages/kazakhstan-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan&p=6$
+RewriteRule ^package\.html$ /kazakhstan-packages/kazakhstan-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=kazakhstan&p=7$
+RewriteRule ^package\.html$ /kazakhstan-packages/kazakhstan-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia$
+RewriteRule ^package\.html$ /georgia-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia&p=1$
+RewriteRule ^package\.html$ /georgia-packages/georgia-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia&p=2$
+RewriteRule ^package\.html$ /georgia-packages/georgia-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia&p=3$
+RewriteRule ^package\.html$ /georgia-packages/georgia-tour-package-6-nights-7-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia&p=4$
+RewriteRule ^package\.html$ /georgia-packages/georgia-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia&p=5$
+RewriteRule ^package\.html$ /georgia-packages/georgia-tour-package-6-nights-7-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia&p=6$
+RewriteRule ^package\.html$ /georgia-packages/georgia-tour-package-7-nights-8-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=georgia&p=7$
+RewriteRule ^package\.html$ /georgia-packages/georgia-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia$
+RewriteRule ^package\.html$ /armenia-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia&p=1$
+RewriteRule ^package\.html$ /armenia-packages/armenia-tour-package-4-nights-5-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia&p=2$
+RewriteRule ^package\.html$ /armenia-packages/armenia-tour-package-5-nights-6-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia&p=3$
+RewriteRule ^package\.html$ /armenia-packages/armenia-tour-package-5-nights-6-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia&p=4$
+RewriteRule ^package\.html$ /armenia-packages/armenia-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia&p=5$
+RewriteRule ^package\.html$ /armenia-packages/armenia-tour-package-5-nights-6-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia&p=6$
+RewriteRule ^package\.html$ /armenia-packages/armenia-tour-package-6-nights-7-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=armenia&p=7$
+RewriteRule ^package\.html$ /armenia-packages/armenia-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia$
+RewriteRule ^package\.html$ /russia-packages.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia&p=1$
+RewriteRule ^package\.html$ /russia-packages/russia-tour-package-6-nights-7-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia&p=2$
+RewriteRule ^package\.html$ /russia-packages/russia-tour-package-7-nights-8-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia&p=3$
+RewriteRule ^package\.html$ /russia-packages/russia-tour-package-7-nights-8-days-deluxe.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia&p=4$
+RewriteRule ^package\.html$ /russia-packages/russia-tour-package-8-nights-9-days.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia&p=5$
+RewriteRule ^package\.html$ /russia-packages/russia-tour-package-7-nights-8-days-premium.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia&p=6$
+RewriteRule ^package\.html$ /russia-packages/russia-tour-package-8-nights-9-days-premium-plus.html? [L,R=301]
+RewriteCond %{QUERY_STRING} ^id=russia&p=7$
+RewriteRule ^package\.html$ /russia-packages/russia-tour-package-9-nights-10-days.html? [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9-]+-packages)$ $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9-]+-packages)/([a-z0-9-]+)$ $1/$2.html [L]
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|svg|woff2)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "max-age=3600, public"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
