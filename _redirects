@@ -1,0 +1,9 @@
+# Clean URL redirects
+/index.html          /             301
+/canada-flights.html /canada-flights 301
+/blog.html           /blog           301
+/travel.html         /travel         301
+/education.html      /education      301
+/domestic.html       /domestic       301
+/international.html  /international  301
+/visa.html           /visa           301
