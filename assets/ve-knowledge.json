@@ -1,0 +1,179 @@
+{
+  "packages": {
+    "Thailand": {
+      "duration": "4N5D",
+      "price_range": "₹28,000–₹55,000",
+      "visa": "Visa Free for Indians",
+      "best_time": "November to March",
+      "highlights": [
+        "Bangkok",
+        "Pattaya",
+        "Phuket",
+        "Chiang Mai"
+      ],
+      "flights_from": "Delhi/Amritsar → Bangkok (BKK/DMK)",
+      "includes": "Flights + Hotel + Transfers + Breakfast"
+    },
+    "Bali": {
+      "duration": "5N6D",
+      "price_range": "₹32,000–₹65,000",
+      "visa": "Visa on Arrival (₹2,500 approx)",
+      "best_time": "April to October",
+      "highlights": [
+        "Seminyak",
+        "Ubud",
+        "Kuta",
+        "Nusa Dua"
+      ],
+      "flights_from": "Delhi → Denpasar (DPS)",
+      "includes": "Flights + Hotel + Transfers"
+    },
+    "Dubai": {
+      "duration": "4N5D",
+      "price_range": "₹35,000–₹70,000",
+      "visa": "Visa on Arrival for Indian passport holders",
+      "best_time": "November to March",
+      "highlights": [
+        "Burj Khalifa",
+        "Desert Safari",
+        "Dubai Mall",
+        "Palm Jumeirah"
+      ],
+      "flights_from": "Delhi/Amritsar → Dubai (DXB)",
+      "includes": "Flights + Hotel + Transfers + Desert Safari"
+    },
+    "Kashmir": {
+      "duration": "5N6D",
+      "price_range": "₹12,000–₹28,000",
+      "visa": "No visa (Domestic)",
+      "best_time": "March to June (Summer), Sept-Oct (Autumn), Dec-Feb (Snow)",
+      "highlights": [
+        "Dal Lake",
+        "Gulmarg",
+        "Pahalgam",
+        "Sonamarg"
+      ],
+      "flights_from": "Chandigarh/Delhi/Amritsar → Srinagar",
+      "includes": "Hotel + Transfers + Sightseeing"
+    },
+    "Georgia": {
+      "duration": "6N7D",
+      "price_range": "₹45,000–₹80,000",
+      "visa": "Visa Free for Indians (180 days)",
+      "best_time": "April to June, September to October",
+      "highlights": [
+        "Tbilisi",
+        "Batumi",
+        "Kazbegi",
+        "Mtskheta"
+      ],
+      "flights_from": "Delhi → Tbilisi (TBS) via Dubai/Istanbul",
+      "includes": "Flights + Hotel + Transfers"
+    },
+    "Europe": {
+      "duration": "8N9D",
+      "price_range": "₹1,20,000–₹2,00,000",
+      "visa": "Schengen Visa required (processing 15-20 days)",
+      "best_time": "April to September",
+      "highlights": [
+        "Paris",
+        "Rome",
+        "Amsterdam",
+        "Prague",
+        "Barcelona"
+      ],
+      "flights_from": "Delhi → Europe (multiple airlines)",
+      "includes": "Flights + Hotel + Transfers + City Tours"
+    },
+    "Singapore": {
+      "duration": "5N6D",
+      "price_range": "₹45,000–₹80,000",
+      "visa": "Visa Free for Indian passport",
+      "best_time": "February to April",
+      "highlights": [
+        "Marina Bay Sands",
+        "Universal Studios",
+        "Sentosa",
+        "Gardens by Bay"
+      ],
+      "flights_from": "Delhi/Amritsar → Singapore (SIN)",
+      "includes": "Flights + Hotel + Transfers"
+    },
+    "Maldives": {
+      "duration": "4N5D",
+      "price_range": "₹65,000–₹1,20,000",
+      "visa": "Visa on Arrival (Free)",
+      "best_time": "November to April",
+      "highlights": [
+        "Water Villas",
+        "Snorkeling",
+        "Diving",
+        "Private Beaches"
+      ],
+      "flights_from": "Delhi → Malé (MLE)",
+      "includes": "Flights + Water Villa + All Meals + Transfers"
+    }
+  },
+  "education_programs": {
+    "Combo GDS": "₹24,999 — Amadeus + Galileo + Tourism basics",
+    "Basic GDS": "₹19,999 — Amadeus or Galileo certification",
+    "Advanced GDS": "₹36,999 — Advanced + placement support",
+    "Itinerary Planning": "₹5,999 — Short course",
+    "For Colleges": "MOU-based programs — contact for pricing"
+  },
+  "visa_info": {
+    "Visa Free": [
+      "Thailand (since Nov 2023)",
+      "Georgia",
+      "Kazakhstan",
+      "Serbia",
+      "Indonesia (Bali)",
+      "Qatar",
+      "Mauritius"
+    ],
+    "Visa on Arrival": [
+      "Dubai/UAE",
+      "Maldives",
+      "Cambodia",
+      "Myanmar"
+    ],
+    "E-Visa": [
+      "Vietnam",
+      "Sri Lanka",
+      "Turkey",
+      "Egypt"
+    ],
+    "Schengen": [
+      "France",
+      "Italy",
+      "Germany",
+      "Spain",
+      "Netherlands",
+      "Switzerland"
+    ],
+    "Requires Visa": [
+      "USA",
+      "UK",
+      "Canada",
+      "Australia",
+      "Japan",
+      "China"
+    ]
+  },
+  "contact": {
+    "Vishal": "+91 7009659048",
+    "Sahitya": "+91 9818794296",
+    "Email": "enquiry@voyage-ed.com",
+    "Address": "Block-F, GMADA Aerocity, Mohali",
+    "WhatsApp": "+91 7009659048",
+    "Hours": "9 AM to 8 PM, 7 days a week"
+  },
+  "faqs": {
+    "Payment modes": "Bank transfer, UPI, Cash, Credit/Debit card",
+    "Booking advance": "Typically 30-50% advance to confirm",
+    "Cancellation": "As per package terms — typically 15 days notice for partial refund",
+    "Group size": "Better pricing for 8+ travelers",
+    "Custom packages": "Yes, all packages are customizable",
+    "Flight booking": "Yes, we book flights separately or as part of package"
+  }
+}
