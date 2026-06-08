@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /package.html
+
+User-agent: Googlebot
+Allow: /
+Disallow: /package.html
+
+User-agent: Bingbot
+Allow: /
+Disallow: /package.html
+
+Sitemap: https://voyage-ed.com/sitemap.xml
