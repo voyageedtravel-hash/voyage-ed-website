@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX341ESGW4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX341ESGW4');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="robots" content="noindex,follow"/>
+<title>Redirecting… | Voyage-Ed Travels</title>
+<link rel="canonical" href="https://voyage-ed.com/index.html"/>
+<script src="/packages-data.js"></script>
+<script>
+(function(){
+  function slug(s){return String(s||'').toLowerCase().replace(/[''""()·•]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+  function pkgSlugUnique(seen, pkg, idx){
+    var base = pkg.title || ("package-"+(idx+1));
+    var variants = [base, pkg.label?base+" "+pkg.label:null, pkg.hotel_category?base+" "+pkg.hotel_category:null, (pkg.label&&pkg.hotel_category)?base+" "+pkg.label+" "+pkg.hotel_category:null].filter(Boolean);
+    for(var i=0;i<variants.length;i++){var s=slug(variants[i]);if(!seen[s]){seen[s]=true;return s;}}
+    var s=slug(base),n=2;while(seen[s+"-"+n])n++;seen[s+"-"+n]=true;return s+"-"+n;
+  }
+  var qs=new URL(location.href).searchParams;
+  var id=(qs.get('id')||'').toLowerCase().trim();
+  var p=qs.get('p');
+  if(!id){location.replace('/index.html');return;}
+  if(p && window.VOYAGE_PACKAGES && window.VOYAGE_PACKAGES[id]){
+    var d=window.VOYAGE_PACKAGES[id];
+    var idx=parseInt(p,10)-1;
+    if(d.packages && d.packages[idx]){
+      var seen={};
+      var slugs=d.packages.map(function(pp,ii){return pkgSlugUnique(seen,pp,ii);});
+      location.replace('/'+id+'-packages/'+slugs[idx]+'.html');
+      return;
+    }
+  }
+  location.replace('/'+id+'-packages.html');
+})();
+</script>
+<meta http-equiv="refresh" content="0; url=/index.html"/>
+</head>
+<body>
+<p style="font-family:sans-serif;padding:2rem">Redirecting to the new SEO-friendly page…
+<br><a href="/index.html">Click here if you are not redirected.</a></p>
+<script src="assets/image-system.js"></script>
+</body>
+</html>
