@@ -75,6 +75,8 @@ nav ul a:hover::after{width:100%}
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--navy)}
 .hero-media{position:absolute;inset:0;z-index:1}
 .hero-media video,.hero-media .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+.hero-media .hero-img.loaded{animation:kenBurns 22s ease-in-out infinite alternate}
+@keyframes kenBurns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.12) translate(-1.5%,1%)}}
 .hero-media video.loaded,.hero-media .hero-img.loaded{opacity:1}
 .hero-veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,21,48,.55) 0%,rgba(10,21,48,.25) 40%,rgba(10,21,48,.75) 100%)}
 .hero-content{position:relative;z-index:3;text-align:center;padding:100px 20px 60px;max-width:1000px}
@@ -386,6 +388,13 @@ body.ve-modal-open{overflow:hidden}
   .wa-float{width:50px;height:50px;bottom:20px;left:14px}
   .wa-float svg{width:26px;height:26px}
 }
+
+@media(max-width:600px){
+  .wa-float{bottom:18px;left:12px;width:48px;height:48px}
+  .wa-float svg{width:24px;height:24px}
+  #ve-trigger{bottom:18px;right:12px;padding:9px 14px}
+  #ve-overlay{bottom:72px;right:6px;left:6px;width:auto;max-width:none}
+}
 </style></head>
 <body>
 
@@ -411,7 +420,7 @@ body.ve-modal-open{overflow:hidden}
   <div class="hero-media" id="heroMedia">
     <img class="hero-img loaded" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80" alt="World travel — mountain road journey" fetchpriority="high"/>
     <video id="heroVideo" muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80">
-      <source data-src="https://cdn.coverr.co/videos/coverr-flying-over-the-mountains-2633/1080p.mp4" type="video/mp4"/>
+      <source data-src="https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4" type="video/mp4"/>
     </video>
   </div>
   <div class="hero-veil"></div>

@@ -28,7 +28,8 @@ nav ul a:hover{color:var(--gold-l);border-bottom-color:var(--gold)}
 .dest-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.55);z-index:1}
 .dest-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.6);z-index:2}
 .dest-hero-yt-wrap{position:absolute;inset:0;overflow:hidden;z-index:2}
-.dest-hero-yt{position:absolute;top:50%;left:50%;width:130%;height:130%;transform:translate(-50%,-50%);border:0;pointer-events:none}
+.dest-hero-yt{position:absolute;top:50%;left:50%;width:max(100vw,178vh);height:max(56.25vw,100vh);transform:translate(-50%,-50%);border:0;pointer-events:none}
+@media(max-width:768px){.dest-hero-yt-wrap{display:none}}
 .dest-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,15,38,.2) 0%,rgba(7,15,38,.5) 55%,rgba(7,15,38,.88) 100%);z-index:3;pointer-events:none}
 .dest-hero-bg::after{content:none}
 .dest-hero-inner{position:relative;z-index:4;width:100%;max-width:1200px;margin:0 auto;padding:4rem 2rem 3rem;text-align:center}
