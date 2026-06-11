@@ -498,9 +498,9 @@
     /* ───── INTERNATIONAL — AFRICA & MIDDLE EAST ───── */
 
     egypt: {
-      hero: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=1600&q=85',
+      hero: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=85',
       gallery: [
-        'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&q=80',
+        'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
         'https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80',
         'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&q=80',
         'https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80',
@@ -510,7 +510,7 @@
         'https://images.unsplash.com/photo-1591711084705-f4e8e97e8e5e?w=800&q=80'
       ],
       cards: [
-        'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=900&q=85',
+        'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=85',
         'https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=900&q=85',
         'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=900&q=85',
         'https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=900&q=85'
@@ -624,9 +624,9 @@
     },
 
     georgia: {
-      hero: 'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1600&q=85',
+      hero: 'https://images.unsplash.com/photo-1626776877737-d5ff85d6d44b?w=1600&q=85',
       gallery: [
-        'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80',
+        'https://images.unsplash.com/photo-1626776877737-d5ff85d6d44b?w=800&q=80',
         'https://images.unsplash.com/photo-1567103472667-6898f3a79cf2?w=800&q=80',
         'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=80',
         'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=800&q=80',
@@ -636,7 +636,7 @@
         'https://images.unsplash.com/photo-1607604760190-ec34f8c35cd9?w=800&q=80'
       ],
       cards: [
-        'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=900&q=85',
+        'https://images.unsplash.com/photo-1626776877737-d5ff85d6d44b?w=900&q=85',
         'https://images.unsplash.com/photo-1567103472667-6898f3a79cf2?w=900&q=85',
         'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=900&q=85',
         'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=900&q=85'
@@ -790,7 +790,7 @@
         'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80',
         'https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?w=800&q=80',
         'https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=800&q=80',
-        'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80'
+        'https://images.unsplash.com/photo-1626776877737-d5ff85d6d44b?w=800&q=80'
       ],
       cards: [
         'https://images.unsplash.com/photo-1548679847-1d4ff48016c9?w=900&q=85',
@@ -852,7 +852,7 @@
         'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
         'https://images.unsplash.com/photo-1469521669194-babb45599def?w=800&q=80',
         'https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=800&q=80',
-        'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80'
+        'https://images.unsplash.com/photo-1626776877737-d5ff85d6d44b?w=800&q=80'
       ],
       cards: [
         'https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=900&q=85',
@@ -1348,7 +1348,7 @@
         'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80',
         'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
         'https://images.unsplash.com/photo-1484447330491-de89c23be34a?w=800&q=80',
-        'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&q=80',
+        'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
         'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
         'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
         'https://images.unsplash.com/photo-1487621167305-5d248087c724?w=800&q=80',
@@ -1358,7 +1358,7 @@
         'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=900&q=85',
         'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85',
         'https://images.unsplash.com/photo-1484447330491-de89c23be34a?w=900&q=85',
-        'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=900&q=85'
+        'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=85'
       ],
       alts: [
         'Northern Lights Aurora Borealis Norway Finland winter sky',
@@ -1934,7 +1934,7 @@
   };
 
   /* Universal fallback */
-  var VE_FALLBACK = 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&q=80';
+  var VE_FALLBACK = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75';
 
   /* =========================================================
    * UTILITIES
@@ -1960,9 +1960,10 @@
   }
 
   function setBackgroundImage(el, url) {
-    if (!el || !url) return;
-    el.style.backgroundImage = "url('" + url + "')";
-    el.setAttribute('data-ve-img-set', '1');
+    var probe = new Image();
+    probe.onload = function() { el.style.backgroundImage = "url('" + url + "')"; el.classList.add('ve-img-loaded'); };
+    probe.onerror = function() { el.style.backgroundImage = "url('" + VE_FALLBACK + "')"; };
+    probe.src = url;
   }
 
   function rotate(arr, index) {
@@ -2200,5 +2201,40 @@
   } else {
     init();
   }
+
+  /* ═══ FOREIGN WIDGET KILLER + IMG SELF-HEAL (v4) ═══ */
+  function killForeignWidgets() {
+    /* Remove any injected chat widget that is not ours */
+    document.querySelectorAll('body > div, body > a').forEach(function(el) {
+      if (el.id === 've-trigger' || el.id === 've-overlay' || el.classList.contains('wa-float-clean') || el.id === 've-marquee' || el.id === 've-toast') return;
+      var cs = window.getComputedStyle(el);
+      if (cs.position !== 'fixed') return;
+      var html = (el.innerHTML || '').toLowerCase();
+      var txt = (el.textContent || '').trim().toLowerCase();
+      if (html.indexOf('wa.me') > -1 || html.indexOf('whatsapp') > -1 || txt === 'chat with us' || txt.indexOf('chat with us') === 0) {
+        el.remove();
+      }
+    });
+    /* Also catch deep-injected launchers */
+    document.querySelectorAll('[class*="getbutton"],[class*="joinchat"],[id*="whatsapp-widget"],[class*="wa-widget"]').forEach(function(el){ el.remove(); });
+  }
+  function imgSelfHeal() {
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.dataset.veHealed) return;
+      img.dataset.veHealed = '1';
+      img.addEventListener('error', function() {
+        if (img.src !== VE_FALLBACK) img.src = VE_FALLBACK;
+      });
+      /* already-broken images */
+      if (img.complete && img.naturalWidth === 0 && img.src && img.src.indexOf('data:') !== 0) {
+        img.src = VE_FALLBACK;
+      }
+    });
+  }
+  setTimeout(killForeignWidgets, 800);
+  setTimeout(killForeignWidgets, 2500);
+  setTimeout(killForeignWidgets, 5000);
+  setTimeout(imgSelfHeal, 600);
+  setTimeout(imgSelfHeal, 3000);
 
 })();

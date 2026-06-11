@@ -952,3 +952,47 @@ img, video, iframe, table { max-width: 100% !important; }
 html{scroll-behavior:smooth}
 .pkg-card-cta,[class*="-cta"]{transition:all .3s!important}
 img{transition:opacity .4s ease}
+
+/* ════════ v4 CRITICAL FIXES ════════ */
+html,body{overflow-x:hidden!important;max-width:100%!important}
+img,iframe,video,svg{max-width:100%!important}
+h1,h2,h3,p{overflow-wrap:break-word;word-break:break-word}
+
+/* Package cities box — bulletproof */
+.pkg-card-cities{display:flex!important;flex-wrap:wrap!important;align-items:flex-start!important;width:auto!important;min-width:0!important;max-width:100%!important;white-space:normal!important}
+.pkg-card-cities-text{flex:1 1 auto!important;min-width:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;text-align:left!important;writing-mode:horizontal-tb!important}
+.pkg-card-cities-icon{flex:0 0 auto!important}
+
+/* Package badge — never full width */
+.pkg-card-badge{display:inline-block!important;width:auto!important;max-width:70%!important;left:.85rem!important;right:auto!important;white-space:nowrap!important;overflow:hidden;text-overflow:ellipsis}
+
+/* Package card image container */
+.pkg-card-img{width:100%!important;overflow:hidden!important}
+.pkg-card{max-width:100%!important;overflow:hidden!important}
+
+/* Tables: scroll inside their card, never widen page */
+table{max-width:100%!important}
+.blog-content table,article table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* Floating buttons final (mobile) */
+@media(max-width:600px){
+  #ve-trigger{bottom:16px!important;right:10px!important;padding:9px 13px!important}
+  .wa-float-clean,.wa-float{bottom:16px!important;left:10px!important;width:48px!important;height:48px!important}
+  #ve-overlay{left:6px!important;right:6px!important;bottom:70px!important;width:auto!important}
+  .pkg-card-cities{font-size:.72rem!important;padding:.5rem .65rem!important}
+}
+
+/* Marquee ticker */
+#ve-marquee{position:relative;z-index:50;background:linear-gradient(90deg,#0a1530,#13265c,#0a1530);color:#f0c842;overflow:hidden;padding:9px 0;font-size:12.5px;font-weight:600;letter-spacing:.04em;border-bottom:1px solid rgba(201,150,26,.35)}
+#ve-marquee .ve-mq-track{display:inline-block;white-space:nowrap;animation:veMq 38s linear infinite;padding-left:100%}
+@keyframes veMq{to{transform:translateX(-100%)}}
+#ve-marquee span{margin:0 22px}
+#ve-marquee b{color:#fff}
+
+/* Social proof toast */
+#ve-toast{position:fixed;bottom:84px;left:12px;z-index:9996;background:#fff;border:1px solid rgba(201,150,26,.3);border-radius:14px;padding:11px 14px;box-shadow:0 12px 36px rgba(10,21,48,.22);display:flex;align-items:center;gap:10px;max-width:290px;font-size:12.5px;color:#1a1a2e;transform:translateX(-120%);transition:transform .55s cubic-bezier(.22,1,.36,1)}
+#ve-toast.ve-show{transform:translateX(0)}
+#ve-toast .ve-toast-ico{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#0d1b3e,#13265c);color:#f0c842;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+#ve-toast b{color:#0d1b3e}
+#ve-toast .ve-toast-x{margin-left:4px;cursor:pointer;color:#9aa3b5;font-size:15px;flex-shrink:0}
+@media(max-width:600px){#ve-toast{bottom:76px;left:8px;max-width:75vw;font-size:11.5px}}
