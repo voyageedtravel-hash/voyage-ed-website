@@ -905,3 +905,50 @@ img, video, iframe, table { max-width: 100% !important; }
   }
 }
 /* ── END AI WIDGET FIX ── */
+
+/* ════════ GLOBAL POLISH v3 (June 2026) ════════ */
+
+/* FLOATING BUTTONS — FIXED POSITIONS SITEWIDE */
+#ve-trigger{left:auto!important;right:20px!important;bottom:22px!important;z-index:9999!important}
+#ve-overlay{left:auto!important;right:20px!important;bottom:88px!important}
+.wa-float-clean,.wa-float{left:16px!important;right:auto!important;bottom:22px!important;z-index:9997!important}
+
+/* HERO VIDEO — full cover, no letterbox band */
+.dest-hero-yt{position:absolute!important;top:50%!important;left:50%!important;width:max(100vw,180vh)!important;height:max(57vw,102vh)!important;transform:translate(-50%,-50%)!important;border:0!important;pointer-events:none!important;opacity:0;animation:ytFadeIn 1s ease 2.5s forwards}
+@keyframes ytFadeIn{to{opacity:1}}
+.dest-hero{background-size:cover!important;background-position:center!important}
+@media(max-width:860px){.dest-hero-yt-wrap{display:none!important}}
+
+/* GLOBAL MOBILE RESPONSIVENESS — every page */
+@media(max-width:768px){
+  .pkg-grid{grid-template-columns:1fr!important;gap:18px!important}
+  .dest-grid,[class*="dest-grid"]{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}
+  .pkg-card-img{height:180px!important}
+  table{display:block;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+  .dest-hero{min-height:380px!important}
+  .dest-hero-inner{padding:2.5rem 1.2rem 2rem!important}
+  .dest-hero h1{font-size:clamp(26px,8vw,38px)!important}
+  .pkg-list-sub{font-size:13px!important;padding:0 8px}
+  .foot-grid,[class*="footer-grid"]{grid-template-columns:1fr 1fr!important}
+  section,[class*="sec-pad"]{padding-left:14px!important;padding-right:14px!important}
+  .container{padding-left:14px!important;padding-right:14px!important}
+}
+@media(max-width:480px){
+  .dest-grid,[class*="dest-grid"]{grid-template-columns:1fr!important}
+  .dest-card,[class*="dest-card"]{min-height:240px!important}
+  h1{font-size:clamp(24px,7.5vw,34px)!important}
+  h2{font-size:clamp(20px,6vw,28px)!important}
+  .pkg-card-price-amt{font-size:20px!important}
+  #ve-trigger{padding:9px 14px!important;bottom:18px!important;right:12px!important}
+  .wa-float-clean,.wa-float{width:48px!important;height:48px!important;bottom:18px!important;left:12px!important}
+  #ve-overlay{right:6px!important;left:6px!important;width:auto!important;bottom:72px!important}
+}
+
+/* ENGAGEMENT POLISH — sitewide */
+.pkg-card,.dest-card,[class*="card"]{transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s!important}
+.pkg-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(13,27,62,.16)!important}
+.g-reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.g-reveal.g-in{opacity:1;transform:translateY(0)}
+html{scroll-behavior:smooth}
+.pkg-card-cta,[class*="-cta"]{transition:all .3s!important}
+img{transition:opacity .4s ease}
