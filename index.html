@@ -385,18 +385,82 @@ body.ve-modal-open{overflow:hidden}
 }
 /* === end Universal Enquiry Popup === */
 @media(max-width:600px){
-  .wa-float{width:50px;height:50px;bottom:20px;left:14px}
+  .wa-float{width:50px;height:50px;bottom:88px;right:14px}
   .wa-float svg{width:26px;height:26px}
 }
 
 @media(max-width:600px){
-  .wa-float{bottom:18px;left:12px;width:48px;height:48px}
+  .wa-float{bottom:84px;right:12px;width:48px;height:48px}
   .wa-float svg{width:24px;height:24px}
   #ve-trigger{bottom:18px;right:12px;padding:9px 14px}
   #ve-overlay{bottom:72px;right:6px;left:6px;width:auto;max-width:none}
 }
+
+/* ─── V7 SCROLL PROGRESS BAR ─── */
+#ve-progress{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2),#fff7d6);z-index:10000;transition:width .1s linear;box-shadow:0 0 8px rgba(201,150,26,.7)}
+
+/* ─── V7 JOURNEY RHYTHM STRIP ─── */
+.journey-strip{background:var(--navy);padding:0;overflow:hidden;border-top:1px solid rgba(201,150,26,.2);border-bottom:1px solid rgba(201,150,26,.2)}
+.journey-track{display:flex;align-items:center;gap:0;animation:journeyScroll 30s linear infinite;width:max-content}
+.journey-track:hover{animation-play-state:paused}
+@keyframes journeyScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.journey-item{display:flex;align-items:center;gap:10px;padding:14px 32px;white-space:nowrap;border-right:1px solid rgba(201,150,26,.15);color:rgba(255,255,255,.75);font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:color .3s}
+.journey-item:hover{color:var(--gold-2)}
+.journey-item .ji-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.journey-item em{color:var(--gold-2);font-style:normal}
+
+/* ─── V7 CINEMATIC FILMSTRIP ─── */
+.filmstrip{overflow:hidden;padding:48px 0;background:var(--navy);position:relative}
+.filmstrip::before,.filmstrip::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+.filmstrip::before{left:0;background:linear-gradient(90deg,var(--navy),transparent)}
+.filmstrip::after{right:0;background:linear-gradient(-90deg,var(--navy),transparent)}
+.filmstrip-label{text-align:center;font-family:var(--garamond);font-style:italic;font-size:14px;color:var(--gold-2);letter-spacing:.14em;margin-bottom:20px;opacity:.8}
+.film-track{display:flex;gap:16px;animation:filmScroll 40s linear infinite;width:max-content}
+.film-track:hover{animation-play-state:paused}
+@keyframes filmScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.film-frame{position:relative;width:280px;height:180px;border-radius:12px;overflow:hidden;flex-shrink:0;border:1px solid rgba(201,150,26,.2)}
+.film-frame img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;display:block}
+.film-frame:hover img{transform:scale(1.08)}
+.film-frame-cap{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(transparent,rgba(10,21,48,.85));color:#fff;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans)}
+
+/* ─── V7 CINEMATIC TESTI ENHANCEMENTS ─── */
+.tcard{position:relative;overflow:hidden}
+.tcard::before{content:'\201C';position:absolute;top:-10px;left:16px;font-size:80px;font-family:Georgia,serif;color:var(--gold);opacity:.15;line-height:1;pointer-events:none}
+.tcard-flag{font-size:18px;margin-bottom:8px}
+.tcard-verified{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:var(--gold);font-weight:700;letter-spacing:.06em;background:rgba(201,150,26,.1);border:1px solid rgba(201,150,26,.25);border-radius:20px;padding:2px 8px;margin-bottom:10px}
+
+/* ─── V7 SAVE BADGE ─── */
+.dcard-save{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#e63946,#c1121f);color:#fff;font-size:10px;font-weight:800;letter-spacing:.05em;padding:4px 9px;border-radius:20px;z-index:3;box-shadow:0 4px 12px rgba(230,57,70,.4)}
+
+/* ─── V7 MOBILE IMPROVEMENTS ─── */
+@media(max-width:768px){
+  .hero h1{font-size:clamp(32px,10vw,56px)!important}
+  .dest-grid{grid-template-columns:1fr 1fr!important;gap:12px!important}
+  .dcard{min-height:200px}
+  .sec-title{font-size:clamp(28px,8vw,44px)!important}
+  .testi-rail{gap:14px}
+  .tcard{min-width:280px!important}
+  .why-grid{grid-template-columns:1fr 1fr!important}
+  .numbers-grid{grid-template-columns:1fr 1fr!important;gap:16px!important}
+  .edu-split{flex-direction:column!important}
+  .edu-img{width:100%!important;height:220px!important}
+  .cta-final-inner{padding:40px 20px!important}
+  .footer-cols{grid-template-columns:1fr 1fr!important;gap:24px!important}
+  .journey-item{padding:12px 20px;font-size:11px}
+  .film-frame{width:220px;height:145px}
+}
+@media(max-width:480px){
+  .dest-grid{grid-template-columns:1fr!important}
+  .hero-stats{gap:20px!important}
+  .hero-stat-num{font-size:28px!important}
+  .why-grid{grid-template-columns:1fr!important}
+  .footer-cols{grid-template-columns:1fr!important}
+  nav ul{gap:10px}
+  .nav-cta{padding:8px 14px!important;font-size:12px!important}
+}
 </style></head>
 <body>
+<div id="ve-progress"></div>
 
 <!-- ═══ NAV ═══ -->
 <nav id="mainNav">
@@ -441,6 +505,33 @@ body.ve-modal-open{overflow:hidden}
   </div>
   <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
 </section>
+
+<!-- ═══ V7 JOURNEY RHYTHM STRIP ═══ -->
+<div class="journey-strip">
+  <div class="journey-track">
+    <a class="journey-item" href="/georgia-packages"><span class="ji-dot"></span>🇬🇪 <em>Georgia</em>&nbsp;· Visa-Free</a>
+    <a class="journey-item" href="/bali-packages"><span class="ji-dot"></span>🇮🇩 <em>Bali</em>&nbsp;· Romantic</a>
+    <a class="journey-item" href="/dubai-abu-dhabi-packages"><span class="ji-dot"></span>🇦🇪 <em>Dubai</em>&nbsp;· Luxury</a>
+    <a class="journey-item" href="/thailand-packages"><span class="ji-dot"></span>🇹🇭 <em>Thailand</em>&nbsp;· Visa-Free</a>
+    <a class="journey-item" href="/vietnam-packages"><span class="ji-dot"></span>🇻🇳 <em>Vietnam</em>&nbsp;· Trending</a>
+    <a class="journey-item" href="/azerbaijan-packages"><span class="ji-dot"></span>🇦🇿 <em>Azerbaijan</em>&nbsp;· Unexplored</a>
+    <a class="journey-item" href="/kazakhstan-packages"><span class="ji-dot"></span>🇰🇿 <em>Kazakhstan</em>&nbsp;· New 2026</a>
+    <a class="journey-item" href="/canada-flights"><span class="ji-dot"></span>🇨🇦 <em>Canada</em>&nbsp;· Flights from ₹55K</a>
+    <a class="journey-item" href="/kashmir-packages"><span class="ji-dot"></span>🏔 <em>Kashmir</em>&nbsp;· Domestic</a>
+    <a class="journey-item" href="/maldives-packages"><span class="ji-dot"></span>🌊 <em>Maldives</em>&nbsp;· Honeymoon</a>
+    <!-- duplicate for seamless loop -->
+    <a class="journey-item" href="/georgia-packages"><span class="ji-dot"></span>🇬🇪 <em>Georgia</em>&nbsp;· Visa-Free</a>
+    <a class="journey-item" href="/bali-packages"><span class="ji-dot"></span>🇮🇩 <em>Bali</em>&nbsp;· Romantic</a>
+    <a class="journey-item" href="/dubai-abu-dhabi-packages"><span class="ji-dot"></span>🇦🇪 <em>Dubai</em>&nbsp;· Luxury</a>
+    <a class="journey-item" href="/thailand-packages"><span class="ji-dot"></span>🇹🇭 <em>Thailand</em>&nbsp;· Visa-Free</a>
+    <a class="journey-item" href="/vietnam-packages"><span class="ji-dot"></span>🇻🇳 <em>Vietnam</em>&nbsp;· Trending</a>
+    <a class="journey-item" href="/azerbaijan-packages"><span class="ji-dot"></span>🇦🇿 <em>Azerbaijan</em>&nbsp;· Unexplored</a>
+    <a class="journey-item" href="/kazakhstan-packages"><span class="ji-dot"></span>🇰🇿 <em>Kazakhstan</em>&nbsp;· New 2026</a>
+    <a class="journey-item" href="/canada-flights"><span class="ji-dot"></span>🇨🇦 <em>Canada</em>&nbsp;· Flights from ₹55K</a>
+    <a class="journey-item" href="/kashmir-packages"><span class="ji-dot"></span>🏔 <em>Kashmir</em>&nbsp;· Domestic</a>
+    <a class="journey-item" href="/maldives-packages"><span class="ji-dot"></span>🌊 <em>Maldives</em>&nbsp;· Honeymoon</a>
+  </div>
+</div>
 
 <!-- ═══ TRIP FINDER QUIZ ═══ -->
 <section class="finder-sec sec-pad" id="finder">
@@ -516,27 +607,27 @@ body.ve-modal-open{overflow:hidden}
     <a class="dcard reveal" href="blog/georgia-tour-package-from-india-2026">
       <img data-src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=75" alt="Georgia tour package from India — Tbilisi Kazbegi" loading="lazy"/>
       <div class="dcard-veil"></div><div class="dcard-badge">Visa-Free</div>
-      <div class="dcard-body"><div class="dcard-country">Caucasus · Europe</div><div class="dcard-name">Georgia</div><div class="dcard-price">6 days from <b>₹45,000</b></div><div class="dcard-cta">Explore →</div></div>
+      <div class="dcard-body"><div class="dcard-country">Caucasus · Europe</div><div class="dcard-name">Georgia</div><div class="dcard-save">SAVE ₹8K</div><div class="dcard-price">6 days from <b>₹45,000</b></div><div class="dcard-cta">Explore →</div></div>
     </a>
     <a class="dcard reveal reveal-d1" href="blog/bali-tour-from-chandigarh">
       <img data-src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=75" alt="Bali tour package from Chandigarh" loading="lazy"/>
       <div class="dcard-veil"></div><div class="dcard-badge">Bestseller</div>
-      <div class="dcard-body"><div class="dcard-country">Indonesia</div><div class="dcard-name">Bali</div><div class="dcard-price">6 days from <b>₹38,000</b></div><div class="dcard-cta">Explore →</div></div>
+      <div class="dcard-body"><div class="dcard-country">Indonesia</div><div class="dcard-name">Bali</div><div class="dcard-save">SAVE ₹5K</div><div class="dcard-price">6 days from <b>₹38,000</b></div><div class="dcard-cta">Explore →</div></div>
     </a>
     <a class="dcard reveal reveal-d2" href="blog/dubai-tour-from-chandigarh">
       <img data-src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=75" alt="Dubai tour package from Chandigarh" loading="lazy"/>
       <div class="dcard-veil"></div><div class="dcard-badge">Quick Getaway</div>
-      <div class="dcard-body"><div class="dcard-country">UAE</div><div class="dcard-name">Dubai</div><div class="dcard-price">5 days from <b>₹32,000</b></div><div class="dcard-cta">Explore →</div></div>
+      <div class="dcard-body"><div class="dcard-country">UAE</div><div class="dcard-name">Dubai</div><div class="dcard-save">SAVE ₹6K</div><div class="dcard-price">5 days from <b>₹32,000</b></div><div class="dcard-cta">Explore →</div></div>
     </a>
     <a class="dcard reveal reveal-d3" href="blog/thailand-tour-from-chandigarh">
       <img data-src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=75" alt="Thailand tour from Chandigarh" loading="lazy"/>
       <div class="dcard-veil"></div><div class="dcard-badge">Visa-Free</div>
-      <div class="dcard-body"><div class="dcard-country">Southeast Asia</div><div class="dcard-name">Thailand</div><div class="dcard-price">6 days from <b>₹35,000</b></div><div class="dcard-cta">Explore →</div></div>
+      <div class="dcard-body"><div class="dcard-country">Southeast Asia</div><div class="dcard-name">Thailand</div><div class="dcard-save">SAVE ₹7K</div><div class="dcard-price">6 days from <b>₹35,000</b></div><div class="dcard-cta">Explore →</div></div>
     </a>
     <a class="dcard reveal" href="blog/vietnam-tour-package-from-india-2026">
       <img data-src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=75" alt="Vietnam tour package from India" loading="lazy"/>
       <div class="dcard-veil"></div><div class="dcard-badge">Trending</div>
-      <div class="dcard-body"><div class="dcard-country">Southeast Asia</div><div class="dcard-name">Vietnam</div><div class="dcard-price">7 days from <b>₹42,000</b></div><div class="dcard-cta">Explore →</div></div>
+      <div class="dcard-body"><div class="dcard-country">Southeast Asia</div><div class="dcard-name">Vietnam</div><div class="dcard-save">SAVE ₹9K</div><div class="dcard-price">7 days from <b>₹42,000</b></div><div class="dcard-cta">Explore →</div></div>
     </a>
     <a class="dcard reveal reveal-d1" href="blog/azerbaijan-tour-package-from-india">
       <img data-src="https://images.unsplash.com/photo-1583416750470-bcdca58e4c8c?w=800&q=75" alt="Azerbaijan Baku tour package from India" loading="lazy"/>
@@ -555,6 +646,30 @@ body.ve-modal-open{overflow:hidden}
     </a>
   </div>
 </section>
+
+<!-- ═══ V7 CINEMATIC FILMSTRIP ═══ -->
+<div class="filmstrip">
+  <div class="filmstrip-label">Moments from our journeys</div>
+  <div class="film-track">
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=70" alt="Georgia Kazbegi mountains" loading="lazy"/><div class="film-frame-cap">Georgia · Kazbegi</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=70" alt="Bali rice terraces" loading="lazy"/><div class="film-frame-cap">Bali · Ubud</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=70" alt="Dubai Burj Khalifa skyline" loading="lazy"/><div class="film-frame-cap">Dubai · Skyline</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=70" alt="Thailand Phi Phi islands" loading="lazy"/><div class="film-frame-cap">Thailand · Phi Phi</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=70" alt="Vietnam Ha Long Bay" loading="lazy"/><div class="film-frame-cap">Vietnam · Ha Long</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70" alt="Azerbaijan Baku Old City" loading="lazy"/><div class="film-frame-cap">Azerbaijan · Baku</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=70" alt="Kashmir Dal Lake" loading="lazy"/><div class="film-frame-cap">Kashmir · Dal Lake</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=70" alt="Maldives overwater bungalow" loading="lazy"/><div class="film-frame-cap">Maldives · Luxury</div></div>
+    <!-- duplicate for loop -->
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=70" alt="Georgia" loading="lazy"/><div class="film-frame-cap">Georgia · Kazbegi</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=70" alt="Bali" loading="lazy"/><div class="film-frame-cap">Bali · Ubud</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=70" alt="Dubai" loading="lazy"/><div class="film-frame-cap">Dubai · Skyline</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=70" alt="Thailand" loading="lazy"/><div class="film-frame-cap">Thailand · Phi Phi</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=70" alt="Vietnam" loading="lazy"/><div class="film-frame-cap">Vietnam · Ha Long</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70" alt="Azerbaijan" loading="lazy"/><div class="film-frame-cap">Azerbaijan · Baku</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=70" alt="Kashmir" loading="lazy"/><div class="film-frame-cap">Kashmir · Dal Lake</div></div>
+    <div class="film-frame"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=70" alt="Maldives" loading="lazy"/><div class="film-frame-cap">Maldives · Luxury</div></div>
+  </div>
+</div>
 
 <!-- ═══ WHY VOYAGE-ED ═══ -->
 <section class="why-sec sec-pad">
@@ -602,14 +717,52 @@ body.ve-modal-open{overflow:hidden}
 
 <!-- ═══ TESTIMONIALS ═══ -->
 <section class="testi-sec sec-pad">
-  <div class="sec-label">Word of mouth</div>
+  <div class="sec-label">Real experiences</div>
   <h2 class="sec-title reveal">Travellers <em>Talk</em></h2>
+  <p class="sec-sub reveal reveal-d1">Over 500 happy travellers — from student flyers to honeymoon couples to GDS-certified graduates.</p>
   <div class="testi-rail">
-    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-text">"Booked Canada tickets for my son through Voyage-Ed. Vishal ji personally handled extra baggage and got us a fare ₹9,000 cheaper than MakeMyTrip. Genuine people."</div><div class="tcard-who"><div class="tcard-av">RS</div><div><div class="tcard-name">Rajinder Singh</div><div class="tcard-trip">Amritsar → Toronto · Student Fare</div></div></div></div>
-    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-text">"Our Georgia honeymoon was flawless — visa-free entry, beautiful hotels, and the Kazbegi day trip was magical. They planned everything down to restaurant suggestions."</div><div class="tcard-who"><div class="tcard-av">PK</div><div><div class="tcard-name">Priya & Karan</div><div class="tcard-trip">Georgia Honeymoon · 7 Days</div></div></div></div>
-    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-text">"Completed the Amadeus GDS course and got placed within 6 weeks. The training is on live systems — that made all the difference in interviews."</div><div class="tcard-who"><div class="tcard-av">SM</div><div><div class="tcard-name">Simran Mehta</div><div class="tcard-trip">GDS Certification · Placed at OTA</div></div></div></div>
-    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-text">"Family trip to Dubai with 2 kids — they arranged everything including a stroller-friendly itinerary. WhatsApp support replied within minutes even at 11pm."</div><div class="tcard-who"><div class="tcard-av">AG</div><div><div class="tcard-name">Amit Gupta</div><div class="tcard-trip">Dubai Family Package · 5 Days</div></div></div></div>
-    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-text">"Thailand group trip for 12 friends — they negotiated group rates we couldn't find anywhere online. Phi Phi island tour was the highlight!"</div><div class="tcard-who"><div class="tcard-av">HS</div><div><div class="tcard-name">Harpreet Sandhu</div><div class="tcard-trip">Thailand Group · 12 pax</div></div></div></div>
+    <div class="tcard">
+      <div class="tcard-flag">🇨🇦</div>
+      <div class="tcard-verified">✓ Verified Booking</div>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-text">"Booked Canada tickets for my son through Voyage-Ed. Vishal ji personally handled extra baggage and got us a fare ₹9,000 cheaper than MakeMyTrip. Genuine people."</div>
+      <div class="tcard-who"><div class="tcard-av">RS</div><div><div class="tcard-name">Rajinder Singh</div><div class="tcard-trip">Amritsar → Toronto · Student Fare</div></div></div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-flag">🇬🇪</div>
+      <div class="tcard-verified">✓ Honeymoon Package</div>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-text">"Our Georgia honeymoon was flawless — visa-free entry, beautiful hotels, and the Kazbegi day trip was magical. They planned everything down to restaurant suggestions."</div>
+      <div class="tcard-who"><div class="tcard-av">PK</div><div><div class="tcard-name">Priya & Karan</div><div class="tcard-trip">Georgia Honeymoon · 7 Days</div></div></div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-flag">🎓</div>
+      <div class="tcard-verified">✓ GDS Graduate</div>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-text">"Completed the Amadeus GDS course and got placed within 6 weeks. The training is on live systems — that made all the difference in interviews."</div>
+      <div class="tcard-who"><div class="tcard-av">SM</div><div><div class="tcard-name">Simran Mehta</div><div class="tcard-trip">GDS Certification · Placed at OTA</div></div></div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-flag">🇦🇪</div>
+      <div class="tcard-verified">✓ Family Package</div>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-text">"Family trip to Dubai with 2 kids — they arranged everything including a stroller-friendly itinerary. WhatsApp support replied within minutes even at 11pm."</div>
+      <div class="tcard-who"><div class="tcard-av">AG</div><div><div class="tcard-name">Amit Gupta</div><div class="tcard-trip">Dubai Family Package · 5 Days</div></div></div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-flag">🇹🇭</div>
+      <div class="tcard-verified">✓ Group of 12</div>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-text">"Thailand group trip for 12 friends — they negotiated group rates we couldn't find anywhere online. Phi Phi island tour was the highlight of our lives!"</div>
+      <div class="tcard-who"><div class="tcard-av">HS</div><div><div class="tcard-name">Harpreet Sandhu</div><div class="tcard-trip">Thailand Group · 12 pax</div></div></div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-flag">🇻🇳</div>
+      <div class="tcard-verified">✓ Couple Trip</div>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-text">"Vietnam was on our bucket list for years. Voyage-Ed made it happen in 7 days — Ha Long Bay cruise, Hoi An streets, and the food! Already planning Bali next."</div>
+      <div class="tcard-who"><div class="tcard-av">NR</div><div><div class="tcard-name">Neha & Rohan</div><div class="tcard-trip">Vietnam 7-Day Couple Package</div></div></div>
+    </div>
   </div>
 </section>
 
@@ -727,7 +880,7 @@ body.ve-modal-open{overflow:hidden}
   </div>
   </div>
 <!-- WhatsApp Float (left) -->
-<a href="https://wa.me/917009659048?text=Hi%20Voyage-Ed!%20I%20want%20to%20plan%20a%20trip" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="wa-float" style="position:fixed;bottom:24px;left:18px;z-index:9998;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,.45);transition:transform .3s cubic-bezier(.34,1.56,.64,1);text-decoration:none" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+<a href="https://wa.me/917009659048?text=Hi%20Voyage-Ed!%20I%20want%20to%20plan%20a%20trip" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="wa-float" style="position:fixed;bottom:92px;right:20px;z-index:9998;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,.45);transition:transform .3s cubic-bezier(.34,1.56,.64,1);text-decoration:none" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
 <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -1328,7 +1481,17 @@ window.veSend=async function(){
 veMsg('ai','Namaste! 🙏 I\'m **Voyage-Ed AI Agent** — your AI travel assistant.\n\n*Fair warning: I\'m powered by AI with big dreams but small experience. Think of me as your enthusiastic intern — helpful, but for bookings & guaranteed pricing, our senior experts are just a call away!* 😄\n\n💡 **My prices are estimates only** — for confirmed rates, speak to our expert.\n\nNow, where would you like to go? Tell me your destination! 🌍');
 })();
 </script>
-<script src="/assets/enhance.js?v=6" defer></script>
-<script src="/assets/image-system.js?v=6" defer></script>
+<script src="/assets/enhance.js?v=7" defer></script>
+<script src="/assets/image-system.js?v=7" defer></script>
+<script>
+// V7 Scroll Progress
+(function(){
+  var bar=document.getElementById('ve-progress');
+  window.addEventListener('scroll',function(){
+    var pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+    bar.style.width=Math.min(pct,100)+'%';
+  },{passive:true});
+})();
+</script>
 </body>
 </html>
