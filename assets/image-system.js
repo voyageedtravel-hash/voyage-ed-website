@@ -2085,15 +2085,28 @@
   }
 
   function fixPackageCards(destKey, images) {
-    var pool = getThemePool();
+    /* ═══ v7 FIX ═══
+       NEVER override curated static images from the HTML.
+       Theme pools REMOVED from this path — they caused cross-destination
+       contamination (Taj Mahal showing on Japan pages, Eiffel on Korea, etc).
+       Priority: 1) static HTML image  2) destination registry cards
+                 3) destination hero   4) universal fallback. */
     var cardImgs = document.querySelectorAll('.pkg-card-img');
     cardImgs.forEach(function(el, i) {
+      el.setAttribute('aria-label', (destKey || 'tour') + ' package');
+      var existing = el.style.backgroundImage;
+      if (existing && existing !== 'none' && existing.indexOf('url') > -1) {
+        /* Static HTML already has the correct destination image — keep it. */
+        el.classList.add('ve-img-loaded');
+        return;
+      }
       var chain = [];
-      if (pool) { for (var k = 0; k < pool.length; k++) chain.push(pool[(i + k) % pool.length]); }
+      if (images && images.cards) {
+        for (var k = 0; k < images.cards.length; k++) chain.push(images.cards[(i + k) % images.cards.length]);
+      }
       if (images && images.hero) chain.push(images.hero.replace('w=1600', 'w=900'));
       chain.push(VE_FALLBACK);
       setBgChain(el, chain);
-      el.setAttribute('aria-label', (destKey || 'tour') + ' package');
       var img = el.querySelector('img');
       if (img) { img.style.display = 'none'; }
     });
@@ -2291,8 +2304,14 @@
       var url = m[1].replace(/&amp;/g, '&');
       var probe = new Image();
       probe.onerror = function() {
-        var pool = getThemePool();
-        setBgChain(el, pool ? pool.slice() : [VE_FALLBACK]);
+        /* v7: heal with DESTINATION-CORRECT images only — never generic pools */
+        var destKey = getDestKey();
+        var imgs = destKey && VE_IMAGES[destKey] ? VE_IMAGES[destKey] : null;
+        var chain = [];
+        if (imgs && imgs.cards) chain = chain.concat(imgs.cards);
+        if (imgs && imgs.hero) chain.push(imgs.hero.replace('w=1600', 'w=900'));
+        chain.push(VE_FALLBACK);
+        setBgChain(el, chain);
       };
       probe.src = url;
     });
