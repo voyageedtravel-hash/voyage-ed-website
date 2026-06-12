@@ -1959,6 +1959,46 @@
     return destKey && VE_IMAGES[destKey] ? VE_IMAGES[destKey] : null;
   }
 
+  
+  /* ═══ v6 THEME POOLS — multiple candidates per destination, probed in order ═══ */
+  var VE_POOLS = {
+    beach:    ['https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80','https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?w=900&q=80','https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&q=80','https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=900&q=80'],
+    tropical: ['https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&q=80','https://images.unsplash.com/photo-1540541338287-41700207dee6?w=900&q=80','https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=900&q=80','https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=900&q=80'],
+    mountain: ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80','https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80','https://images.unsplash.com/photo-1589308454676-21178b78d2b6?w=900&q=80','https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=900&q=80','https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=900&q=80'],
+    city:     ['https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=900&q=80','https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=80','https://images.unsplash.com/photo-1547448415-e9f5b28e570d?w=900&q=80','https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=900&q=80'],
+    heritage: ['https://images.unsplash.com/photo-1564507592333-c60657eea523?w=900&q=80','https://images.unsplash.com/photo-1548013146-72479768bada?w=900&q=80','https://images.unsplash.com/photo-1583416750470-bcdca58e4c8c?w=900&q=80','https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900&q=80'],
+    europe:   ['https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900&q=80','https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=900&q=80','https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=900&q=80','https://images.unsplash.com/photo-1520986606214-8b456906c813?w=900&q=80'],
+    safari:   ['https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&q=80','https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&q=80','https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=900&q=80'],
+    island:   ['https://images.unsplash.com/photo-1583265627959-fb7042f5133b?w=900&q=80','https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900&q=80','https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&q=80','https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=900&q=80'],
+    desert:   ['https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80','https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&q=80','https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80']
+  };
+  var VE_THEME_MAP = {
+    'georgia':'mountain','armenia':'mountain','azerbaijan':'city','kazakhstan':'mountain','almaty':'mountain','baku':'city',
+    'sri-lanka':'tropical','srilanka':'tropical','bali':'tropical','thailand':'tropical','vietnam':'tropical','phuket':'beach','maldives':'island','seychelles':'island','mauritius':'beach','andaman':'beach','goa':'beach',
+    'dubai':'city','singapore':'city','malaysia':'city','hong-kong':'city','japan':'heritage','korea':'heritage','china':'heritage','turkey':'heritage','egypt':'desert','jordan':'desert','morocco':'desert',
+    'europe':'europe','france':'europe','paris':'europe','italy':'europe','switzerland':'mountain','austria':'europe','spain':'europe','greece':'europe','uk':'europe','london':'europe',
+    'kashmir':'mountain','ladakh':'mountain','himachal':'mountain','manali':'mountain','shimla':'mountain','uttarakhand':'mountain','sikkim':'mountain','darjeeling':'mountain','nepal':'mountain','bhutan':'mountain',
+    'kerala':'tropical','rajasthan':'heritage','agra':'heritage','varanasi':'heritage',
+    'kenya':'safari','tanzania':'safari','south-africa':'safari','victoria-falls':'safari','australia':'beach','new-zealand':'mountain','fiji':'island','canada':'mountain','usa':'city','america':'city'
+  };
+  function getThemePool() {
+    var p = location.pathname.toLowerCase();
+    var keys = Object.keys(VE_THEME_MAP);
+    for (var i = 0; i < keys.length; i++) {
+      if (p.indexOf(keys[i]) > -1) return VE_POOLS[VE_THEME_MAP[keys[i]]];
+    }
+    return null;
+  }
+  /* Probe a chain of URLs; apply the first that loads */
+  function setBgChain(el, urls, idx) {
+    idx = idx || 0;
+    if (idx >= urls.length) { el.style.backgroundImage = "url('" + VE_FALLBACK + "')"; return; }
+    var probe = new Image();
+    probe.onload = function() { el.style.backgroundImage = "url('" + urls[idx] + "')"; el.classList.add('ve-img-loaded'); };
+    probe.onerror = function() { setBgChain(el, urls, idx + 1); };
+    probe.src = urls[idx];
+  }
+
   function setBackgroundImage(el, url) {
     var probe = new Image();
     probe.onload = function() { el.style.backgroundImage = "url('" + url + "')"; el.classList.add('ve-img-loaded'); };
@@ -2045,12 +2085,15 @@
   }
 
   function fixPackageCards(destKey, images) {
-    if (!images || !images.hero) return;
+    var pool = getThemePool();
     var cardImgs = document.querySelectorAll('.pkg-card-img');
     cardImgs.forEach(function(el, i) {
-      /* Use the destination's own hero image — always destination-correct */
-      setBackgroundImage(el, images.hero.replace('w=1600', 'w=900'));
-      el.setAttribute('aria-label', destKey + ' tour package');
+      var chain = [];
+      if (pool) { for (var k = 0; k < pool.length; k++) chain.push(pool[(i + k) % pool.length]); }
+      if (images && images.hero) chain.push(images.hero.replace('w=1600', 'w=900'));
+      chain.push(VE_FALLBACK);
+      setBgChain(el, chain);
+      el.setAttribute('aria-label', (destKey || 'tour') + ' package');
       var img = el.querySelector('img');
       if (img) { img.style.display = 'none'; }
     });
@@ -2248,7 +2291,8 @@
       var url = m[1].replace(/&amp;/g, '&');
       var probe = new Image();
       probe.onerror = function() {
-        el.style.backgroundImage = "url('" + VE_FALLBACK + "')";
+        var pool = getThemePool();
+        setBgChain(el, pool ? pool.slice() : [VE_FALLBACK]);
       };
       probe.src = url;
     });

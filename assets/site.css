@@ -1012,9 +1012,12 @@ nav.dest-breadcrumb,.dest-breadcrumb{background:none!important;background-image:
 
 /* 3. MOBILE NAV MENU — template pages fullscreen menu */
 @media(max-width:980px){
-  nav:not(.dest-breadcrumb) ul,nav:not(.dest-breadcrumb) .nav-links{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;background:rgba(10,21,48,.98)!important;backdrop-filter:blur(20px);flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:26px!important;z-index:1001!important;margin:0!important;padding:60px 20px!important}
-  nav:not(.dest-breadcrumb) ul li{width:auto!important}
-  nav:not(.dest-breadcrumb) ul a{font-size:17px!important;color:#fff!important}
+  /* Menu hidden by default on mobile; fullscreen ONLY when opened */
+  nav:not(.dest-breadcrumb)>ul{display:none!important}
+  nav:not(.dest-breadcrumb)>ul.open,nav:not(.dest-breadcrumb)>ul.active{display:flex!important;position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;background:rgba(10,21,48,.98)!important;backdrop-filter:blur(20px);flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:26px!important;z-index:1001!important;margin:0!important;padding:60px 20px!important;overflow-y:auto}
+  nav:not(.dest-breadcrumb)>ul.open li,nav:not(.dest-breadcrumb)>ul.active li{width:auto!important}
+  nav:not(.dest-breadcrumb)>ul.open a,nav:not(.dest-breadcrumb)>ul.active a{font-size:17px!important;color:#fff!important}
+  nav .hamburger{display:flex!important}
 }
 
 /* 4. DEST HERO — cinematic guarantee */
@@ -1036,3 +1039,28 @@ nav.dest-breadcrumb,.dest-breadcrumb{background:none!important;background-image:
 .ve-exp-fact .fi{font-size:17px;flex-shrink:0}
 .ve-exp-love{margin-top:13px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(14px,2vw,17px);color:#f0c842;text-align:center}
 @media(max-width:600px){.ve-exp{margin-top:-30px}.ve-exp-card{padding:16px 14px}.ve-exp-facts{grid-template-columns:1fr}}
+
+/* ════════ v6 BUYER BOOST ════════ */
+.ve-rating{display:flex;align-items:center;gap:7px;margin:.35rem 0 .55rem;font-size:.78rem;color:#5a6376}
+.ve-rating .ve-stars{color:#f5a623;font-size:.85rem;letter-spacing:1px}
+.ve-rating b{color:#0d1b3e}
+.ve-emi{font-size:.72rem;color:#1a7f4e;font-weight:700;margin-top:.25rem}
+.ve-urgency{display:inline-flex;align-items:center;gap:5px;background:linear-gradient(90deg,#fff3e6,#ffe9d6);border:1px solid #ffd0a1;color:#b35309;border-radius:50px;padding:4px 12px;font-size:.68rem;font-weight:800;margin:.4rem 0;animation:vePulseSoft 2.4s ease infinite}
+@keyframes vePulseSoft{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.ve-freecancel{font-size:.7rem;color:#1a7f4e;margin-top:.3rem;font-weight:600}
+.ve-trust{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:1100px;margin:26px auto 6px;padding:0 14px}
+.ve-trust span{background:#fff;border:1px solid rgba(201,150,26,.3);border-radius:50px;padding:9px 18px;font-size:12px;font-weight:700;color:#0d1b3e;box-shadow:0 4px 16px rgba(13,27,62,.07);display:inline-flex;align-items:center;gap:7px}
+/* Sticky mobile CTA bar */
+#ve-ctabar{display:none}
+@media(max-width:768px){
+  #ve-ctabar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:9995;background:#fff;border-top:1px solid rgba(201,150,26,.35);box-shadow:0 -8px 28px rgba(10,21,48,.16)}
+  #ve-ctabar a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 4px;font-size:12.5px;font-weight:800;text-decoration:none;letter-spacing:.03em}
+  #ve-ctabar .cta-call{color:#0d1b3e}
+  #ve-ctabar .cta-wa{color:#1a7f4e;border-left:1px solid #eee;border-right:1px solid #eee}
+  #ve-ctabar .cta-quote{background:linear-gradient(135deg,#c9961a,#f0c842);color:#0d1b3e}
+  body.ve-has-bar{padding-bottom:52px}
+  body.ve-has-bar #ve-trigger{bottom:70px!important}
+  body.ve-has-bar .wa-float-clean,body.ve-has-bar .wa-float{bottom:70px!important}
+  body.ve-has-bar #ve-toast{bottom:130px}
+  body.ve-has-bar #ve-overlay{bottom:124px!important}
+}
