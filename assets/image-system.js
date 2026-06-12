@@ -2045,13 +2045,14 @@
   }
 
   function fixPackageCards(destKey, images) {
-    if (!images || !images.cards) return;
+    if (!images || !images.hero) return;
     var cardImgs = document.querySelectorAll('.pkg-card-img');
     cardImgs.forEach(function(el, i) {
-      setBackgroundImage(el, images.cards[i % images.cards.length]);
-      if (images.cardAlts) {
-        el.setAttribute('aria-label', images.cardAlts[i % images.cardAlts.length] || destKey + ' tour package');
-      }
+      /* Use the destination's own hero image — always destination-correct */
+      setBackgroundImage(el, images.hero.replace('w=1600', 'w=900'));
+      el.setAttribute('aria-label', destKey + ' tour package');
+      var img = el.querySelector('img');
+      if (img) { img.style.display = 'none'; }
     });
   }
 
@@ -2236,5 +2237,23 @@
   setTimeout(killForeignWidgets, 5000);
   setTimeout(imgSelfHeal, 600);
   setTimeout(imgSelfHeal, 3000);
+
+  /* v5: verify every inline background-image; heal dead ones */
+  function bgSelfHeal() {
+    document.querySelectorAll('[style*="background-image"]').forEach(function(el) {
+      if (el.dataset.veBgHealed) return;
+      el.dataset.veBgHealed = '1';
+      var m = (el.getAttribute('style') || '').match(/background-image\s*:\s*url\(['"]?([^'")]+)['"]?\)/i);
+      if (!m || !m[1] || m[1].indexOf('http') !== 0) return;
+      var url = m[1].replace(/&amp;/g, '&');
+      var probe = new Image();
+      probe.onerror = function() {
+        el.style.backgroundImage = "url('" + VE_FALLBACK + "')";
+      };
+      probe.src = url;
+    });
+  }
+  setTimeout(bgSelfHeal, 500);
+  setTimeout(bgSelfHeal, 3000);
 
 })();
