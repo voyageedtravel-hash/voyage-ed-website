@@ -1069,3 +1069,50 @@ nav.dest-breadcrumb,.dest-breadcrumb{background:none!important;background-image:
 .pkg-card-price-label{white-space:nowrap}
 .pkg-card-price-amt{white-space:nowrap}
 .pkg-card-price-per{white-space:nowrap}
+
+/* ═══════════ v7.1 BULLETPROOF PRICE BOX — GRID LAYOUT ═══════════
+   Grid with explicit rows/columns makes text overlap PHYSICALLY IMPOSSIBLE,
+   regardless of what enhance.js injects or any other CSS conflicts. */
+.pkg-card-price{
+  display:grid!important;
+  grid-template-columns:auto 1fr!important;
+  align-items:center!important;
+  column-gap:.6rem!important;
+  row-gap:.4rem!important;
+  background:linear-gradient(135deg,#fdf6e9,#faf0dc)!important;
+  border:1px solid #e6c878!important;
+  border-radius:10px!important;
+  padding:.9rem 1.1rem!important;
+  margin-bottom:1rem!important;
+}
+.pkg-card-price-label{
+  grid-column:1!important;grid-row:1!important;
+  font-size:.7rem!important;color:#8b93a7!important;font-weight:600!important;
+  text-transform:uppercase!important;letter-spacing:.07em!important;
+  white-space:nowrap!important;margin:0!important;line-height:1.3!important;
+}
+.pkg-card-price-amt{
+  grid-column:2!important;grid-row:1!important;justify-self:end!important;
+  font-family:'Playfair Display',serif!important;
+  font-size:1.5rem!important;font-weight:800!important;color:#0d1b3e!important;
+  white-space:nowrap!important;line-height:1.1!important;margin:0!important;
+}
+.pkg-card-price-per{
+  grid-column:2!important;grid-row:2!important;justify-self:end!important;
+  font-size:.66rem!important;color:#8b93a7!important;font-weight:500!important;
+  margin:0!important;line-height:1!important;
+}
+.pkg-card-price .ve-emi{
+  grid-column:1 / -1!important;width:100%!important;
+  font-size:.74rem!important;font-weight:700!important;color:#1a7f4e!important;
+  line-height:1.5!important;border-top:1px dashed #e6c878!important;
+  padding-top:.55rem!important;margin:.2rem 0 0!important;
+}
+.pkg-card-price .ve-freecancel{
+  grid-column:1 / -1!important;width:100%!important;
+  font-size:.7rem!important;font-weight:600!important;color:#1a7f4e!important;
+  line-height:1.5!important;margin:0!important;
+}
+/* Premium card hover */
+.pkg-card{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s!important}
+.pkg-card:hover{transform:translateY(-6px)!important;box-shadow:0 24px 56px -16px rgba(13,27,62,.28)!important}
