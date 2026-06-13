@@ -1116,3 +1116,98 @@ nav.dest-breadcrumb,.dest-breadcrumb{background:none!important;background-image:
 /* Premium card hover */
 .pkg-card{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s!important}
 .pkg-card:hover{transform:translateY(-6px)!important;box-shadow:0 24px 56px -16px rgba(13,27,62,.28)!important}
+
+/* ════════════════════════════════════════════════════════════════
+   ✨ VOYAGE-ED v7.2 — PREMIUM POLISH LAYER (single-file, site-wide)
+   Pure CSS. No new JS. Uses existing brand tokens. Low regression risk.
+   Goal: cinematic, luxe, Gen-Z feel without touching page structure.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── 1. SMOOTH SCROLL + TEXT RENDERING ── */
+html{scroll-behavior:smooth}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+/* ── 2. PREMIUM SELECTION + SCROLLBAR ── */
+::selection{background:var(--gold);color:var(--navy)}
+@media(min-width:900px){
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:var(--cream)}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--gold-l));border-radius:10px;border:2px solid var(--cream)}
+}
+
+/* ── 3. CARD ENTRANCE — staggered cinematic reveal ── */
+@media(prefers-reduced-motion:no-preference){
+  .pkg-card,.dcard,.ccard{
+    opacity:0;transform:translateY(24px);
+    animation:veRise .7s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .pkg-grid .pkg-card:nth-child(1),.dest-grid .dcard:nth-child(1){animation-delay:.05s}
+  .pkg-grid .pkg-card:nth-child(2),.dest-grid .dcard:nth-child(2){animation-delay:.13s}
+  .pkg-grid .pkg-card:nth-child(3),.dest-grid .dcard:nth-child(3){animation-delay:.21s}
+  .pkg-grid .pkg-card:nth-child(4),.dest-grid .dcard:nth-child(4){animation-delay:.29s}
+  .pkg-grid .pkg-card:nth-child(n+5){animation-delay:.35s}
+  @keyframes veRise{to{opacity:1;transform:translateY(0)}}
+}
+
+/* ── 4. IMAGE ZOOM ON HOVER (premium kinetics) ── */
+.pkg-card a{overflow:hidden;display:block}
+.pkg-card-img{transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.pkg-card:hover .pkg-card-img{transform:scale(1.06)}
+
+/* ── 5. SUBTLE GOLD ACCENT on price (safe: solid color guaranteed) ──
+   Price ALWAYS visible in navy; gradient is progressive-enhancement only
+   via @supports so a clip failure can never hide the price. */
+.pkg-card-price-amt{color:var(--navy)!important;-webkit-text-fill-color:var(--navy)}
+@supports((-webkit-background-clip:text) or (background-clip:text)){
+  @media(prefers-reduced-motion:no-preference) and (min-width:900px){
+    .pkg-card-price-amt{
+      background:linear-gradient(110deg,var(--navy) 0%,var(--navy) 42%,var(--gold) 50%,var(--navy) 58%,var(--navy) 100%);
+      background-size:220% 100%;
+      -webkit-background-clip:text;background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation:veShimmer 6s linear infinite;
+    }
+  }
+}
+@keyframes veShimmer{0%{background-position:120% 0}100%{background-position:-120% 0}}
+
+/* ── 6. BADGE GLOW (tier badges feel premium) ── */
+.pkg-card-badge{
+  backdrop-filter:blur(6px);
+  box-shadow:0 4px 16px rgba(13,27,62,.25);
+  letter-spacing:.08em;font-weight:800;
+}
+
+/* ── 7. CTA BUTTON — magnetic gold sweep ── */
+.pkg-card-cta,.btn-hero,.cta-quote{position:relative;overflow:hidden;z-index:1}
+.pkg-card-cta::after,.btn-hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:translateX(-120%);transition:transform .6s ease;
+}
+.pkg-card-cta:hover::after,.btn-hero:hover::after{transform:translateX(120%)}
+
+/* ── 8. SECTION TITLE — refined gold underline accent ── */
+.sec-title em,.pkg-title em{position:relative;color:var(--gold);font-style:italic}
+
+/* ── 9. TRUST STRIP — premium glass ── */
+.ve-trust{
+  background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+  border:1px solid var(--gray-l);border-radius:14px;
+  padding:14px 18px;box-shadow:0 8px 30px -12px rgba(13,27,62,.18);
+}
+.ve-trust span{font-weight:600;color:var(--navy)}
+
+/* ── 10. FOCUS-VISIBLE accessibility (world-class detail) ── */
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold-l);outline-offset:3px;border-radius:4px}
+
+/* ── 11. LAZY IMG FADE ── */
+img{transition:opacity .4s ease}
+img[loading="lazy"]:not(.ve-img-loaded){opacity:.0}
+img.ve-img-loaded,img[loading="lazy"].loaded{opacity:1}
+
+/* ── 12. MOBILE TAP TARGETS + polish ── */
+@media(max-width:768px){
+  .pkg-card-cta,.cta-call,.cta-wa,.cta-quote{min-height:48px}
+  .pkg-card-price-amt{font-size:1.35rem!important}
+}
