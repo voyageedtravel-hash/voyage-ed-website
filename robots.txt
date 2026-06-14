@@ -1,3 +1,10 @@
+# ═══════════════════════════════════════════════════════════
+# Voyage-Ed Travels — robots.txt
+# GEO-optimized: explicitly welcomes AI answer engines
+# (ChatGPT, Gemini, Claude, Perplexity, etc.)
+# ═══════════════════════════════════════════════════════════
+
+# ── Traditional search engines ──
 User-agent: *
 Allow: /
 Disallow: /package.html
@@ -10,4 +17,58 @@ User-agent: Bingbot
 Allow: /
 Disallow: /package.html
 
+# ── AI / Generative Engine crawlers (GEO) ──
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google AI (Gemini / AI Overviews training)
+User-agent: Google-Extended
+Allow: /
+User-agent: GoogleOther
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: BingPreview
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (used by many LLMs for training)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+User-agent: FacebookBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# ── Sitemaps ──
 Sitemap: https://voyage-ed.com/sitemap.xml
