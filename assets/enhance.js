@@ -1,4 +1,4 @@
-/* Voyage-Ed global enhancements v4 */
+/* Voyage-Ed global enhancements v5 — +exit-intent */
 (function(){
   'use strict';
 
@@ -298,6 +298,112 @@
     },{passive:true});
   }
 
+
+  /* ═══ EXIT-INTENT POPUP (catch leaving visitors → capture lead) ═══ */
+  function initExitIntent(){
+    var KEY = 'veExitShown';
+    try { if(sessionStorage.getItem(KEY)) return; } catch(e){ return; }
+    var shown = false;
+    var armed = false;
+    // Arm only after 12s so it doesn't annoy instant bouncers
+    setTimeout(function(){ armed = true; }, 12000);
+
+    function buildPopup(){
+      var overlay = document.createElement('div');
+      overlay.id = 've-exit';
+      overlay.innerHTML =
+        '<div class="ve-exit-card">' +
+          '<button class="ve-exit-x" aria-label="Close">&times;</button>' +
+          '<div class="ve-exit-badge">WAIT — DON\'T MISS THIS</div>' +
+          '<h2>Get a FREE Trip Quote in 1 Hour ✈️</h2>' +
+          '<p>Leave your number and our travel expert will send you the best package price — no obligation. We\'ve helped 10,000+ travellers from North India.</p>' +
+          '<input id="ve-exit-name" type="text" placeholder="Your name" />' +
+          '<input id="ve-exit-phone" type="tel" placeholder="Phone / WhatsApp number" />' +
+          '<button id="ve-exit-btn" type="button">Get My Free Quote →</button>' +
+          '<div id="ve-exit-msg"></div>' +
+          '<div class="ve-exit-or">or <a href="https://wa.me/917009659048?text=Hi%20Voyage-Ed!%20I%20want%20a%20trip%20quote" target="_blank" rel="noopener">message us on WhatsApp</a></div>' +
+        '</div>';
+      document.body.appendChild(overlay);
+
+      overlay.querySelector('.ve-exit-x').onclick = closePopup;
+      overlay.onclick = function(e){ if(e.target===overlay) closePopup(); };
+      document.getElementById('ve-exit-btn').onclick = submitExit;
+    }
+
+    function closePopup(){
+      var o = document.getElementById('ve-exit');
+      if(o){ o.style.opacity='0'; setTimeout(function(){ o.remove(); }, 250); }
+    }
+
+    function submitExit(){
+      var name=(document.getElementById('ve-exit-name')||{}).value||'';
+      var phone=(document.getElementById('ve-exit-phone')||{}).value||'';
+      var msg=document.getElementById('ve-exit-msg'), btn=document.getElementById('ve-exit-btn');
+      if(!name.trim()||!phone.trim()){ msg.style.color='#ffd2d2'; msg.textContent='Please enter your name and phone.'; return; }
+      btn.disabled=true; btn.textContent='Sending...';
+      var dest=(document.title||'').split('—')[0].split('|')[0].trim();
+      // Create CRM deal
+      fetch('https://voyage-crm.onrender.com/api/leads/webhook',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({clientName:name,contactNo:phone,destination:dest,source:'Website Exit Popup',remarks:'Exit-intent on '+location.pathname})
+      }).catch(function(){});
+      // Formspree backup
+      fetch('https://formspree.io/f/xbdwrzaq',{
+        method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({name:name,phone:phone,source:'Exit popup',page:location.href})
+      }).catch(function(){});
+      setTimeout(function(){
+        msg.style.color='#b6f5c8'; msg.textContent='✓ Thank you! Our expert will call you shortly.';
+        btn.textContent='Sent ✓';
+        setTimeout(closePopup, 2200);
+      }, 800);
+    }
+
+    function trigger(){
+      if(shown || !armed) return;
+      shown = true;
+      try { sessionStorage.setItem(KEY,'1'); } catch(e){}
+      buildPopup();
+    }
+
+    // Desktop: mouse leaves top of viewport (toward tabs/back)
+    document.addEventListener('mouseout', function(e){
+      if(!e.relatedTarget && e.clientY <= 5) trigger();
+    });
+    // Mobile: fast scroll-up after scrolling down = exit signal
+    var lastY = window.scrollY, peak = 0;
+    window.addEventListener('scroll', function(){
+      var y = window.scrollY;
+      if(y > peak) peak = y;
+      if(peak > 600 && lastY - y > 60 && y < peak - 300) trigger();
+      lastY = y;
+    }, {passive:true});
+  }
+
+  function initExitStyles(){
+    if(document.getElementById('ve-exit-css')) return;
+    var s=document.createElement('style'); s.id='ve-exit-css';
+    s.textContent=`
+#ve-exit{position:fixed;inset:0;background:rgba(10,21,48,.72);backdrop-filter:blur(4px);z-index:99999;display:flex;align-items:center;justify-content:center;padding:18px;opacity:1;transition:opacity .25s;animation:veExitIn .3s ease}
+@keyframes veExitIn{from{opacity:0}to{opacity:1}}
+.ve-exit-card{background:linear-gradient(150deg,#0d1b3e,#13265c 55%,#1a2f6e);color:#fff;max-width:420px;width:100%;border-radius:22px;padding:34px 30px;position:relative;box-shadow:0 30px 80px -20px rgba(0,0,0,.6);border:1px solid rgba(201,150,26,.3);animation:veCardIn .35s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes veCardIn{from{transform:translateY(24px) scale(.96);opacity:0}to{transform:none;opacity:1}}
+.ve-exit-x{position:absolute;top:14px;right:16px;background:none;border:none;color:rgba(255,255,255,.6);font-size:30px;line-height:1;cursor:pointer;padding:0;width:32px;height:32px}
+.ve-exit-x:hover{color:#fff}
+.ve-exit-badge{display:inline-block;background:rgba(201,150,26,.18);color:#f0c842;font-size:11px;font-weight:800;letter-spacing:1.5px;padding:6px 12px;border-radius:20px;margin-bottom:14px}
+.ve-exit-card h2{font-size:25px;line-height:1.2;margin:0 0 10px;color:#fff;font-family:var(--serif,'Playfair Display',serif)}
+.ve-exit-card p{font-size:14px;line-height:1.55;color:rgba(255,255,255,.82);margin:0 0 18px}
+.ve-exit-card input{width:100%;padding:13px 15px;border-radius:11px;border:none;margin-bottom:10px;font-size:15px;box-sizing:border-box;background:#fff;color:#0d1b3e}
+#ve-exit-btn{width:100%;padding:15px;border-radius:11px;border:none;background:linear-gradient(135deg,#f0c842,#c9961a);color:#0d1b3e;font-weight:800;font-size:16px;cursor:pointer;transition:transform .15s}
+#ve-exit-btn:hover{transform:translateY(-2px)}
+#ve-exit-msg{font-size:13px;text-align:center;margin-top:10px;min-height:16px}
+.ve-exit-or{text-align:center;font-size:13px;color:rgba(255,255,255,.6);margin-top:14px}
+.ve-exit-or a{color:#f0c842;font-weight:600;text-decoration:none}
+@media(max-width:480px){.ve-exit-card{padding:28px 22px}.ve-exit-card h2{font-size:22px}}
+`;
+    document.head.appendChild(s);
+  }
+
   function init(){
     initPkgBoost();
     initStickyCTA();
@@ -311,6 +417,8 @@
     initBackToTop();
     initLazyFade();
     initBlogProgress();
+    initExitStyles();
+    initExitIntent();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}
   else{init();}
