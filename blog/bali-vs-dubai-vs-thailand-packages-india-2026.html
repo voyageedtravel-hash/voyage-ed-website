@@ -601,6 +601,13 @@ footer a{color:var(--gold-2);text-decoration:none}
       <p style="font-size:.85rem;color:#555;margin-bottom:4px;line-height:1.6">Tell us your dates, group size and budget. We'll compare all three destinations and give you the best option.</p>
       <a href="https://wa.me/917009659048?text=Hi%20Vishal%2C%20I%20read%20the%20Bali%20vs%20Dubai%20vs%20Thailand%20blog.%20Can%20you%20help%20me%20plan%20my%20trip%3F" class="sidebar-cta-btn" target="_blank" rel="noopener">💬 WhatsApp Us Now</a>
       <a href="tel:+917009659048" class="sidebar-sec-btn">📞 Call Vishal</a>
+<div class="quick-lead" style="margin-top:24px;max-width:420px;margin-left:auto;margin-right:auto;text-align:left">
+        <div style="font-size:13px;color:rgba(255,255,255,.85);margin-bottom:10px;text-align:center">Or get a free quote by message — we reply within an hour:</div>
+        <input id="ql-name" type="text" placeholder="Your name" style="width:100%;padding:13px 15px;border-radius:10px;border:none;margin-bottom:9px;font-size:15px;box-sizing:border-box"/>
+        <input id="ql-phone" type="tel" placeholder="Phone / WhatsApp number" style="width:100%;padding:13px 15px;border-radius:10px;border:none;margin-bottom:9px;font-size:15px;box-sizing:border-box"/>
+        <button id="ql-btn" type="button" onclick="submitQuickLead()" style="width:100%;padding:14px;border-radius:10px;border:none;background:var(--gold-2,#c9961a);color:#0d1b3e;font-weight:800;font-size:15px;cursor:pointer">Get My Free Quote →</button>
+        <div id="ql-msg" style="font-size:13px;color:#fff;margin-top:10px;text-align:center;min-height:18px"></div>
+      </div>
     </div>
     <div class="sidebar-card">
       <h4>Package Starting Prices</h4>
@@ -903,5 +910,31 @@ veMsg('ai','Namaste! 🙏 I\'m your **Voyage-Ed AI Planner**.\n\nTell me your dr
 
 <script src="/assets/enhance.js?v=7" defer></script>
 <script src="/assets/image-system.js?v=7" defer></script>
+<script>
+function submitQuickLead(){
+  var name=(document.getElementById('ql-name')||{}).value||'';
+  var phone=(document.getElementById('ql-phone')||{}).value||'';
+  var msg=document.getElementById('ql-msg'), btn=document.getElementById('ql-btn');
+  if(!name.trim()||!phone.trim()){ msg.textContent='Please enter your name and phone.'; return; }
+  btn.disabled=true; btn.textContent='Sending...';
+  var dest=(document.title||'').split('—')[0].split('|')[0].trim();
+  // 1) Create deal in CRM
+  fetch('https://voyage-crm.onrender.com/api/leads/webhook',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({clientName:name,contactNo:phone,destination:dest,source:'Website Blog',remarks:'From blog: '+location.pathname})
+  }).catch(function(){});
+  // 2) Formspree backup so you also get an email
+  fetch('https://formspree.io/f/xbdwrzaq',{
+    method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({name:name,phone:phone,destination:dest,page:location.href})
+  }).catch(function(){});
+  setTimeout(function(){
+    btn.textContent='Sent ✓'; msg.textContent='Thank you! A travel planner will contact you shortly.';
+    var n=document.getElementById('ql-name'), p=document.getElementById('ql-phone');
+    if(n)n.value=''; if(p)p.value='';
+    setTimeout(function(){ btn.disabled=false; btn.textContent='Get My Free Quote →'; }, 3000);
+  }, 900);
+}
+</script>
 </body>
 </html>
