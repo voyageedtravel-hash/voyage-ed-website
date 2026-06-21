@@ -1,4 +1,4 @@
-/* Voyage-Ed global enhancements v5 — +exit-intent */
+/* Voyage-Ed global enhancements v6 — +exit-intent +search */
 (function(){
   'use strict';
 
@@ -404,6 +404,151 @@
     document.head.appendChild(s);
   }
 
+
+  /* ═══ INTELLIGENT SITE SEARCH ═══ */
+  var VE_INDEX = null;
+  function loadSearchIndex(cb){
+    if(VE_INDEX){ cb(VE_INDEX); return; }
+    fetch('/assets/search-index.json').then(function(r){return r.json();}).then(function(d){
+      VE_INDEX = d; cb(d);
+    }).catch(function(){ cb([]); });
+  }
+
+  // Score a page against the query: higher = more relevant
+  function scoreEntry(e, q, words){
+    var hay = (e.t+' '+e.d+' '+e.k+' '+e.c).toLowerCase();
+    var title = e.t.toLowerCase();
+    var score = 0;
+    // Exact phrase in title = huge boost
+    if(title.indexOf(q) >= 0) score += 100;
+    if(title.indexOf(q) === 0) score += 50; // starts with
+    // Phrase anywhere
+    if(hay.indexOf(q) >= 0) score += 30;
+    // Each query word
+    words.forEach(function(w){
+      if(w.length < 2) return;
+      if(title.indexOf(w) >= 0) score += 20;
+      else if(hay.indexOf(w) >= 0) score += 8;
+    });
+    // Category boost: prefer Destination/Package over Guide for trip queries
+    if(score > 0 && (e.c==='Destination'||e.c==='Package')) score += 5;
+    return score;
+  }
+
+  function searchSite(q, cb){
+    q = (q||'').trim().toLowerCase();
+    if(q.length < 2){ cb([]); return; }
+    var words = q.split(/\s+/);
+    loadSearchIndex(function(idx){
+      var scored = [];
+      for(var i=0;i<idx.length;i++){
+        var s = scoreEntry(idx[i], q, words);
+        if(s > 0) scored.push({e:idx[i], s:s});
+      }
+      scored.sort(function(a,b){ return b.s - a.s; });
+      cb(scored.slice(0, 8).map(function(x){ return x.e; }));
+    });
+  }
+
+  function initSearch(){
+    if(document.getElementById('ve-search-wrap')) return;
+    // Build the search bar — floating trigger in the nav area
+    var trigger = document.createElement('button');
+    trigger.id = 've-search-trigger';
+    trigger.setAttribute('aria-label','Search');
+    trigger.innerHTML = '🔍';
+    document.body.appendChild(trigger);
+
+    var overlay = document.createElement('div');
+    overlay.id = 've-search-wrap';
+    overlay.innerHTML =
+      '<div class="ve-search-box">' +
+        '<div class="ve-search-inputrow">' +
+          '<span class="ve-search-ic">🔍</span>' +
+          '<input id="ve-search-input" type="text" placeholder="Search destinations, packages, guides..." autocomplete="off" />' +
+          '<button class="ve-search-close" aria-label="Close">&times;</button>' +
+        '</div>' +
+        '<div id="ve-search-results"></div>' +
+        '<div class="ve-search-hint">Try: <b>Georgia</b>, <b>Canada flights</b>, <b>honeymoon</b>, <b>Thailand cost</b></div>' +
+      '</div>';
+    document.body.appendChild(overlay);
+
+    var input = document.getElementById('ve-search-input');
+    var results = document.getElementById('ve-search-results');
+    var open = function(){ overlay.classList.add('open'); setTimeout(function(){input.focus();},50); loadSearchIndex(function(){}); };
+    var close = function(){ overlay.classList.remove('open'); input.value=''; results.innerHTML=''; };
+
+    trigger.onclick = open;
+    overlay.querySelector('.ve-search-close').onclick = close;
+    overlay.onclick = function(e){ if(e.target===overlay) close(); };
+    document.addEventListener('keydown', function(e){
+      if((e.ctrlKey||e.metaKey) && e.key==='k'){ e.preventDefault(); open(); }
+      if(e.key==='Escape') close();
+    });
+
+    var catIcon = {Destination:'📍',Package:'🧳',Guide:'📖',Flights:'✈️',Visa:'🛂',Education:'🎓'};
+    var render = function(items){
+      if(!input.value.trim()){ results.innerHTML=''; return; }
+      if(!items.length){
+        results.innerHTML = '<div class="ve-search-empty">No matches. Try a destination name, or <a href="https://wa.me/917009659048?text=Hi! I am looking for...">ask us on WhatsApp</a>.</div>';
+        return;
+      }
+      results.innerHTML = items.map(function(e){
+        return '<a class="ve-search-item" href="'+e.u+'">' +
+          '<span class="ve-search-cat">'+(catIcon[e.c]||'📄')+'</span>' +
+          '<span class="ve-search-txt"><b>'+e.t+'</b><small>'+(e.d||e.c)+'</small></span>' +
+          '<span class="ve-search-go">→</span></a>';
+      }).join('');
+    };
+
+    var debounce;
+    input.oninput = function(){
+      clearTimeout(debounce);
+      var q = input.value;
+      debounce = setTimeout(function(){ searchSite(q, render); }, 120);
+    };
+    // Enter → go to first result
+    input.onkeydown = function(e){
+      if(e.key==='Enter'){
+        var first = results.querySelector('.ve-search-item');
+        if(first) window.location.href = first.getAttribute('href');
+      }
+    };
+  }
+
+
+  function initSearchStyles(){
+    if(document.getElementById("ve-search-css")) return;
+    var s=document.createElement("style"); s.id="ve-search-css";
+    s.textContent=`
+#ve-search-trigger{position:fixed;top:50%;right:0;transform:translateY(-50%);z-index:9998;background:linear-gradient(135deg,#0d1b3e,#13265c);color:#f0c842;border:none;border-radius:12px 0 0 12px;width:46px;height:52px;font-size:20px;cursor:pointer;box-shadow:-4px 4px 16px rgba(10,21,48,.3);transition:width .2s,padding .2s}
+#ve-search-trigger:hover{width:54px}
+#ve-search-wrap{position:fixed;inset:0;background:rgba(10,21,48,.6);backdrop-filter:blur(5px);z-index:99998;display:none;align-items:flex-start;justify-content:center;padding:80px 18px 18px}
+#ve-search-wrap.open{display:flex;animation:veSearchIn .2s ease}
+@keyframes veSearchIn{from{opacity:0}to{opacity:1}}
+.ve-search-box{background:#fff;width:100%;max-width:580px;border-radius:18px;box-shadow:0 30px 80px -20px rgba(0,0,0,.5);overflow:hidden;animation:veSearchCard .25s cubic-bezier(.2,.9,.3,1.1)}
+@keyframes veSearchCard{from{transform:translateY(-20px);opacity:0}to{transform:none;opacity:1}}
+.ve-search-inputrow{display:flex;align-items:center;padding:6px 14px;border-bottom:1px solid #e8eef7}
+.ve-search-ic{font-size:18px;opacity:.5}
+#ve-search-input{flex:1;border:none;outline:none;padding:16px 12px;font-size:17px;color:#0d1b3e;background:transparent}
+.ve-search-close{background:none;border:none;font-size:26px;color:#9aa7bd;cursor:pointer;padding:0 6px}
+#ve-search-results{max-height:54vh;overflow-y:auto}
+.ve-search-item{display:flex;align-items:center;gap:12px;padding:13px 18px;text-decoration:none;color:#0d1b3e;border-bottom:1px solid #f1f5fa;transition:background .12s}
+.ve-search-item:hover{background:#f4f7fc}
+.ve-search-cat{font-size:20px;flex-shrink:0}
+.ve-search-txt{flex:1;min-width:0}
+.ve-search-txt b{display:block;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ve-search-txt small{display:block;font-size:12px;color:#7e8aa0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.ve-search-go{color:#c9961a;font-weight:700;flex-shrink:0}
+.ve-search-empty{padding:24px 18px;text-align:center;color:#7e8aa0;font-size:14px}
+.ve-search-empty a{color:#c9961a;font-weight:600}
+.ve-search-hint{padding:13px 18px;font-size:12px;color:#9aa7bd;background:#f9fbfd;border-top:1px solid #f1f5fa}
+.ve-search-hint b{color:#0d1b3e;font-weight:600}
+@media(max-width:480px){#ve-search-wrap{padding:60px 12px 12px}#ve-search-trigger{width:42px;height:48px;font-size:18px}}
+`;
+    document.head.appendChild(s);
+  }
+
   function init(){
     initPkgBoost();
     initStickyCTA();
@@ -419,6 +564,8 @@
     initBlogProgress();
     initExitStyles();
     initExitIntent();
+    initSearchStyles();
+    initSearch();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}
   else{init();}
