@@ -531,8 +531,8 @@
     if(document.getElementById("ve-search-css")) return;
     var s=document.createElement("style"); s.id="ve-search-css";
     s.textContent=`
-#ve-search-trigger{position:fixed;top:50%;right:0;transform:translateY(-50%);z-index:9998;background:linear-gradient(135deg,#0d1b3e,#13265c);color:#f0c842;border:none;border-radius:12px 0 0 12px;width:46px;height:52px;font-size:20px;cursor:pointer;box-shadow:-4px 4px 16px rgba(10,21,48,.3);transition:width .2s,padding .2s}
-#ve-search-trigger:hover{width:54px}
+#ve-search-trigger{position:fixed;top:130px;right:14px;z-index:9990;background:linear-gradient(135deg,#0d1b3e,#13265c);color:#f0c842;border:1px solid rgba(201,150,26,.3);border-radius:50%;width:46px;height:46px;font-size:19px;cursor:pointer;box-shadow:0 4px 16px rgba(10,21,48,.3);transition:transform .2s}
+#ve-search-trigger:hover{transform:scale(1.08)}
 #ve-search-wrap{position:fixed;inset:0;background:rgba(10,21,48,.6);backdrop-filter:blur(5px);z-index:99998;display:none;align-items:flex-start;justify-content:center;padding:80px 18px 18px}
 #ve-search-wrap.open{display:flex;animation:veSearchIn .2s ease}
 @keyframes veSearchIn{from{opacity:0}to{opacity:1}}
