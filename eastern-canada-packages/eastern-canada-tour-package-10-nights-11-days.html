@@ -376,7 +376,7 @@
 .ve-av{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:2px}
 .ve-msg.ve-ai .ve-av{background:linear-gradient(135deg,var(--ve-navy),#1a3060)}
 .ve-msg.ve-user .ve-av{background:linear-gradient(135deg,var(--ve-gold),var(--ve-gold-l))}
-.ve-bub{max-width:80%;padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.6;font-family:'DM Sans',sans-serif}
+.ve-bub{max-width:80%;padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.6;font-family:'DM Sans',sans-serif} .ve-bub .ve-h{font-weight:800;font-size:14px;margin:8px 0 4px;color:var(--ve-navy)} .ve-bub .ve-ul{margin:4px 0 8px;padding-left:18px} .ve-bub .ve-ul li{margin:2px 0;list-style:disc} .ve-bub .ve-price{font-weight:700;color:#c9961a}
 .ve-msg.ve-ai .ve-bub{background:#fff;color:#1a1a2e;border-radius:4px 14px 14px 14px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .ve-msg.ve-user .ve-bub{background:var(--ve-navy);color:#fff;border-radius:14px 4px 14px 14px}
 .ve-bub strong{color:var(--ve-gold);font-weight:600}
@@ -489,9 +489,32 @@ function veMsg(role,content){
 }
 
 function veFmt(t){
-  return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
-    .replace(/₹[\d,]+/g,function(m){return'<span class="ve-price">'+m+'</span>'})
-    .replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');
+  // Escape any stray HTML first
+  t = t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  var lines = t.split('\n');
+  var out=[], inList=false;
+  for(var i=0;i<lines.length;i++){
+    var ln=lines[i];
+    // Headers: ###, ##, #
+    var hm = ln.match(/^\s*(#{1,4})\s+(.*)$/);
+    if(hm){ if(inList){out.push('</ul>');inList=false;} out.push('<div class="ve-h">'+hm[2]+'</div>'); continue; }
+    // Bullets: * or - 
+    var bm = ln.match(/^\s*[\*\-]\s+(.*)$/);
+    if(bm){ if(!inList){out.push('<ul class="ve-ul">');inList=true;} out.push('<li>'+bm[1]+'</li>'); continue; }
+    // Numbered: 1. 2.
+    var nm = ln.match(/^\s*\d+\.\s+(.*)$/);
+    if(nm){ if(!inList){out.push('<ul class="ve-ul">');inList=true;} out.push('<li>'+nm[1]+'</li>'); continue; }
+    if(inList){ out.push('</ul>'); inList=false; }
+    if(ln.trim()==='') out.push('<br>');
+    else out.push('<div>'+ln+'</div>');
+  }
+  if(inList) out.push('</ul>');
+  var html = out.join('');
+  // Inline formatting: bold, prices
+  html = html.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');
+  html = html.replace(/(^|[^\*])\*([^\*\n]+?)\*([^\*]|$)/g,'$1<em>$2</em>$3');
+  html = html.replace(/₹[\d,]+/g,function(m){return'<span class="ve-price">'+m+'</span>'});
+  return html;
 }
 
 function veLeadCard(){
