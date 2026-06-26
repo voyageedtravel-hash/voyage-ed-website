@@ -270,11 +270,11 @@ footer{background:#080f24;color:rgba(255,255,255,.75);padding:clamp(48px,7vw,80p
 .ve-t-txt span:last-child{font-size:10px;color:var(--ve-gold-l);letter-spacing:.05em;display:block}
 .ve-pulse{position:absolute;top:-4px;right:-4px;width:12px;height:12px;background:var(--ve-gold);border-radius:50%;animation:vePulse 2s infinite}
 @keyframes vePulse{0%{transform:scale(1);opacity:1}70%{transform:scale(2.2);opacity:0}100%{transform:scale(1);opacity:0}}
-#ve-overlay{display:none;position:fixed;bottom:90px;right:20px;z-index:10000;width:380px;max-width:calc(100vw - 32px)}
-#ve-overlay.ve-open{display:block;animation:veFadeIn .25s ease}
+#ve-overlay{display:none;position:fixed;bottom:90px;right:20px;z-index:10000;width:380px;max-width:calc(100vw - 32px);height:600px;max-height:calc(100vh - 120px)}
+#ve-overlay.ve-open{display:flex;flex-direction:column;overflow:hidden;animation:veFadeIn .25s ease}
 @keyframes veFadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 #ve-panel{background:var(--ve-cream);width:100%;max-height:75vh;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 40px rgba(13,27,62,.25);border:1px solid rgba(201,150,26,.15)}
-@media(max-width:440px){#ve-overlay{right:8px;left:8px;width:auto;bottom:80px}}
+@media(max-width:440px){#ve-overlay{right:8px;left:8px;width:auto;bottom:80px;height:auto;max-height:calc(100vh - 110px);top:auto}}
 .ve-hdr{background:linear-gradient(135deg,var(--ve-navy),#162d5e);padding:18px 20px 14px;flex-shrink:0}
 .ve-hdr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
 .ve-logo-wrap{display:flex;align-items:center;gap:9px}
@@ -914,7 +914,7 @@ body.ve-modal-open{overflow:hidden}
       <div style="font-size:11px;color:#94a3b8;text-align:center">🔒 No spam. Your details are safe with us.</div>
     </div>
     <!-- MAIN CHAT (hidden until details entered) -->
-    <div id="ve-chat-main" style="display:none;flex-direction:column;height:100%">
+    <div id="ve-chat-main" style="display:none;flex-direction:column;flex:1 1 auto;min-height:0;height:100%">
     <div class="ve-hdr">
       <div class="ve-hdr-top">
         <div class="ve-logo-wrap">
@@ -1506,8 +1506,8 @@ window.veSend=async function(){
 veMsg('ai','Namaste! 🙏 I\'m **Voyage-Ed AI Agent** — your AI travel assistant.\n\n*Fair warning: I\'m powered by AI with big dreams but small experience. Think of me as your enthusiastic intern — helpful, but for bookings & guaranteed pricing, our senior experts are just a call away!* 😄\n\n💡 **My prices are estimates only** — for confirmed rates, speak to our expert.\n\nNow, where would you like to go? Tell me your destination! 🌍');
 })();
 </script>
-<script src="/assets/enhance.js?v=11" defer></script>
-<script src="/assets/image-system.js?v=11" defer></script>
+<script src="/assets/enhance.js?v=12" defer></script>
+<script src="/assets/image-system.js?v=12" defer></script>
 <script>
 // V7 Scroll Progress
 (function(){
