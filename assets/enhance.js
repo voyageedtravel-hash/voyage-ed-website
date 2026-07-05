@@ -1,4 +1,4 @@
-/* Voyage-Ed global enhancements v8 — +conversions */
+/* Voyage-Ed global enhancements v9 — +cinematic +conversions */
 (function(){
   'use strict';
 
@@ -392,6 +392,62 @@
 
 
   /* ═══ GA4 CONVERSION TRACKING (WhatsApp, Call, Forms) ═══ */
+
+  /* ═══ CINEMATIC PACK — film-grade visual layer ═══ */
+  function initCinematicPack(){
+    if(document.getElementById('ve-cine-css')) return;
+    var s=document.createElement('style'); s.id='ve-cine-css';
+    s.textContent=`
+/* 1. FILM GRAIN — subtle cinematic texture over hero sections */
+.hero::after,section[class*=hero]::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;z-index:2;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero{position:relative}
+/* 2. GOLD SHIMMER on main headings */
+@keyframes veShimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+.hero h1{background:linear-gradient(110deg,#fff 40%,#f0c842 50%,#fff 60%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:veShimmer 6s linear infinite}
+/* 3. 3D CARD TILT — destination cards feel alive */
+.dcard,.art-card{transform-style:preserve-3d;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s!important;will-change:transform}
+.dcard:hover,.art-card:hover{box-shadow:0 30px 60px -18px rgba(13,27,62,.45)!important}
+/* 4. PAGE CURTAIN REVEAL on load */
+#ve-curtain{position:fixed;inset:0;z-index:999999;background:linear-gradient(150deg,#0a1530,#13265c);display:flex;align-items:center;justify-content:center;transition:opacity .6s ease,visibility .6s}
+#ve-curtain.gone{opacity:0;visibility:hidden}
+#ve-curtain .cur-logo{font-family:'Playfair Display',Georgia,serif;color:#f0c842;font-size:26px;letter-spacing:4px;animation:vePulse 1.2s ease infinite alternate}
+@keyframes vePulse{from{opacity:.5;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+/* 5. GOLD UNDERLINE sweep on nav links */
+nav ul a{position:relative}
+nav ul a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:linear-gradient(90deg,#f0c842,#c9961a);transition:width .3s}
+nav ul a:hover::after{width:100%}
+@media(prefers-reduced-motion:reduce){.hero h1{animation:none}.dcard,.art-card{transition:none!important}}`;
+    document.head.appendChild(s);
+
+    /* Curtain reveal (only once per session, super fast) */
+    try{
+      if(!sessionStorage.getItem('veCurtain')){
+        sessionStorage.setItem('veCurtain','1');
+        var c=document.createElement('div'); c.id='ve-curtain';
+        c.innerHTML='<div class="cur-logo">VOYAGE-ED</div>';
+        document.body.appendChild(c);
+        setTimeout(function(){ c.classList.add('gone'); setTimeout(function(){c.remove();},700); }, 650);
+      }
+    }catch(e){}
+
+    /* 3D tilt physics on cards (desktop only) */
+    if(window.matchMedia('(hover:hover)').matches){
+      document.addEventListener('mousemove', function(e){
+        var card = e.target.closest && e.target.closest('.dcard, .art-card');
+        if(!card) return;
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left)/r.width - .5;
+        var y = (e.clientY - r.top)/r.height - .5;
+        card.style.transform = 'perspective(900px) rotateY('+(x*6)+'deg) rotateX('+(-y*6)+'deg) translateY(-4px)';
+      }, {passive:true});
+      document.addEventListener('mouseout', function(e){
+        var card = e.target.closest && e.target.closest('.dcard, .art-card');
+        if(card && (!e.relatedTarget || !card.contains(e.relatedTarget))) card.style.transform='';
+      }, true);
+    }
+  }
+
   function initConversionTracking(){
     function track(name, params){
       try{ if(typeof gtag==='function') gtag('event', name, params||{}); }catch(e){}
@@ -670,6 +726,7 @@ h1,h2{letter-spacing:.01em}
     initBackToTop();
     initLazyFade();
     initBlogProgress();
+    initCinematicPack();
     initConversionTracking();
     initBeautyPack();
     initConversionTracking();
