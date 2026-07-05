@@ -1,4 +1,4 @@
-/* Voyage-Ed global enhancements v7 — +exit-intent +search +beauty */
+/* Voyage-Ed global enhancements v8 — +conversions */
 (function(){
   'use strict';
 
@@ -579,6 +579,48 @@ h1,h2{letter-spacing:.01em}
     document.head.appendChild(s);
   }
 
+
+  /* ═══ GA4 CONVERSION TRACKING (WhatsApp, calls, forms, leads) ═══ */
+  function initConversionTracking(){
+    function track(name, params){
+      try{ if(typeof gtag==='function') gtag('event', name, params||{}); }catch(e){}
+    }
+    // 1. WhatsApp clicks (every wa.me link, incl. floating button)
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a');
+      if(!a) return;
+      var href = a.getAttribute('href')||'';
+      if(href.indexOf('wa.me')>-1){
+        track('whatsapp_click', {page_path: location.pathname, link_text: (a.textContent||'').trim().slice(0,50)});
+      } else if(href.indexOf('tel:')===0){
+        track('phone_click', {page_path: location.pathname});
+      } else if(href.indexOf('mailto:')===0){
+        track('email_click', {page_path: location.pathname});
+      }
+    }, true);
+    // 2. Lead form submits (quick-lead blog forms + exit popup + homepage form)
+    document.addEventListener('click', function(e){
+      var b = e.target.closest && e.target.closest('button');
+      if(!b) return;
+      var id = b.id||'';
+      if(id==='ql-btn') track('generate_lead', {method:'blog_form', page_path: location.pathname});
+      if(id==='ve-exit-btn') track('generate_lead', {method:'exit_popup', page_path: location.pathname});
+    }, true);
+    // 3. Native form submits
+    document.addEventListener('submit', function(e){
+      track('generate_lead', {method:'form', page_path: location.pathname});
+    }, true);
+    // 4. AI chat opened (engagement signal)
+    var t=document.getElementById('ve-trigger');
+    if(t) t.addEventListener('click', function(){ track('ai_chat_open', {page_path: location.pathname}); });
+    // 5. Search used
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Enter' && e.target && e.target.id==='ve-search-input'){
+        track('site_search', {search_term: e.target.value.slice(0,60)});
+      }
+    }, true);
+  }
+
   function init(){
     initPkgBoost();
     initStickyCTA();
@@ -593,6 +635,7 @@ h1,h2{letter-spacing:.01em}
     initLazyFade();
     initBlogProgress();
     initBeautyPack();
+    initConversionTracking();
     initExitStyles();
     initExitIntent();
     initSearchStyles();
