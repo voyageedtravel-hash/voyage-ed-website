@@ -1,4 +1,4 @@
-/* Voyage-Ed global enhancements v6 — +exit-intent +search */
+/* Voyage-Ed global enhancements v7 — +exit-intent +search +beauty */
 (function(){
   'use strict';
 
@@ -390,6 +390,26 @@
     }, {passive:true});
   }
 
+  function initBeautyPack(){
+    if(document.getElementById('ve-beauty-css')) return;
+    var s=document.createElement('style'); s.id='ve-beauty-css';
+    s.textContent=`
+/* ═══ VOYAGE-ED PREMIUM BEAUTY PACK ═══ */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#0d1b3e}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#c9961a,#f0c842);border-radius:5px;border:2px solid #0d1b3e}
+::-webkit-scrollbar-thumb:hover{background:#f0c842}
+::selection{background:#c9961a;color:#fff}
+::-moz-selection{background:#c9961a;color:#fff}
+img{transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .5s}
+a:focus-visible,button:focus-visible{outline:2px solid #c9961a;outline-offset:3px;border-radius:4px}
+.dcard-price b,.art-card-title{background:linear-gradient(90deg,#0d1b3e,#1a3060);-webkit-background-clip:text}
+h1,h2{letter-spacing:.01em}
+.cta-btn,.nav-cta,button[class*=btn]{transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s!important}
+.cta-btn:hover,.nav-cta:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 30px -8px rgba(201,150,26,.5)!important}
+`;
+    document.head.appendChild(s);
+  }
   function initExitStyles(){
     if(document.getElementById('ve-exit-css')) return;
     var s=document.createElement('style'); s.id='ve-exit-css';
@@ -572,6 +592,7 @@
     initBackToTop();
     initLazyFade();
     initBlogProgress();
+    initBeautyPack();
     initExitStyles();
     initExitIntent();
     initSearchStyles();
