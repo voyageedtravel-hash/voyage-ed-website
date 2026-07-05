@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get Your Exact Trip Quote in 1 Hour | Voyage-Ed Travels Chandigarh</title>
+<meta name="description" content="Tell us your destination, dates and budget — get an exact package quote from Voyage-Ed's travel experts within 1 hour. Free, no obligation."/>
+<link rel="canonical" href="https://voyage-ed.com/quote"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX341ESGW4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MX341ESGW4');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Get Exact Trip Quote — Voyage-Ed Travels","isPartOf":{"@id":"https://voyage-ed.com/#organization"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Raleway,sans-serif;background:#f4f7fc;min-height:100vh}
+.hero{background:linear-gradient(150deg,#0a1530,#13265c);color:#fff;text-align:center;padding:52px 20px 40px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,38px);margin-bottom:8px}
+.hero p{opacity:.85;max-width:520px;margin:0 auto}
+.wrap{max-width:520px;margin:-24px auto 40px;padding:0 16px}
+.card{background:#fff;border-radius:18px;padding:28px 24px;box-shadow:0 20px 60px -20px rgba(13,27,62,.25)}
+label{display:block;font-size:12px;font-weight:700;color:#5a6b8c;letter-spacing:.5px;margin:14px 0 6px}
+input,select{width:100%;padding:13px 14px;border:1.5px solid #d4e0f5;border-radius:10px;font-size:15px;font-family:inherit;background:#fff}
+input:focus,select:focus{outline:none;border-color:#c9961a}
+button{width:100%;margin-top:22px;padding:16px;border:none;border-radius:12px;background:linear-gradient(135deg,#f0c842,#c9961a);color:#0d1b3e;font-weight:800;font-size:16px;cursor:pointer;transition:transform .2s}
+button:hover{transform:translateY(-2px)}
+#msg{text-align:center;font-size:14px;margin-top:12px;min-height:20px;color:#15803d;font-weight:600}
+.trust{text-align:center;font-size:12px;color:#8a97b0;margin-top:14px}
+</style></head><body>
+<div class="hero"><h1>Get Your Exact Quote in 1 Hour ✈️</h1><p>Tell us your dream trip — our experts will send a personalised package with real prices. Free, no obligation.</p></div>
+<div class="wrap"><div class="card">
+  <label>YOUR NAME *</label><input id="q-name" placeholder="Full name"/>
+  <label>PHONE / WHATSAPP *</label><input id="q-phone" type="tel" placeholder="10-digit number"/>
+  <label>DESTINATION *</label>
+  <select id="q-dest"><option value="">Select destination</option><option>Georgia</option><option>Thailand</option><option>Dubai</option><option>Bali</option><option>Vietnam</option><option>Uzbekistan</option><option>Sri Lanka</option><option>Kashmir</option><option>Ladakh</option><option>Europe</option><option>Canada Flights</option><option>Other</option></select>
+  <label>TRAVEL MONTH</label><input id="q-month" placeholder="e.g. September 2026"/>
+  <label>NO. OF TRAVELLERS</label><input id="q-pax" type="number" min="1" placeholder="2"/>
+  <label>BUDGET PER PERSON (₹)</label>
+  <select id="q-budget"><option value="">Select budget</option><option>Under ₹30,000</option><option>₹30,000–₹60,000</option><option>₹60,000–₹1,00,000</option><option>₹1,00,000+</option></select>
+  <button onclick="submitQuote()">Get My Exact Quote →</button>
+  <div id="msg"></div>
+  <div class="trust">🔒 No spam. Reply within 1 hour, 9am–9pm IST.</div>
+</div></div>
+<script>
+function submitQuote(){
+  var g=function(id){return (document.getElementById(id)||{}).value||'';};
+  var name=g('q-name'),phone=g('q-phone'),dest=g('q-dest');
+  var msg=document.getElementById('msg');
+  if(!name.trim()||!phone.trim()||!dest){msg.style.color='#b91c1c';msg.textContent='Please fill name, phone and destination.';return;}
+  var utm=new URLSearchParams(location.search);
+  var remarks='Quote page | Month:'+g('q-month')+' | Pax:'+g('q-pax')+' | Budget:'+g('q-budget')+' | utm:'+(utm.get('utm_source')||'direct')+'/'+(utm.get('utm_campaign')||'');
+  fetch('https://voyage-crm.onrender.com/api/leads/webhook',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({clientName:name,contactNo:phone,destination:dest,source:'Quote Page',remarks:remarks})}).catch(function(){});
+  fetch('https://formspree.io/f/xbdwrzaq',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({name:name,phone:phone,destination:dest,details:remarks})}).catch(function(){});
+  try{gtag('event','lead_form_submit',{form:'quote_page',destination:dest,event_category:'lead'});}catch(e){}
+  msg.style.color='#15803d';msg.textContent='✓ Thank you '+name.split(' ')[0]+'! Our expert will call you within 1 hour.';
+  ['q-name','q-phone','q-month','q-pax'].forEach(function(i){var e=document.getElementById(i);if(e)e.value='';});
+}
+</script>
+</body></html>

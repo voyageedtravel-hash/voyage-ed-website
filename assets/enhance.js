@@ -390,6 +390,42 @@
     }, {passive:true});
   }
 
+
+  /* ═══ GA4 CONVERSION TRACKING (WhatsApp, Call, Forms) ═══ */
+  function initConversionTracking(){
+    function track(name, params){
+      try{ if(typeof gtag==='function') gtag('event', name, params||{}); }catch(e){}
+    }
+    // Track every WhatsApp click site-wide
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a');
+      if(!a) return;
+      var href = a.getAttribute('href')||'';
+      if(href.indexOf('wa.me')>-1){
+        track('whatsapp_click', {link_url:href, page:location.pathname, event_category:'lead'});
+      } else if(href.indexOf('tel:')===0){
+        track('phone_click', {phone:href.replace('tel:',''), page:location.pathname, event_category:'lead'});
+      } else if(href.indexOf('mailto:')===0){
+        track('email_click', {page:location.pathname, event_category:'lead'});
+      }
+    }, true);
+    // Track form submits (lead forms, exit popup, quick-lead)
+    document.addEventListener('click', function(e){
+      var b = e.target.closest && e.target.closest('button');
+      if(!b) return;
+      var id = b.id||'';
+      if(id==='ql-btn') track('lead_form_submit', {form:'blog_quick_lead', page:location.pathname, event_category:'lead'});
+      if(id==='ve-exit-btn') track('lead_form_submit', {form:'exit_popup', page:location.pathname, event_category:'lead'});
+    }, true);
+    // Scroll depth (75% = engaged reader)
+    var fired75=false;
+    window.addEventListener('scroll', function(){
+      if(fired75) return;
+      var d=(window.scrollY+window.innerHeight)/document.documentElement.scrollHeight;
+      if(d>0.75){ fired75=true; track('scroll_75', {page:location.pathname}); }
+    }, {passive:true});
+  }
+
   function initBeautyPack(){
     if(document.getElementById('ve-beauty-css')) return;
     var s=document.createElement('style'); s.id='ve-beauty-css';
@@ -634,6 +670,7 @@ h1,h2{letter-spacing:.01em}
     initBackToTop();
     initLazyFade();
     initBlogProgress();
+    initConversionTracking();
     initBeautyPack();
     initConversionTracking();
     initExitStyles();
