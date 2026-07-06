@@ -31,7 +31,7 @@
     kashmir: {
       hero: 'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=1600&q=85',
       gallery: [
-        'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=800&q=80',
+        'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&q=80',
         'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=800&q=80',
         'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80',
         'https://images.unsplash.com/photo-1601423543803-b2e6a6c574c1?w=800&q=80',
@@ -41,7 +41,7 @@
         'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80'
       ],
       cards: [
-        'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=900&q=85',
+        'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=900&q=85',
         'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=900&q=85',
         'https://images.unsplash.com/photo-1601423543803-b2e6a6c574c1?w=900&q=85',
         'https://images.unsplash.com/photo-1604131442100-22f0e3e98b1b?w=900&q=85'
@@ -161,7 +161,7 @@
         'https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?w=800&q=80',
         'https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80',
         'https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&q=80',
-        'https://images.unsplash.com/photo-1512273222628-4daea6e55abb?w=800&q=80',
+        'https://images.unsplash.com/photo-1530841377377-3ff06c0ca713?w=800&q=80',
         'https://images.unsplash.com/photo-1548687845-8049e7b3c6e4?w=800&q=80'
       ],
       cards: [
@@ -498,7 +498,7 @@
     /* ───── INTERNATIONAL — AFRICA & MIDDLE EAST ───── */
 
     egypt: {
-      hero: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=85',
+      hero: 'https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1600&q=85',
       gallery: [
         'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
         'https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80',
@@ -972,7 +972,7 @@
       hero: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&q=85',
       gallery: [
         'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
-        'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=800&q=80',
+        'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&q=80',
         'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80',
         'https://images.unsplash.com/photo-1496947850313-7743325fa58c?w=800&q=80',
         'https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=800&q=80',
@@ -984,7 +984,7 @@
         'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=85',
         'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=85',
         'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=85',
-        'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=900&q=85'
+        'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=900&q=85'
       ],
       alts: [
         'Darjeeling toy train UNESCO heritage mountain railway',
