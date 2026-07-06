@@ -7,3 +7,2471 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
+
+# ─── 301 redirects: legacy query-string URLs → clean URLs (converted from .htaccess) ───
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages/bali-beach-getaway-kuta-4-nights-5-days.html"
+  status = 301
+  query = { id = "bali", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages/kuta-ubud-classic-5-nights-6-days.html"
+  status = 301
+  query = { id = "bali", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages/seminyak-ubud-couple-retreat-5-nights-6-days.html"
+  status = 301
+  query = { id = "bali", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages/kuta-ubud-nusa-penida-6-nights-7-days.html"
+  status = 301
+  query = { id = "bali", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages/seminyak-ubud-gili-islands-7-nights-8-days.html"
+  status = 301
+  query = { id = "bali", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages/amazing-islands-of-bali-8-nights-9-days.html"
+  status = 301
+  query = { id = "bali", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages/nusa-dua-ubud-luxury-honeymoon-6-nights-7-days.html"
+  status = 301
+  query = { id = "bali", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages/bangkok-pattaya-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "thailand", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages/bangkok-pattaya-extended-5-nights-6-days.html"
+  status = 301
+  query = { id = "thailand", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages/phuket-krabi-beach-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "thailand", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages/phuket-beach-getaway-4-nights-5-days.html"
+  status = 301
+  query = { id = "thailand", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages/bangkok-pattaya-phuket-6-nights-7-days.html"
+  status = 301
+  query = { id = "thailand", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages/phuket-krabi-phi-phi-6-nights-7-days.html"
+  status = 301
+  query = { id = "thailand", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages/koh-samui-phuket-luxury-escape-7-nights-8-days.html"
+  status = 301
+  query = { id = "thailand", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages/maafushi-local-island-budget-3-nights-4-days.html"
+  status = 301
+  query = { id = "maldives", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages/maafushi-north-male-combo-4-nights-5-days.html"
+  status = 301
+  query = { id = "maldives", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages/beach-resort-getaway-4-nights-5-days.html"
+  status = 301
+  query = { id = "maldives", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages/beach-villa-extended-stay-5-nights-6-days.html"
+  status = 301
+  query = { id = "maldives", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages/water-villa-experience-4-nights-5-days.html"
+  status = 301
+  query = { id = "maldives", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages/water-villa-honeymoon-5-nights-6-days.html"
+  status = 301
+  query = { id = "maldives", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages/premium-water-villa-all-inclusive-6-nights-7-days.html"
+  status = 301
+  query = { id = "maldives", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages/dubai-express-3-nights-4-days.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages/dubai-city-desert-4-nights-5-days.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages/dubai-abu-dhabi-combo-5-nights-6-days.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages/dubai-family-with-theme-parks-5-nights-6-days.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages/dubai-abu-dhabi-mini-cruise-6-nights-7-days.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages/dubai-abu-dhabi-ras-al-khaimah-7-nights-8-days.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages/dubai-luxury-burj-atlantis-palm-6-nights-7-days.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages/singapore-express-4-nights-5-days.html"
+  status = 301
+  query = { id = "singapore-malaysia", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages/kuala-lumpur-genting-highlands-4-nights-5-days.html"
+  status = 301
+  query = { id = "singapore-malaysia", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages/singapore-kuala-lumpur-5-nights-6-days.html"
+  status = 301
+  query = { id = "singapore-malaysia", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages/singapore-genting-dream-cruise-5-nights-6-days.html"
+  status = 301
+  query = { id = "singapore-malaysia", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages/singapore-kl-genting-6-nights-7-days.html"
+  status = 301
+  query = { id = "singapore-malaysia", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages/singapore-kl-langkawi-7-nights-8-days.html"
+  status = 301
+  query = { id = "singapore-malaysia", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages/singapore-disney-cruise-kl-luxury-8-nights-9-days.html"
+  status = 301
+  query = { id = "singapore-malaysia", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kashmir-packages/srinagar-houseboat-experience-3-nights-4-days.html"
+  status = 301
+  query = { id = "kashmir", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kashmir-packages/kashmir-classic-srinagar-gulmarg-pahalgam-5-nights-6-days.html"
+  status = 301
+  query = { id = "kashmir", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kashmir-packages/kashmir-premium-4-valleys-6-nights-7-days.html"
+  status = 301
+  query = { id = "kashmir", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kashmir-packages/kashmir-luxury-grand-7-nights-8-days.html"
+  status = 301
+  query = { id = "kashmir", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/goa-packages/goa-tour-package-2-nights-3-days.html"
+  status = 301
+  query = { id = "goa", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/goa-packages/goa-tour-package-3-nights-4-days.html"
+  status = 301
+  query = { id = "goa", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/goa-packages/goa-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "goa", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/goa-packages/goa-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "goa", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rajasthan-packages/rajasthan-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "rajasthan", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rajasthan-packages/rajasthan-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "rajasthan", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rajasthan-packages/rajasthan-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "rajasthan", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rajasthan-packages/rajasthan-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "rajasthan", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/ladakh-packages/ladakh-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "ladakh", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/ladakh-packages/ladakh-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "ladakh", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/ladakh-packages/ladakh-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "ladakh", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/ladakh-packages/ladakh-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "ladakh", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/himachal-packages/himachal-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "himachal", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/himachal-packages/himachal-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "himachal", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/himachal-packages/himachal-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "himachal", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/himachal-packages/himachal-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "himachal", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kerala-packages/kerala-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "kerala", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kerala-packages/kerala-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "kerala", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kerala-packages/kerala-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "kerala", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kerala-packages/kerala-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "kerala", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uttarakhand-packages/uttarakhand-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "uttarakhand", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uttarakhand-packages/uttarakhand-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "uttarakhand", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uttarakhand-packages/uttarakhand-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "uttarakhand", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uttarakhand-packages/uttarakhand-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "uttarakhand", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "delhi-agra-varanasi", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "delhi-agra-varanasi", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "delhi-agra-varanasi", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/delhi-agra-varanasi-packages/delhi-agra-varanasi-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "delhi-agra-varanasi", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/tamil-nadu-packages/tamil-nadu-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "tamil-nadu", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/tamil-nadu-packages/tamil-nadu-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "tamil-nadu", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/tamil-nadu-packages/tamil-nadu-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "tamil-nadu", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/tamil-nadu-packages/tamil-nadu-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "tamil-nadu", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/karnataka-packages/karnataka-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "karnataka", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/karnataka-packages/karnataka-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "karnataka", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/karnataka-packages/karnataka-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "karnataka", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/karnataka-packages/karnataka-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "karnataka", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/gujarat-packages/gujarat-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "gujarat", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/gujarat-packages/gujarat-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "gujarat", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/gujarat-packages/gujarat-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "gujarat", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/gujarat-packages/gujarat-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "gujarat", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/andaman-nicobar-packages/andaman-nicobar-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "andaman-nicobar", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/andaman-nicobar-packages/andaman-nicobar-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "andaman-nicobar", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/andaman-nicobar-packages/andaman-nicobar-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "andaman-nicobar", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/andaman-nicobar-packages/andaman-nicobar-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "andaman-nicobar", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "sikkim-darjeeling", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "sikkim-darjeeling", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "sikkim-darjeeling", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sikkim-darjeeling-packages/sikkim-darjeeling-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "sikkim-darjeeling", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "arunachal-meghalaya", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "arunachal-meghalaya", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "arunachal-meghalaya", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/arunachal-meghalaya-packages/arunachal-meghalaya-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "arunachal-meghalaya", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/madhya-pradesh-packages/madhya-pradesh-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "madhya-pradesh", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/madhya-pradesh-packages/madhya-pradesh-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "madhya-pradesh", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/madhya-pradesh-packages/madhya-pradesh-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "madhya-pradesh", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/madhya-pradesh-packages/madhya-pradesh-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "madhya-pradesh", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages/vietnam-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "vietnam", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages/vietnam-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "vietnam", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages/vietnam-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "vietnam", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages/vietnam-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "vietnam", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages/vietnam-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "vietnam", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages/vietnam-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "vietnam", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages/vietnam-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "vietnam", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages/sri-lanka-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "sri-lanka", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages/sri-lanka-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "sri-lanka", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages/sri-lanka-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "sri-lanka", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages/sri-lanka-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "sri-lanka", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages/sri-lanka-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "sri-lanka", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages/sri-lanka-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "sri-lanka", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages/sri-lanka-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "sri-lanka", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages/japan-south-korea-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "japan-korea", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages/japan-south-korea-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "japan-korea", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages/japan-south-korea-tour-package-8-nights-9-days-deluxe.html"
+  status = 301
+  query = { id = "japan-korea", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages/japan-south-korea-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "japan-korea", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages/japan-south-korea-tour-package-8-nights-9-days-premium.html"
+  status = 301
+  query = { id = "japan-korea", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages/japan-south-korea-tour-package-9-nights-10-days-premium-plus.html"
+  status = 301
+  query = { id = "japan-korea", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages/japan-south-korea-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "japan-korea", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages/south-africa-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "south-africa", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages/south-africa-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "south-africa", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages/south-africa-tour-package-8-nights-9-days-deluxe.html"
+  status = 301
+  query = { id = "south-africa", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages/south-africa-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "south-africa", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages/south-africa-tour-package-8-nights-9-days-premium.html"
+  status = 301
+  query = { id = "south-africa", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages/south-africa-tour-package-9-nights-10-days-premium-plus.html"
+  status = 301
+  query = { id = "south-africa", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages/south-africa-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "south-africa", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages/kenya-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "kenya", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages/kenya-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "kenya", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages/kenya-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "kenya", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages/kenya-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "kenya", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages/kenya-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "kenya", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages/kenya-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "kenya", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages/kenya-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "kenya", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages/mauritius-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "mauritius", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages/mauritius-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "mauritius", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages/mauritius-tour-package-5-nights-6-days-deluxe.html"
+  status = 301
+  query = { id = "mauritius", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages/mauritius-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "mauritius", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages/mauritius-tour-package-5-nights-6-days-premium.html"
+  status = 301
+  query = { id = "mauritius", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages/mauritius-tour-package-6-nights-7-days-premium-plus.html"
+  status = 301
+  query = { id = "mauritius", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages/mauritius-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "mauritius", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages/seychelles-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "seychelles", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages/seychelles-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "seychelles", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages/seychelles-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "seychelles", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages/seychelles-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "seychelles", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages/seychelles-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "seychelles", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages/seychelles-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "seychelles", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages/seychelles-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "seychelles", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages/egypt-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "egypt", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages/egypt-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "egypt", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages/egypt-tour-package-7-nights-8-days-deluxe.html"
+  status = 301
+  query = { id = "egypt", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages/egypt-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "egypt", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages/egypt-tour-package-7-nights-8-days-premium.html"
+  status = 301
+  query = { id = "egypt", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages/egypt-tour-package-8-nights-9-days-premium-plus.html"
+  status = 301
+  query = { id = "egypt", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages/egypt-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "egypt", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages/victoria-falls-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "victoria-falls", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages/victoria-falls-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "victoria-falls", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages/victoria-falls-tour-package-5-nights-6-days-deluxe.html"
+  status = 301
+  query = { id = "victoria-falls", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages/victoria-falls-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "victoria-falls", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages/victoria-falls-tour-package-5-nights-6-days-premium.html"
+  status = 301
+  query = { id = "victoria-falls", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages/victoria-falls-tour-package-6-nights-7-days-premium-plus.html"
+  status = 301
+  query = { id = "victoria-falls", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages/victoria-falls-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "victoria-falls", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages/france-switzerland-italy-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "france-switzerland-italy", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages/france-switzerland-italy-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "france-switzerland-italy", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages/france-switzerland-italy-tour-package-10-nights-11-days-deluxe.html"
+  status = 301
+  query = { id = "france-switzerland-italy", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages/france-switzerland-italy-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "france-switzerland-italy", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages/france-switzerland-italy-tour-package-10-nights-11-days-premium.html"
+  status = 301
+  query = { id = "france-switzerland-italy", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages/france-switzerland-italy-tour-package-11-nights-12-days-premium-plus.html"
+  status = 301
+  query = { id = "france-switzerland-italy", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages/france-switzerland-italy-tour-package-12-nights-13-days.html"
+  status = 301
+  query = { id = "france-switzerland-italy", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages/germany-austria-hungary-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "germany-austria-hungary", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages/germany-austria-hungary-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "germany-austria-hungary", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages/germany-austria-hungary-tour-package-9-nights-10-days-deluxe.html"
+  status = 301
+  query = { id = "germany-austria-hungary", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages/germany-austria-hungary-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "germany-austria-hungary", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages/germany-austria-hungary-tour-package-9-nights-10-days-premium.html"
+  status = 301
+  query = { id = "germany-austria-hungary", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages/germany-austria-hungary-tour-package-10-nights-11-days-premium-plus.html"
+  status = 301
+  query = { id = "germany-austria-hungary", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages/germany-austria-hungary-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "germany-austria-hungary", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages/prague-budapest-poland-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "prague-budapest-poland", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages/prague-budapest-poland-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "prague-budapest-poland", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages/prague-budapest-poland-tour-package-9-nights-10-days-deluxe.html"
+  status = 301
+  query = { id = "prague-budapest-poland", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages/prague-budapest-poland-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "prague-budapest-poland", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages/prague-budapest-poland-tour-package-9-nights-10-days-premium.html"
+  status = 301
+  query = { id = "prague-budapest-poland", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages/prague-budapest-poland-tour-package-10-nights-11-days-premium-plus.html"
+  status = 301
+  query = { id = "prague-budapest-poland", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages/prague-budapest-poland-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "prague-budapest-poland", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages/norway-finland-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "norway-finland", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages/norway-finland-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "norway-finland", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages/norway-finland-tour-package-8-nights-9-days-deluxe.html"
+  status = 301
+  query = { id = "norway-finland", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages/norway-finland-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "norway-finland", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages/norway-finland-tour-package-8-nights-9-days-premium.html"
+  status = 301
+  query = { id = "norway-finland", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages/norway-finland-tour-package-9-nights-10-days-premium-plus.html"
+  status = 301
+  query = { id = "norway-finland", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages/norway-finland-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "norway-finland", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages/uk-ireland-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "uk-ireland", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages/uk-ireland-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "uk-ireland", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages/uk-ireland-tour-package-9-nights-10-days-deluxe.html"
+  status = 301
+  query = { id = "uk-ireland", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages/uk-ireland-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "uk-ireland", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages/uk-ireland-tour-package-9-nights-10-days-premium.html"
+  status = 301
+  query = { id = "uk-ireland", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages/uk-ireland-tour-package-10-nights-11-days-premium-plus.html"
+  status = 301
+  query = { id = "uk-ireland", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages/uk-ireland-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "uk-ireland", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages/greece-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "greece", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages/greece-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "greece", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages/greece-tour-package-7-nights-8-days-deluxe.html"
+  status = 301
+  query = { id = "greece", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages/greece-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "greece", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages/greece-tour-package-7-nights-8-days-premium.html"
+  status = 301
+  query = { id = "greece", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages/greece-tour-package-8-nights-9-days-premium-plus.html"
+  status = 301
+  query = { id = "greece", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages/greece-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "greece", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages/turkey-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "turkey", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages/turkey-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "turkey", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages/turkey-tour-package-7-nights-8-days-deluxe.html"
+  status = 301
+  query = { id = "turkey", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages/turkey-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "turkey", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages/turkey-tour-package-7-nights-8-days-premium.html"
+  status = 301
+  query = { id = "turkey", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages/turkey-tour-package-8-nights-9-days-premium-plus.html"
+  status = 301
+  query = { id = "turkey", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages/turkey-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "turkey", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages/usa-east-coast-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "us-east-coast", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages/usa-east-coast-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "us-east-coast", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages/usa-east-coast-tour-package-8-nights-9-days-deluxe.html"
+  status = 301
+  query = { id = "us-east-coast", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages/usa-east-coast-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "us-east-coast", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages/usa-east-coast-tour-package-8-nights-9-days-premium.html"
+  status = 301
+  query = { id = "us-east-coast", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages/usa-east-coast-tour-package-9-nights-10-days-premium-plus.html"
+  status = 301
+  query = { id = "us-east-coast", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages/usa-east-coast-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "us-east-coast", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages/usa-west-coast-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "us-west-coast", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages/usa-west-coast-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "us-west-coast", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages/usa-west-coast-tour-package-9-nights-10-days-deluxe.html"
+  status = 301
+  query = { id = "us-west-coast", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages/usa-west-coast-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "us-west-coast", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages/usa-west-coast-tour-package-9-nights-10-days-premium.html"
+  status = 301
+  query = { id = "us-west-coast", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages/usa-west-coast-tour-package-10-nights-11-days-premium-plus.html"
+  status = 301
+  query = { id = "us-west-coast", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages/usa-west-coast-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "us-west-coast", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages/usa-national-parks-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "us-national-parks", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages/usa-national-parks-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "us-national-parks", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages/usa-national-parks-tour-package-10-nights-11-days-deluxe.html"
+  status = 301
+  query = { id = "us-national-parks", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages/usa-national-parks-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "us-national-parks", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages/usa-national-parks-tour-package-10-nights-11-days-premium.html"
+  status = 301
+  query = { id = "us-national-parks", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages/usa-national-parks-tour-package-11-nights-12-days-premium-plus.html"
+  status = 301
+  query = { id = "us-national-parks", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages/usa-national-parks-tour-package-12-nights-13-days.html"
+  status = 301
+  query = { id = "us-national-parks", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages/orlando-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "orlando", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages/orlando-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "orlando", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages/orlando-tour-package-7-nights-8-days-deluxe.html"
+  status = 301
+  query = { id = "orlando", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages/orlando-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "orlando", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages/orlando-tour-package-7-nights-8-days-premium.html"
+  status = 301
+  query = { id = "orlando", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages/orlando-tour-package-8-nights-9-days-premium-plus.html"
+  status = 301
+  query = { id = "orlando", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages/orlando-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "orlando", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages/eastern-canada-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "eastern-canada", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages/eastern-canada-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "eastern-canada", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages/eastern-canada-tour-package-8-nights-9-days-deluxe.html"
+  status = 301
+  query = { id = "eastern-canada", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages/eastern-canada-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "eastern-canada", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages/eastern-canada-tour-package-8-nights-9-days-premium.html"
+  status = 301
+  query = { id = "eastern-canada", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages/eastern-canada-tour-package-9-nights-10-days-premium-plus.html"
+  status = 301
+  query = { id = "eastern-canada", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages/eastern-canada-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "eastern-canada", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages/western-canada-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "western-canada", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages/western-canada-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "western-canada", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages/western-canada-tour-package-9-nights-10-days-deluxe.html"
+  status = 301
+  query = { id = "western-canada", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages/western-canada-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "western-canada", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages/western-canada-tour-package-9-nights-10-days-premium.html"
+  status = 301
+  query = { id = "western-canada", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages/western-canada-tour-package-10-nights-11-days-premium-plus.html"
+  status = 301
+  query = { id = "western-canada", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages/western-canada-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "western-canada", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages/rocky-mountaineer-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "rocky-mountaineer", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages/rocky-mountaineer-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "rocky-mountaineer", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages/rocky-mountaineer-tour-package-9-nights-10-days-deluxe.html"
+  status = 301
+  query = { id = "rocky-mountaineer", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages/rocky-mountaineer-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "rocky-mountaineer", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages/rocky-mountaineer-tour-package-9-nights-10-days-premium.html"
+  status = 301
+  query = { id = "rocky-mountaineer", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages/rocky-mountaineer-tour-package-10-nights-11-days-premium-plus.html"
+  status = 301
+  query = { id = "rocky-mountaineer", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages/rocky-mountaineer-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "rocky-mountaineer", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages/autumn-fall-colours-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "autumn-fall", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages/autumn-fall-colours-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "autumn-fall", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages/autumn-fall-colours-tour-package-7-nights-8-days-deluxe.html"
+  status = 301
+  query = { id = "autumn-fall", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages/autumn-fall-colours-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "autumn-fall", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages/autumn-fall-colours-tour-package-7-nights-8-days-premium.html"
+  status = 301
+  query = { id = "autumn-fall", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages/autumn-fall-colours-tour-package-8-nights-9-days-premium-plus.html"
+  status = 301
+  query = { id = "autumn-fall", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages/autumn-fall-colours-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "autumn-fall", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages/sydney-melbourne-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages/sydney-melbourne-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages/sydney-melbourne-tour-package-8-nights-9-days-deluxe.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages/sydney-melbourne-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages/sydney-melbourne-tour-package-8-nights-9-days-premium.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages/sydney-melbourne-tour-package-9-nights-10-days-premium-plus.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages/sydney-melbourne-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages/gold-coast-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "australia-gold-coast", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages/gold-coast-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "australia-gold-coast", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages/gold-coast-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "australia-gold-coast", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages/gold-coast-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "australia-gold-coast", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages/gold-coast-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "australia-gold-coast", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages/gold-coast-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "australia-gold-coast", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages/gold-coast-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "australia-gold-coast", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages/great-barrier-reef-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages/great-barrier-reef-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages/great-barrier-reef-tour-package-7-nights-8-days-deluxe.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages/great-barrier-reef-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages/great-barrier-reef-tour-package-7-nights-8-days-premium.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages/great-barrier-reef-tour-package-8-nights-9-days-premium-plus.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages/great-barrier-reef-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages/luxury-self-drive-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages/luxury-self-drive-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages/luxury-self-drive-tour-package-10-nights-11-days-deluxe.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages/luxury-self-drive-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages/luxury-self-drive-tour-package-10-nights-11-days-premium.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages/luxury-self-drive-tour-package-11-nights-12-days-premium-plus.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages/luxury-self-drive-tour-package-12-nights-13-days.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages/north-south-combo-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "nz-north-south", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages/north-south-combo-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "nz-north-south", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages/north-south-combo-tour-package-10-nights-11-days-deluxe.html"
+  status = 301
+  query = { id = "nz-north-south", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages/north-south-combo-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "nz-north-south", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages/north-south-combo-tour-package-10-nights-11-days-premium.html"
+  status = 301
+  query = { id = "nz-north-south", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages/north-south-combo-tour-package-11-nights-12-days-premium-plus.html"
+  status = 301
+  query = { id = "nz-north-south", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages/north-south-combo-tour-package-12-nights-13-days.html"
+  status = 301
+  query = { id = "nz-north-south", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages/queenstown-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "nz-queenstown", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages/queenstown-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "nz-queenstown", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages/queenstown-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "nz-queenstown", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages/queenstown-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "nz-queenstown", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages/queenstown-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "nz-queenstown", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages/queenstown-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "nz-queenstown", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages/queenstown-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "nz-queenstown", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages/self-drive-scenic-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "nz-self-drive", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages/self-drive-scenic-tour-package-12-nights-13-days.html"
+  status = 301
+  query = { id = "nz-self-drive", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages/self-drive-scenic-tour-package-12-nights-13-days-deluxe.html"
+  status = 301
+  query = { id = "nz-self-drive", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages/self-drive-scenic-tour-package-13-nights-14-days.html"
+  status = 301
+  query = { id = "nz-self-drive", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages/self-drive-scenic-tour-package-12-nights-13-days-premium.html"
+  status = 301
+  query = { id = "nz-self-drive", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages/self-drive-scenic-tour-package-13-nights-14-days-premium-plus.html"
+  status = 301
+  query = { id = "nz-self-drive", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages/self-drive-scenic-tour-package-14-nights-15-days.html"
+  status = 301
+  query = { id = "nz-self-drive", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages/luxury-nature-escapes-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "nz-luxury-nature", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages/luxury-nature-escapes-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "nz-luxury-nature", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages/luxury-nature-escapes-tour-package-9-nights-10-days-deluxe.html"
+  status = 301
+  query = { id = "nz-luxury-nature", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages/luxury-nature-escapes-tour-package-10-nights-11-days.html"
+  status = 301
+  query = { id = "nz-luxury-nature", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages/luxury-nature-escapes-tour-package-9-nights-10-days-premium.html"
+  status = 301
+  query = { id = "nz-luxury-nature", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages/luxury-nature-escapes-tour-package-10-nights-11-days-premium-plus.html"
+  status = 301
+  query = { id = "nz-luxury-nature", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages/luxury-nature-escapes-tour-package-11-nights-12-days.html"
+  status = 301
+  query = { id = "nz-luxury-nature", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages/azerbaijan-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "azerbaijan", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages/azerbaijan-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "azerbaijan", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages/azerbaijan-tour-package-5-nights-6-days-deluxe.html"
+  status = 301
+  query = { id = "azerbaijan", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages/azerbaijan-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "azerbaijan", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages/azerbaijan-tour-package-5-nights-6-days-premium.html"
+  status = 301
+  query = { id = "azerbaijan", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages/azerbaijan-tour-package-6-nights-7-days-premium-plus.html"
+  status = 301
+  query = { id = "azerbaijan", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages/azerbaijan-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "azerbaijan", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages/kazakhstan-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "kazakhstan", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages/kazakhstan-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "kazakhstan", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages/kazakhstan-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "kazakhstan", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages/kazakhstan-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "kazakhstan", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages/kazakhstan-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "kazakhstan", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages/kazakhstan-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "kazakhstan", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages/kazakhstan-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "kazakhstan", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages/georgia-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "georgia", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages/georgia-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "georgia", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages/georgia-tour-package-6-nights-7-days-deluxe.html"
+  status = 301
+  query = { id = "georgia", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages/georgia-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "georgia", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages/georgia-tour-package-6-nights-7-days-premium.html"
+  status = 301
+  query = { id = "georgia", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages/georgia-tour-package-7-nights-8-days-premium-plus.html"
+  status = 301
+  query = { id = "georgia", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages/georgia-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "georgia", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages/armenia-tour-package-4-nights-5-days.html"
+  status = 301
+  query = { id = "armenia", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages/armenia-tour-package-5-nights-6-days.html"
+  status = 301
+  query = { id = "armenia", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages/armenia-tour-package-5-nights-6-days-deluxe.html"
+  status = 301
+  query = { id = "armenia", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages/armenia-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "armenia", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages/armenia-tour-package-5-nights-6-days-premium.html"
+  status = 301
+  query = { id = "armenia", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages/armenia-tour-package-6-nights-7-days-premium-plus.html"
+  status = 301
+  query = { id = "armenia", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages/armenia-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "armenia", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages/russia-tour-package-6-nights-7-days.html"
+  status = 301
+  query = { id = "russia", p = "1" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages/russia-tour-package-7-nights-8-days.html"
+  status = 301
+  query = { id = "russia", p = "2" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages/russia-tour-package-7-nights-8-days-deluxe.html"
+  status = 301
+  query = { id = "russia", p = "3" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages/russia-tour-package-8-nights-9-days.html"
+  status = 301
+  query = { id = "russia", p = "4" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages/russia-tour-package-7-nights-8-days-premium.html"
+  status = 301
+  query = { id = "russia", p = "5" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages/russia-tour-package-8-nights-9-days-premium-plus.html"
+  status = 301
+  query = { id = "russia", p = "6" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages/russia-tour-package-9-nights-10-days.html"
+  status = 301
+  query = { id = "russia", p = "7" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/bali-packages.html"
+  status = 301
+  query = { id = "bali" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/thailand-packages.html"
+  status = 301
+  query = { id = "thailand" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/maldives-packages.html"
+  status = 301
+  query = { id = "maldives" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/dubai-abu-dhabi-packages.html"
+  status = 301
+  query = { id = "dubai-abu-dhabi" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/singapore-malaysia-packages.html"
+  status = 301
+  query = { id = "singapore-malaysia" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kashmir-packages.html"
+  status = 301
+  query = { id = "kashmir" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/goa-packages.html"
+  status = 301
+  query = { id = "goa" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rajasthan-packages.html"
+  status = 301
+  query = { id = "rajasthan" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/ladakh-packages.html"
+  status = 301
+  query = { id = "ladakh" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/himachal-packages.html"
+  status = 301
+  query = { id = "himachal" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kerala-packages.html"
+  status = 301
+  query = { id = "kerala" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uttarakhand-packages.html"
+  status = 301
+  query = { id = "uttarakhand" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/delhi-agra-varanasi-packages.html"
+  status = 301
+  query = { id = "delhi-agra-varanasi" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/tamil-nadu-packages.html"
+  status = 301
+  query = { id = "tamil-nadu" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/karnataka-packages.html"
+  status = 301
+  query = { id = "karnataka" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/gujarat-packages.html"
+  status = 301
+  query = { id = "gujarat" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/andaman-nicobar-packages.html"
+  status = 301
+  query = { id = "andaman-nicobar" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sikkim-darjeeling-packages.html"
+  status = 301
+  query = { id = "sikkim-darjeeling" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/arunachal-meghalaya-packages.html"
+  status = 301
+  query = { id = "arunachal-meghalaya" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/madhya-pradesh-packages.html"
+  status = 301
+  query = { id = "madhya-pradesh" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/vietnam-packages.html"
+  status = 301
+  query = { id = "vietnam" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/sri-lanka-packages.html"
+  status = 301
+  query = { id = "sri-lanka" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/japan-korea-packages.html"
+  status = 301
+  query = { id = "japan-korea" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/south-africa-packages.html"
+  status = 301
+  query = { id = "south-africa" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kenya-packages.html"
+  status = 301
+  query = { id = "kenya" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/mauritius-packages.html"
+  status = 301
+  query = { id = "mauritius" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/seychelles-packages.html"
+  status = 301
+  query = { id = "seychelles" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/egypt-packages.html"
+  status = 301
+  query = { id = "egypt" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/victoria-falls-packages.html"
+  status = 301
+  query = { id = "victoria-falls" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/france-switzerland-italy-packages.html"
+  status = 301
+  query = { id = "france-switzerland-italy" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/germany-austria-hungary-packages.html"
+  status = 301
+  query = { id = "germany-austria-hungary" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/prague-budapest-poland-packages.html"
+  status = 301
+  query = { id = "prague-budapest-poland" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/norway-finland-packages.html"
+  status = 301
+  query = { id = "norway-finland" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/uk-ireland-packages.html"
+  status = 301
+  query = { id = "uk-ireland" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/greece-packages.html"
+  status = 301
+  query = { id = "greece" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/turkey-packages.html"
+  status = 301
+  query = { id = "turkey" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-east-coast-packages.html"
+  status = 301
+  query = { id = "us-east-coast" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-west-coast-packages.html"
+  status = 301
+  query = { id = "us-west-coast" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/us-national-parks-packages.html"
+  status = 301
+  query = { id = "us-national-parks" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/orlando-packages.html"
+  status = 301
+  query = { id = "orlando" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/eastern-canada-packages.html"
+  status = 301
+  query = { id = "eastern-canada" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/western-canada-packages.html"
+  status = 301
+  query = { id = "western-canada" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/rocky-mountaineer-packages.html"
+  status = 301
+  query = { id = "rocky-mountaineer" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/autumn-fall-packages.html"
+  status = 301
+  query = { id = "autumn-fall" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-sydney-melbourne-packages.html"
+  status = 301
+  query = { id = "australia-sydney-melbourne" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-gold-coast-packages.html"
+  status = 301
+  query = { id = "australia-gold-coast" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-great-barrier-reef-packages.html"
+  status = 301
+  query = { id = "australia-great-barrier-reef" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/australia-luxury-self-drive-packages.html"
+  status = 301
+  query = { id = "australia-luxury-self-drive" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-north-south-packages.html"
+  status = 301
+  query = { id = "nz-north-south" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-queenstown-packages.html"
+  status = 301
+  query = { id = "nz-queenstown" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-self-drive-packages.html"
+  status = 301
+  query = { id = "nz-self-drive" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/nz-luxury-nature-packages.html"
+  status = 301
+  query = { id = "nz-luxury-nature" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/azerbaijan-packages.html"
+  status = 301
+  query = { id = "azerbaijan" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/kazakhstan-packages.html"
+  status = 301
+  query = { id = "kazakhstan" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/georgia-packages.html"
+  status = 301
+  query = { id = "georgia" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/armenia-packages.html"
+  status = 301
+  query = { id = "armenia" }
+
+[[redirects]]
+  from = "/package.html"
+  to = "/russia-packages.html"
+  status = 301
+  query = { id = "russia" }
+
