@@ -246,10 +246,10 @@
     },
 
     'arunachal-meghalaya': {
-      hero: 'https://images.unsplash.com/photo-1606134459088-89b3e2ff3af9?w=1600&q=85',
+      hero: 'https://images.unsplash.com/photo-1593813738953-fb3c93e0769d?w=1600&q=85',
       gallery: [
-        'https://images.unsplash.com/photo-1606134459088-89b3e2ff3af9?w=800&q=80',
-        'https://images.unsplash.com/photo-1571606428253-b7bda8a64a1a?w=800&q=80',
+        'https://images.unsplash.com/photo-1593813738953-fb3c93e0769d?w=800&q=80',
+        'https://images.unsplash.com/photo-1609276804051-8c5e906cc430?w=800&q=80',
         'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80',
         'https://images.unsplash.com/photo-1608501078713-8e445a709b39?w=800&q=80',
         'https://images.unsplash.com/photo-1559541561-e5d5be91b01c?w=800&q=80',
@@ -258,8 +258,8 @@
         'https://images.unsplash.com/photo-1593011951104-f30e76c2c4cd?w=800&q=80'
       ],
       cards: [
-        'https://images.unsplash.com/photo-1606134459088-89b3e2ff3af9?w=900&q=85',
-        'https://images.unsplash.com/photo-1571606428253-b7bda8a64a1a?w=900&q=85',
+        'https://images.unsplash.com/photo-1593813738953-fb3c93e0769d?w=900&q=85',
+        'https://images.unsplash.com/photo-1609276804051-8c5e906cc430?w=900&q=85',
         'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=900&q=85',
         'https://images.unsplash.com/photo-1608501078713-8e445a709b39?w=900&q=85'
       ],
