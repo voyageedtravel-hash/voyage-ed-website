@@ -2,6 +2,7 @@
    VOYAGE-ED PACKAGES DATA — Multi-Package Format with Real City Combinations + Videos
    =========================================================================== */
 
+const PRICE_VERSION = "2026-08-01-v3";
 const VOYAGE_PACKAGES = {
   "bali": {
     id: "bali",
