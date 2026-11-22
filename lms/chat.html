@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage-Ed LMS · Amadeus AI Tutor</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/lms/style.css" />
+</head>
+<body class="lms-chat">
+  <div class="lms-chat-shell">
+
+    <!-- Top bar: brand on left, student name + logout on right -->
+    <header class="lms-chat-header">
+      <div class="lms-chat-brand">
+        <img src="/logo.png" alt="Voyage-Ed" />
+        <div>
+          <div class="brand-title">Amadeus AI Tutor</div>
+          <div class="brand-sub" id="studentBrandSub">Voyage-Ed GDS Training</div>
+        </div>
+      </div>
+      <div class="lms-chat-meta">
+        <div class="lms-chat-usage" id="usagePill" title="Aaj ke questions / daily limit">—</div>
+        <button class="lms-chat-logout" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <!-- Main chat scroll area -->
+    <main class="lms-chat-body" id="chatBody">
+      <!-- Welcome / empty state -->
+      <div class="lms-chat-welcome" id="welcomeBlock">
+        <div class="lms-chat-welcome-icon">💬</div>
+        <h2>Namaste <span id="welcomeName">Student</span>!</h2>
+        <p id="welcomeMsg">Loading your tutor…</p>
+        <div class="lms-chat-suggestions">
+          <div class="lms-chat-suggest-label">Try asking:</div>
+          <button class="lms-chat-suggest">Sign in command kya hai?</button>
+          <button class="lms-chat-suggest">DEL se BOM ki availability kaise dekhoon?</button>
+          <button class="lms-chat-suggest">PNR create karne ka pura flow bata</button>
+          <button class="lms-chat-suggest">Ticket issue karne ka command?</button>
+          <button class="lms-chat-suggest">Seat map kaise dekhte hain?</button>
+          <button class="lms-chat-suggest">Encode-decode city command kya hai?</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Input dock -->
+    <footer class="lms-chat-dock">
+      <form id="chatForm" class="lms-chat-form">
+        <textarea id="chatInput" rows="1" placeholder="Apna question yahaan likho — Hindi, English, ya Hinglish mein…" maxlength="2000" required></textarea>
+        <button type="submit" id="chatSend" class="lms-chat-send" title="Send (Enter)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </form>
+      <div class="lms-chat-hint">Enter = send · Shift+Enter = new line</div>
+    </footer>
+  </div>
+
+  <script src="/lms/app.js"></script>
+  <script>
+    // ─── Auth guard — unauthenticated students get bounced to login ────
+    const token = localStorage.getItem('lms_token');
+    if (!token) window.location.href = '/lms/login.html';
+    const student = JSON.parse(localStorage.getItem('lms_student') || '{}');
+
+    // ─── DOM refs ───
+    const chatBody = document.getElementById('chatBody');
+    const welcomeBlock = document.getElementById('welcomeBlock');
+    const welcomeName = document.getElementById('welcomeName');
+    const welcomeMsg = document.getElementById('welcomeMsg');
+    const studentBrandSub = document.getElementById('studentBrandSub');
+    const usagePill = document.getElementById('usagePill');
+    const chatInput = document.getElementById('chatInput');
+    const chatForm = document.getElementById('chatForm');
+    const chatSend = document.getElementById('chatSend');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    welcomeName.textContent = (student.name || 'Student').split(' ')[0];
+    studentBrandSub.textContent = student.batchName || 'Voyage-Ed GDS Training';
+
+    // ─── Logout ───
+    logoutBtn.addEventListener('click', () => {
+      if (confirm('Logout karna hai?')) {
+        localStorage.removeItem('lms_token');
+        localStorage.removeItem('lms_student');
+        window.location.href = '/lms/login.html';
+      }
+    });
+
+    // ─── Fetch student + config on load ───
+    (async () => {
+      try {
+        const res = await fetch(LMS_API + '/api/lms/me', { headers: { Authorization: 'Bearer ' + token } });
+        if (res.status === 401) throw new Error('session');
+        const data = await res.json();
+        welcomeMsg.textContent = data.welcomeMsg;
+        if (!data.qrgReady) {
+          welcomeMsg.innerHTML = '⚠️ <b>QRG abhi upload nahi hua.</b> Vishal Sir se baat karo — jab tak QRG upload nahi hota, AI jawab nahi de paayega.';
+        }
+        loadChatHistory();
+      } catch (ex) {
+        if (String(ex.message).includes('session')) {
+          localStorage.removeItem('lms_token');
+          window.location.href = '/lms/login.html';
+        }
+      }
+    })();
+
+    // ─── Chat history (shows past Q&As on load so student has continuity) ───
+    async function loadChatHistory() {
+      try {
+        const res = await fetch(LMS_API + '/api/lms/chats?limit=30', { headers: { Authorization: 'Bearer ' + token } });
+        const chats = await res.json();
+        if (!Array.isArray(chats) || chats.length === 0) return;
+        welcomeBlock.hidden = true;
+        // Oldest first (API returns newest first), so reverse for chronological display
+        chats.reverse().forEach(c => {
+          appendMessage('user', c.question, false);
+          appendMessage('ai', c.answer, false);
+        });
+        chatBody.scrollTop = chatBody.scrollHeight;
+      } catch {}
+    }
+
+    // ─── Message rendering ───
+    // Minimal but safe markdown — bold, inline code, backtick code
+    // blocks, bullet lists.  We escape raw HTML first so the AI can't
+    // inject anything dangerous into the DOM.
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+    function renderMarkdown(text) {
+      let html = esc(text);
+      // code blocks (```...```)
+      html = html.replace(/```([\s\S]*?)```/g, (_, body) => '<pre class="codeblock"><code>' + body + '</code></pre>');
+      // inline code (`...`)
+      html = html.replace(/`([^`\n]+)`/g, '<code class="inline-code">$1</code>');
+      // bold (**...**)
+      html = html.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+      // paragraph breaks
+      html = html.replace(/\n{2,}/g, '</p><p>');
+      html = '<p>' + html + '</p>';
+      // list items: lines starting with -, *, or bullet
+      html = html.replace(/<p>((?:\s*[-*•] .+\n?)+)<\/p>/g, (_, block) => {
+        const items = block.trim().split(/\n/).map(l => '<li>' + l.replace(/^\s*[-*•]\s*/, '') + '</li>').join('');
+        return '<ul>' + items + '</ul>';
+      });
+      // single newlines inside paragraphs → <br>
+      html = html.replace(/(?<!>)\n(?!<)/g, '<br>');
+      return html;
+    }
+
+    function appendMessage(role, text, scroll = true) {
+      welcomeBlock.hidden = true;
+      const wrap = document.createElement('div');
+      wrap.className = 'lms-msg lms-msg-' + role;
+      const bubble = document.createElement('div');
+      bubble.className = 'lms-msg-bubble';
+      bubble.innerHTML = role === 'ai' ? renderMarkdown(text) : esc(text);
+      wrap.appendChild(bubble);
+      chatBody.appendChild(wrap);
+      if (scroll) chatBody.scrollTop = chatBody.scrollHeight;
+      return bubble;
+    }
+
+    function appendThinking() {
+      welcomeBlock.hidden = true;
+      const wrap = document.createElement('div');
+      wrap.className = 'lms-msg lms-msg-ai lms-msg-thinking';
+      wrap.innerHTML = '<div class="lms-msg-bubble"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>';
+      chatBody.appendChild(wrap);
+      chatBody.scrollTop = chatBody.scrollHeight;
+      return wrap;
+    }
+
+    // ─── Auto-grow textarea ───
+    chatInput.addEventListener('input', () => {
+      chatInput.style.height = 'auto';
+      chatInput.style.height = Math.min(chatInput.scrollHeight, 180) + 'px';
+    });
+
+    // ─── Enter to send, Shift+Enter for newline ───
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        chatForm.dispatchEvent(new Event('submit'));
+      }
+    });
+
+    // ─── Suggestion chip clicks ───
+    document.querySelectorAll('.lms-chat-suggest').forEach(b => {
+      b.addEventListener('click', () => {
+        chatInput.value = b.textContent;
+        chatInput.focus();
+        chatInput.dispatchEvent(new Event('input'));
+      });
+    });
+
+    // ─── Send a question ───
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const q = chatInput.value.trim();
+      if (!q) return;
+      appendMessage('user', q);
+      chatInput.value = '';
+      chatInput.style.height = 'auto';
+      chatSend.disabled = true;
+      const thinking = appendThinking();
+
+      try {
+        const res = await fetch(LMS_API + '/api/lms/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+          body: JSON.stringify({ question: q }),
+        });
+        const data = await res.json();
+        thinking.remove();
+        if (res.status === 401) {
+          localStorage.removeItem('lms_token');
+          window.location.href = '/lms/login.html';
+          return;
+        }
+        if (!res.ok) {
+          appendMessage('ai', '⚠️ ' + (data.error || 'Kuch galat ho gaya — phir se try karo'));
+        } else {
+          appendMessage('ai', data.answer);
+          if (data.dailyUsed && data.dailyLimit) {
+            usagePill.textContent = `${data.dailyUsed} / ${data.dailyLimit} today`;
+          }
+        }
+      } catch (ex) {
+        thinking.remove();
+        appendMessage('ai', '⚠️ Network issue — internet check karo aur phir try karo');
+      }
+      chatSend.disabled = false;
+      chatInput.focus();
+    });
+  </script>
+</body>
+</html>

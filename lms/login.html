@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage-Ed LMS · Student Login</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/lms/style.css" />
+</head>
+<body class="lms-auth">
+  <!-- Full-screen split: left hero (navy + gold gradient + tagline),
+       right form.  On mobile the hero stacks on top and shrinks to a
+       compact header so the form is above the fold. -->
+  <div class="lms-auth-shell">
+
+    <aside class="lms-auth-hero">
+      <div class="lms-auth-brand">
+        <img src="/logo.png" alt="Voyage-Ed" class="lms-auth-logo" />
+        <div class="lms-auth-brand-text">
+          <div class="lms-auth-brand-name">VOYAGE-ED TRAVELS</div>
+          <div class="lms-auth-brand-tag">LEARN · TRAVEL · EXPLORE</div>
+        </div>
+      </div>
+      <div class="lms-auth-hero-copy">
+        <h1>Amadeus GDS<br/><span>Learning Portal</span></h1>
+        <p>Namaste 👋 — tumhara personal AI tutor ready hai. QRG ki har entry, har command, har example — 24×7 available.</p>
+        <ul class="lms-auth-features">
+          <li>Simple Hindi / English / Hinglish mein pucho</li>
+          <li>Exact Amadeus commands with real examples</li>
+          <li>Jab chaho, jitna chaho — koi doubt chhota nahi</li>
+        </ul>
+      </div>
+      <div class="lms-auth-hero-foot">
+        <span>Need an account?</span> Call Vishal Sir — <a href="tel:+917009659048">+91 70096 59048</a>
+      </div>
+    </aside>
+
+    <main class="lms-auth-main">
+      <div class="lms-auth-card">
+        <h2>Student Login</h2>
+        <p class="lms-auth-sub">Apne credentials se login karo jo Voyage-Ed ne diye hain.</p>
+
+        <form id="loginForm" autocomplete="on">
+          <label>
+            <span>Username</span>
+            <input type="text" id="username" name="username" required autocomplete="username" placeholder="e.g. ve-2027-001" autofocus />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="••••••••" />
+          </label>
+
+          <div id="loginErr" class="lms-auth-err" hidden></div>
+
+          <button type="submit" id="loginBtn" class="lms-auth-btn">
+            <span class="btn-label">Login</span>
+            <span class="btn-loading" hidden>Checking…</span>
+          </button>
+        </form>
+
+        <div class="lms-auth-help">
+          Credentials bhool gaye? WhatsApp Vishal Sir — <a href="https://wa.me/917009659048">+91 70096 59048</a>
+        </div>
+      </div>
+      <footer class="lms-auth-foot">
+        © Voyage-Ed Travels · Suite 315, Regus GMADA Aerocity, Mohali · GSTIN 04ABBFV6015A1ZT
+      </footer>
+    </main>
+  </div>
+
+  <script src="/lms/app.js"></script>
+  <script>
+    // If already logged in, bounce straight to chat.
+    if (localStorage.getItem('lms_token')) {
+      window.location.href = '/lms/chat.html';
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('loginBtn');
+      const err = document.getElementById('loginErr');
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      err.hidden = true;
+      btn.querySelector('.btn-label').hidden = true;
+      btn.querySelector('.btn-loading').hidden = false;
+      btn.disabled = true;
+      try {
+        const res = await fetch(LMS_API + '/api/lms/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Login failed');
+        localStorage.setItem('lms_token', data.token);
+        localStorage.setItem('lms_student', JSON.stringify(data.student));
+        window.location.href = '/lms/chat.html';
+      } catch (ex) {
+        err.textContent = ex.message;
+        err.hidden = false;
+        btn.querySelector('.btn-label').hidden = false;
+        btn.querySelector('.btn-loading').hidden = true;
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
