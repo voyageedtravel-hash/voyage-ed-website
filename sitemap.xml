@@ -137,4 +137,13 @@
   <url><loc>https://voyage-ed.com/blog/georgia-in-october-from-india-2026</loc><lastmod>2026-08-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://voyage-ed.com/blog/vietnam-in-september-from-india-2026</loc><lastmod>2026-08-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://voyage-ed.com/blog/dubai-diwali-packages-2026-from-india</loc><lastmod>2026-08-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Special Blocked Fares — dynamic daily-updated inventory -->
+  <url><loc>https://voyage-ed.com/special-fares/</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://voyage-ed.com/special-fares/destination.html?slug=bali</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://voyage-ed.com/special-fares/destination.html?slug=thailand</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://voyage-ed.com/special-fares/destination.html?slug=uae</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://voyage-ed.com/special-fares/destination.html?slug=malaysia</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://voyage-ed.com/special-fares/destination.html?slug=canada</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://voyage-ed.com/special-fares/destination.html?slug=europe</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://voyage-ed.com/special-fares/destination.html?slug=australia</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
 </urlset>

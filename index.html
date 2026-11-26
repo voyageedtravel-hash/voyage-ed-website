@@ -598,6 +598,7 @@ body.ve-modal-open{overflow:hidden}
   ]
 }
 </script>
+<style>@keyframes veDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.45;transform:scale(1.4)}}</style>
 </head>
 <body>
 <div id="ve-progress"></div>
@@ -609,7 +610,7 @@ body.ve-modal-open{overflow:hidden}
   <ul id="navMenu">
     <li><a href="/">Home</a></li>
     <li><a href="travel">Travel</a></li>
-    <li><a href="/special-fares/">Special Blocked Fares ✈</a></li>
+    <li><a href="/special-fares/" style="display:inline-flex;align-items:center;gap:5px"><span style="font-size:15px">🔔</span>Special Blocked Fares<span style="display:inline-block;width:7px;height:7px;background:#e11d48;border-radius:50%;margin-left:2px;box-shadow:0 0 8px rgba(225,29,72,0.9);animation:veDot 1.4s infinite"></span></a></li>
     <li><a href="domestic">Domestic</a></li>
     <li><a href="international">International</a></li>
     <li><a href="visa">Visa</a></li>

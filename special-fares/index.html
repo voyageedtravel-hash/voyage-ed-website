@@ -30,26 +30,125 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- Enhanced Schema.org: LocalBusiness + Service + FAQPage + BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  "name": "Voyage-Ed Travels",
-  "image": "https://voyage-ed.com/logo-mark.png",
-  "url": "https://voyage-ed.com",
-  "telephone": "+917009659048",
-  "email": "enquiry@voyage-ed.com",
-  "priceRange": "₹₹",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Suite 315, Regus, GMADA Aerocity",
-    "addressLocality": "Mohali",
-    "addressRegion": "Punjab",
-    "postalCode": "140306",
-    "addressCountry": "IN"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 30.7046, "longitude": 76.7179 },
-  "areaServed": ["IN", "AE", "CA", "AU", "TH", "ID", "GB", "IT", "MY"]
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://voyage-ed.com/#organization",
+      "name": "Voyage-Ed Travels",
+      "legalName": "Voyage-Ed Travels",
+      "image": "https://voyage-ed.com/logo-mark.png",
+      "logo": "https://voyage-ed.com/logo-mark.png",
+      "url": "https://voyage-ed.com",
+      "telephone": "+917009659048",
+      "email": "enquiry@voyage-ed.com",
+      "priceRange": "₹₹",
+      "foundingDate": "2026",
+      "slogan": "Fly for less. Fly with confidence.",
+      "description": "Premium travel agency in Mohali-Chandigarh specialising in blocked airline inventory, international flights, luxury packages, visa services and corporate travel.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Suite 315, Regus, GMADA Aerocity",
+        "addressLocality": "Mohali",
+        "addressRegion": "Punjab",
+        "postalCode": "140306",
+        "addressCountry": "IN"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 30.7046, "longitude": 76.7179 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:30", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "16:00" }
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "India" },
+        { "@type": "Country", "name": "United Arab Emirates" },
+        { "@type": "Country", "name": "Canada" },
+        { "@type": "Country", "name": "Australia" },
+        { "@type": "Country", "name": "Thailand" },
+        { "@type": "Country", "name": "Indonesia" },
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "Italy" },
+        { "@type": "Country", "name": "Malaysia" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/voyageedtravels",
+        "https://www.instagram.com/voyageedtravels",
+        "https://www.linkedin.com/company/voyage-ed-travels"
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "237", "bestRating": "5" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://voyage-ed.com/special-fares/#service",
+      "name": "Special Blocked Fares — Exclusive Airline Inventory",
+      "serviceType": "Discounted International Flight Booking",
+      "provider": { "@id": "https://voyage-ed.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "India" },
+      "description": "Daily-updated blocked airline inventory from major carriers. Save ₹5,000 – ₹25,000 per ticket vs. public portals. Confirmed within 30 minutes. Full GST invoice included.",
+      "offers": [
+        { "@type": "Offer", "name": "Cheapest Delhi-Bali Flights", "priceCurrency": "INR", "price": "50999", "availability": "https://schema.org/InStock", "url": "https://voyage-ed.com/special-fares/destination.html?slug=bali" },
+        { "@type": "Offer", "name": "Cheapest Delhi-Bangkok Flights", "priceCurrency": "INR", "price": "14500", "availability": "https://schema.org/InStock", "url": "https://voyage-ed.com/special-fares/destination.html?slug=thailand" },
+        { "@type": "Offer", "name": "Cheapest Delhi-Dubai Flights", "priceCurrency": "INR", "price": "28400", "availability": "https://schema.org/InStock", "url": "https://voyage-ed.com/special-fares/destination.html?slug=uae" },
+        { "@type": "Offer", "name": "Cheapest Amritsar-Kuala Lumpur Flights", "priceCurrency": "INR", "price": "15800", "availability": "https://schema.org/InStock", "url": "https://voyage-ed.com/special-fares/destination.html?slug=malaysia" },
+        { "@type": "Offer", "name": "Cheapest Amritsar-Toronto Flights", "priceCurrency": "INR", "price": "85000", "availability": "https://schema.org/InStock", "url": "https://voyage-ed.com/special-fares/destination.html?slug=canada" },
+        { "@type": "Offer", "name": "Cheapest Delhi-London Flights", "priceCurrency": "INR", "price": "34000", "availability": "https://schema.org/InStock", "url": "https://voyage-ed.com/special-fares/destination.html?slug=europe" },
+        { "@type": "Offer", "name": "Cheapest Delhi-Melbourne Flights", "priceCurrency": "INR", "price": "28900", "availability": "https://schema.org/InStock", "url": "https://voyage-ed.com/special-fares/destination.html?slug=australia" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://voyage-ed.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Special Blocked Fares", "item": "https://voyage-ed.com/special-fares/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Special Blocked Fares?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Special Blocked Fares are exclusive airline inventory seats reserved in bulk by Voyage-Ed Travels from carriers like Air India, Singapore Airlines, Qatar Airways, Turkish Airlines and others. Because we commit to volume, we get them at corporate rates and pass the savings to you — typically ₹5,000-₹25,000 cheaper per ticket than MakeMyTrip, Goibibo or direct airline websites." }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I confirm a blocked fare booking?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Under 30 minutes. Tap the Book button on any fare, WhatsApp opens pre-filled with your request. We confirm live availability, send the payment link, and your e-ticket lands within half an hour." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I get a GST invoice?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, every booking comes with a full GST invoice from Voyage-Ed Travels (GSTIN on request) that you can upload directly to your corporate expense tool." }
+        },
+        {
+          "@type": "Question",
+          "name": "How often are the blocked fares updated?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Fresh blocked inventory is loaded every working day. Bookmark the page and check before any public portal — the difference per ticket can be ₹5,000 to ₹25,000." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which cities can I fly from?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We hold blocked inventory primarily from Delhi (DEL), Amritsar (ATQ), and Chandigarh (IXC). For routes to Toronto, Vancouver, Edmonton, Melbourne, Sydney, Dubai, Abu Dhabi, Sharjah, Kuala Lumpur, Bangkok, Phuket, Bali, London and Rome — contact us if your route isn't listed; we probably have it or can negotiate it." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are blocked fares refundable?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Blocked airline inventory is non-refundable and non-changeable at the fare level you see. This is why we can offer them so cheaply. If you need flexibility, we can book flexible fares separately — call +91 7009 659 048." }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://voyage-ed.com/special-fares/",
+      "name": "Special Blocked Fares — Cheapest International Flights from India",
+      "inLanguage": "en-IN",
+      "isPartOf": { "@id": "https://voyage-ed.com/#organization" },
+      "about": { "@id": "https://voyage-ed.com/special-fares/#service" }
+    }
+  ]
 }
 </script>
 
@@ -124,6 +223,8 @@
   .live-bar { background: linear-gradient(90deg, var(--cream) 0%, #fff 50%, var(--cream) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 16px 24px; text-align: center; font-size: 14px; color: var(--navy); }
   .pulse { display: inline-block; width: 8px; height: 8px; background: #16a34a; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; vertical-align: middle; box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6); }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6); } 70% { box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); } 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); } }
+  .live-dot { display:inline-block; width:7px; height:7px; background:#e11d48; border-radius:50%; box-shadow:0 0 8px rgba(225,29,72,0.9); animation:veDot 1.4s infinite; }
+  @keyframes veDot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.45; transform:scale(1.5); } }
   .live-bar b { color: var(--gold); }
 
   /* Sections */
@@ -233,7 +334,7 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/#destinations">Packages</a></li>
-        <li><a href="/special-fares/" style="color:var(--gold);font-weight:700">Blocked Fares</a></li>
+        <li><a href="/special-fares/" style="color:var(--gold);font-weight:700;display:inline-flex;align-items:center;gap:5px">🔔 Blocked Fares <span class="live-dot"></span></a></li>
         <li><a href="/visa.html">Visa</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html" class="nav-cta">Enquire Now</a></li>

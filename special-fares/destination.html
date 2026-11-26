@@ -22,6 +22,39 @@
 <meta property="og:title" id="ogTitle" content="Special Blocked Fares | Voyage-Ed">
 <meta property="og:description" id="ogDesc" content="Cheapest blocked airline fares, updated daily.">
 <meta property="og:image" id="ogImg" content="https://voyage-ed.com/logo-mark.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 day">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="coverage" content="worldwide">
+<meta name="target" content="all">
+
+<!-- Dynamic Schema.org injected by JS below -->
+<script type="application/ld+json" id="ldjson-static">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://voyage-ed.com/#organization",
+  "name": "Voyage-Ed Travels",
+  "url": "https://voyage-ed.com",
+  "logo": "https://voyage-ed.com/logo-mark.png",
+  "telephone": "+917009659048",
+  "email": "enquiry@voyage-ed.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Suite 315, Regus, GMADA Aerocity",
+    "addressLocality": "Mohali",
+    "addressRegion": "Punjab",
+    "postalCode": "140306",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 30.7046, "longitude": 76.7179 },
+  "areaServed": [ "IN", "AE", "CA", "AU", "TH", "ID", "GB", "IT", "MY" ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "237", "bestRating": "5" }
+}
+</script>
+<script type="application/ld+json" id="ldjson-dynamic">{}</script>
 
 <style>
   :root {
@@ -59,6 +92,8 @@
   .nav-cta { background: var(--navy); color: #fff !important; padding: 11px 22px; border-radius: 6px; }
   .nav-cta:hover { background: var(--gold); }
   .mobile-toggle { display: none; background: none; border: none; font-size: 26px; color: var(--navy); cursor: pointer; padding: 4px; }
+  .live-dot { display:inline-block; width:7px; height:7px; background:#e11d48; border-radius:50%; box-shadow:0 0 8px rgba(225,29,72,0.9); animation:veDot 1.4s infinite; }
+  @keyframes veDot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.45; transform:scale(1.5); } }
 
   .breadcrumb { max-width: 1320px; margin: 18px auto 0; padding: 0 24px; font-size: 13px; color: var(--muted); }
   .breadcrumb a { color: var(--navy); text-decoration: none; }
@@ -212,7 +247,7 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/#destinations">Packages</a></li>
-        <li><a href="/special-fares/" style="color:var(--gold);font-weight:700">Blocked Fares</a></li>
+        <li><a href="/special-fares/" style="color:var(--gold);font-weight:700;display:inline-flex;align-items:center;gap:5px">🔔 Blocked Fares <span class="live-dot"></span></a></li>
         <li><a href="/visa.html">Visa</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html" class="nav-cta">Enquire Now</a></li>
@@ -338,6 +373,16 @@ const slug = params.get('slug') || 'bali';
     return net;
   }
 
+  // Pre-compute stats (used by schema + stats UI)
+  let totalFares = 0, cheapest = Infinity;
+  for (const s of dest.sectors) {
+    totalFares += s.fares.length;
+    for (const f of s.fares) if (f.net != null) {
+      const final = applyMarkup(f.net);
+      if (final < cheapest) cheapest = final;
+    }
+  }
+
   // Meta
   document.title = dest.seo.title;
   document.getElementById('pageTitle').textContent = dest.seo.title;
@@ -347,6 +392,72 @@ const slug = params.get('slug') || 'bali';
   document.getElementById('ogTitle').setAttribute('content', dest.seo.title);
   document.getElementById('ogDesc').setAttribute('content', dest.seo.description);
   document.getElementById('ogImg').setAttribute('content', dest.heroImage);
+
+  // Dynamic Schema.org for this destination
+  const offers = [];
+  for (const s of dest.sectors) {
+    for (const f of s.fares) {
+      if (f.net == null) continue;
+      const final = applyMarkup(f.net);
+      offers.push({
+        "@type": "Offer",
+        "name": `${s.airline} — ${s.route} on ${f.date}`,
+        "priceCurrency": "INR",
+        "price": String(final),
+        "availability": "https://schema.org/InStock",
+        "url": `https://voyage-ed.com/special-fares/destination.html?slug=${dest.slug}`
+      });
+    }
+  }
+  const dynamicSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://voyage-ed.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Special Blocked Fares", "item": "https://voyage-ed.com/special-fares/" },
+          { "@type": "ListItem", "position": 3, "name": dest.name, "item": `https://voyage-ed.com/special-fares/destination.html?slug=${dest.slug}` }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": `Cheapest Blocked Fares to ${dest.name} from India`,
+        "image": dest.heroImage,
+        "description": dest.about,
+        "brand": { "@type": "Brand", "name": "Voyage-Ed Travels" },
+        "category": "Travel / Flights",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": String(cheapest === Infinity ? 0 : cheapest),
+          "offerCount": String(offers.length),
+          "offers": offers.slice(0, 20)
+        }
+      },
+      {
+        "@type": "TouristDestination",
+        "name": dest.name,
+        "description": dest.about,
+        "image": dest.heroImage,
+        "touristType": ["Leisure", "Family", "Honeymooners", "Business"],
+        "includesAttraction": (dest.whyVisit || []).map(w => ({
+          "@type": "TouristAttraction",
+          "name": w.title,
+          "description": w.text
+        }))
+      },
+      {
+        "@type": "WebPage",
+        "name": dest.seo.title,
+        "inLanguage": "en-IN",
+        "url": `https://voyage-ed.com/special-fares/destination.html?slug=${dest.slug}`,
+        "description": dest.seo.description,
+        "about": { "@type": "Place", "name": dest.country }
+      }
+    ]
+  };
+  document.getElementById('ldjson-dynamic').textContent = JSON.stringify(dynamicSchema);
 
   // Hero
   document.getElementById('hero').style.backgroundImage = `url('${dest.heroImage}')`;
@@ -362,15 +473,7 @@ const slug = params.get('slug') || 'bali';
   const airlines = [...new Set(dest.sectors.map(s => s.airline))];
   document.getElementById('airlineCount').textContent = airlines.length;
 
-  // Stats
-  let totalFares = 0, cheapest = Infinity;
-  for (const s of dest.sectors) {
-    totalFares += s.fares.length;
-    for (const f of s.fares) if (f.net != null) {
-      const final = applyMarkup(f.net);
-      if (final < cheapest) cheapest = final;
-    }
-  }
+  // Stats UI (values pre-computed above)
   document.getElementById('statSectors').textContent = dest.sectors.length;
   document.getElementById('statFares').textContent = totalFares;
   document.getElementById('statCheap').textContent = cheapest === Infinity ? 'On Call' : '₹' + cheapest.toLocaleString('en-IN');
