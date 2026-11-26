@@ -2,11 +2,26 @@
   "lastUpdated": "2026-11-26",
   "updateNote": "Daily update workflow: edit the destinations array with the net fares Vishal receives from the consolidator. Keep structure, then commit + push. Markup is applied automatically by the frontend — always store NET.",
   "markupRules": [
-    { "upto": 20000, "add": 1000 },
-    { "upto": 40000, "add": 1500 },
-    { "upto": 60000, "add": 2000 },
-    { "upto": 110000, "add": 5000 },
-    { "upto": 999999999, "add": 7000 }
+    {
+      "upto": 20000,
+      "add": 1000
+    },
+    {
+      "upto": 40000,
+      "add": 1500
+    },
+    {
+      "upto": 60000,
+      "add": 2000
+    },
+    {
+      "upto": 110000,
+      "add": 5000
+    },
+    {
+      "upto": 999999999,
+      "add": 7000
+    }
   ],
   "destinations": [
     {
@@ -17,8 +32,8 @@
       "flag": "🇮🇩",
       "heroImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1920&q=85",
       "gallery": [
-        "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80",
-        "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+        "https://images.unsplash.com/photo-1583069320804-73c9ab1e2aae?w=800&q=80",
         "https://images.unsplash.com/photo-1604999333679-b86d54738315?w=800&q=80",
         "https://images.unsplash.com/photo-1554481923-a6918bd997bc?w=800&q=80"
       ],
@@ -29,10 +44,26 @@
       },
       "about": "Bali is Indonesia's island of temples, rice terraces, and volcanic beaches — the darling of honeymooners and solo travellers alike. Direct from India via Kuala Lumpur or Singapore, typical flight time is 7-9 hours with one connection. Visa on arrival for Indians (approx ₹3,000, valid 30 days).",
       "whyVisit": [
-        { "icon": "🏖", "title": "World-class beaches", "text": "Seminyak, Nusa Dua and Uluwatu — golden sand, warm water and spectacular surf breaks." },
-        { "icon": "🛕", "title": "Ancient temples", "text": "Tanah Lot, Besakih and Uluwatu temple perched on cliffs over the Indian Ocean." },
-        { "icon": "🌿", "title": "Ubud rice terraces", "text": "Emerald-green Tegalalang terraces, yoga retreats and the Sacred Monkey Forest." },
-        { "icon": "🌋", "title": "Mount Batur sunrise", "text": "Pre-dawn trek up an active volcano — the view at the summit is unforgettable." }
+        {
+          "icon": "🏖",
+          "title": "World-class beaches",
+          "text": "Seminyak, Nusa Dua and Uluwatu — golden sand, warm water and spectacular surf breaks."
+        },
+        {
+          "icon": "🛕",
+          "title": "Ancient temples",
+          "text": "Tanah Lot, Besakih and Uluwatu temple perched on cliffs over the Indian Ocean."
+        },
+        {
+          "icon": "🌿",
+          "title": "Ubud rice terraces",
+          "text": "Emerald-green Tegalalang terraces, yoga retreats and the Sacred Monkey Forest."
+        },
+        {
+          "icon": "🌋",
+          "title": "Mount Batur sunrise",
+          "text": "Pre-dawn trek up an active volcano — the view at the summit is unforgettable."
+        }
       ],
       "bestTime": "April – October (dry season)",
       "visa": "Visa on Arrival · 30 days · approx ₹3,000",
@@ -44,14 +75,38 @@
           "flights": "MH 191 DEL-KUL 23:00-06:55 · MH 715 KUL-DPS 09:00-12:05 · Return MH 714 DPS-KUL 13:05-16:00 · MH 190 KUL-DEL 18:50-21:50",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "16 Jan - 23 Jan", "net": 49999 },
-            { "date": "20 Jan - 27 Jan", "net": 52999 },
-            { "date": "23 Jan - 30 Jan", "net": 52999 },
-            { "date": "30 Jan - 06 Feb", "net": 51999 },
-            { "date": "10 Feb - 17 Feb", "net": 49999 },
-            { "date": "17 Feb - 24 Feb", "net": 48999 },
-            { "date": "20 Feb - 27 Feb", "net": 48999 },
-            { "date": "27 Feb - 06 Mar", "net": 48999 }
+            {
+              "date": "16 Jan - 23 Jan",
+              "net": 49999
+            },
+            {
+              "date": "20 Jan - 27 Jan",
+              "net": 52999
+            },
+            {
+              "date": "23 Jan - 30 Jan",
+              "net": 52999
+            },
+            {
+              "date": "30 Jan - 06 Feb",
+              "net": 51999
+            },
+            {
+              "date": "10 Feb - 17 Feb",
+              "net": 49999
+            },
+            {
+              "date": "17 Feb - 24 Feb",
+              "net": 48999
+            },
+            {
+              "date": "20 Feb - 27 Feb",
+              "net": 48999
+            },
+            {
+              "date": "27 Feb - 06 Mar",
+              "net": 48999
+            }
           ]
         },
         {
@@ -61,22 +116,70 @@
           "flights": "MH 119 ATQ-KUL 23:15-06:10 · MH 715 KUL-DPS 09:00-12:05 · Return MH 714 DPS-KUL 12:55-16:00 · MH 118 KUL-ATQ 17:15-20:40",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "10 Dec - 17 Dec", "net": 52999 },
-            { "date": "24 Feb - 03 Mar", "net": 49999 },
-            { "date": "25 Feb - 04 Mar", "net": 49999 },
-            { "date": "27 Feb - 06 Mar", "net": 49999 },
-            { "date": "03 Mar - 10 Mar", "net": 49999 },
-            { "date": "04 Mar - 11 Mar", "net": 49999 },
-            { "date": "06 Mar - 13 Mar", "net": 49999 },
-            { "date": "10 Mar - 17 Mar", "net": 49999 },
-            { "date": "11 Mar - 18 Mar", "net": 49999 },
-            { "date": "13 Mar - 20 Mar", "net": 49999 },
-            { "date": "17 Mar - 24 Mar", "net": 49999 },
-            { "date": "18 Mar - 25 Mar", "net": 49999 },
-            { "date": "20 Mar - 27 Mar", "net": 49999 },
-            { "date": "24 Mar - 31 Mar", "net": 49999 },
-            { "date": "25 Mar - 01 Apr", "net": 49999 },
-            { "date": "27 Mar - 03 Apr", "net": 49999 }
+            {
+              "date": "10 Dec - 17 Dec",
+              "net": 52999
+            },
+            {
+              "date": "24 Feb - 03 Mar",
+              "net": 49999
+            },
+            {
+              "date": "25 Feb - 04 Mar",
+              "net": 49999
+            },
+            {
+              "date": "27 Feb - 06 Mar",
+              "net": 49999
+            },
+            {
+              "date": "03 Mar - 10 Mar",
+              "net": 49999
+            },
+            {
+              "date": "04 Mar - 11 Mar",
+              "net": 49999
+            },
+            {
+              "date": "06 Mar - 13 Mar",
+              "net": 49999
+            },
+            {
+              "date": "10 Mar - 17 Mar",
+              "net": 49999
+            },
+            {
+              "date": "11 Mar - 18 Mar",
+              "net": 49999
+            },
+            {
+              "date": "13 Mar - 20 Mar",
+              "net": 49999
+            },
+            {
+              "date": "17 Mar - 24 Mar",
+              "net": 49999
+            },
+            {
+              "date": "18 Mar - 25 Mar",
+              "net": 49999
+            },
+            {
+              "date": "20 Mar - 27 Mar",
+              "net": 49999
+            },
+            {
+              "date": "24 Mar - 31 Mar",
+              "net": 49999
+            },
+            {
+              "date": "25 Mar - 01 Apr",
+              "net": 49999
+            },
+            {
+              "date": "27 Mar - 03 Apr",
+              "net": 49999
+            }
           ]
         },
         {
@@ -86,9 +189,18 @@
           "flights": "DEL 03:15 → DPS 13:50 · Return DPS 15:10 → DEL 20:45",
           "baggage": "25 KG + 7 KG",
           "fares": [
-            { "date": "16 Jan - 22 Jan", "net": 52999 },
-            { "date": "23 Jan - 29 Jan", "net": 54999 },
-            { "date": "30 Jan - 05 Feb", "net": 54999 }
+            {
+              "date": "16 Jan - 22 Jan",
+              "net": 52999
+            },
+            {
+              "date": "23 Jan - 29 Jan",
+              "net": 54999
+            },
+            {
+              "date": "30 Jan - 05 Feb",
+              "net": 54999
+            }
           ]
         },
         {
@@ -98,23 +210,74 @@
           "flights": "SQ 403 DEL 21:45 → SIN 05:55 · SQ 934 SIN 06:45 → DPS 09:30 · Return SQ 947 DPS 21:30 → SIN 00:20 · SQ 402 SIN 02:25 → DEL 05:40",
           "baggage": "25 KG + 7 KG",
           "fares": [
-            { "date": "19 Jan - 26 Jan", "net": 52999 },
-            { "date": "22 Jan - 29 Jan", "net": 52999 },
-            { "date": "30 Jan - 06 Feb", "net": 52999 },
-            { "date": "04 Feb - 11 Feb", "net": 52999 },
-            { "date": "05 Feb - 12 Feb", "net": 52999 },
-            { "date": "09 Feb - 16 Feb", "net": 52999 },
-            { "date": "12 Feb - 19 Feb", "net": 52999 },
-            { "date": "13 Feb - 20 Feb", "net": 52999 },
-            { "date": "19 Feb - 26 Feb", "net": 52999 },
-            { "date": "25 Feb - 04 Mar", "net": 52999 },
-            { "date": "26 Feb - 05 Mar", "net": 52999 },
-            { "date": "04 Mar - 11 Mar", "net": 52999 },
-            { "date": "05 Mar - 12 Mar", "net": 52999 },
-            { "date": "09 Mar - 16 Mar", "net": 52999 },
-            { "date": "12 Mar - 19 Mar", "net": 52999 },
-            { "date": "25 Mar - 01 Apr", "net": 52999 },
-            { "date": "26 Mar - 02 Apr", "net": 52999 }
+            {
+              "date": "19 Jan - 26 Jan",
+              "net": 52999
+            },
+            {
+              "date": "22 Jan - 29 Jan",
+              "net": 52999
+            },
+            {
+              "date": "30 Jan - 06 Feb",
+              "net": 52999
+            },
+            {
+              "date": "04 Feb - 11 Feb",
+              "net": 52999
+            },
+            {
+              "date": "05 Feb - 12 Feb",
+              "net": 52999
+            },
+            {
+              "date": "09 Feb - 16 Feb",
+              "net": 52999
+            },
+            {
+              "date": "12 Feb - 19 Feb",
+              "net": 52999
+            },
+            {
+              "date": "13 Feb - 20 Feb",
+              "net": 52999
+            },
+            {
+              "date": "19 Feb - 26 Feb",
+              "net": 52999
+            },
+            {
+              "date": "25 Feb - 04 Mar",
+              "net": 52999
+            },
+            {
+              "date": "26 Feb - 05 Mar",
+              "net": 52999
+            },
+            {
+              "date": "04 Mar - 11 Mar",
+              "net": 52999
+            },
+            {
+              "date": "05 Mar - 12 Mar",
+              "net": 52999
+            },
+            {
+              "date": "09 Mar - 16 Mar",
+              "net": 52999
+            },
+            {
+              "date": "12 Mar - 19 Mar",
+              "net": 52999
+            },
+            {
+              "date": "25 Mar - 01 Apr",
+              "net": 52999
+            },
+            {
+              "date": "26 Mar - 02 Apr",
+              "net": 52999
+            }
           ]
         }
       ]
@@ -127,9 +290,9 @@
       "flag": "🇹🇭",
       "heroImage": "https://images.unsplash.com/photo-1563492065-1a5c74e4d394?w=1920&q=85",
       "gallery": [
-        "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80",
+        "https://images.unsplash.com/photo-1563492065-1a5c74e4d394?w=800&q=80",
         "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
-        "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=80",
+        "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80",
         "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80"
       ],
       "seo": {
@@ -139,10 +302,26 @@
       },
       "about": "Thailand is India's favourite beach + temple + street-food getaway — visa on arrival (~₹2,000, 15 days), 4-5 hour flight from Delhi, and the Thai Baht stretches far. Best time Nov-Feb (cool season).",
       "whyVisit": [
-        { "icon": "🏝", "title": "Phuket & Krabi islands", "text": "Phi Phi, James Bond Island, long-tail boat rides and emerald-green waters." },
-        { "icon": "🛕", "title": "Bangkok's grand temples", "text": "Wat Arun, the Grand Palace and floating markets along the Chao Phraya." },
-        { "icon": "🌶", "title": "Street food capital", "text": "Pad Thai, green curry, mango sticky rice — world's best street-food scene." },
-        { "icon": "🐘", "title": "Chiang Mai hills", "text": "Ethical elephant sanctuaries, hill-tribe villages and the famous night bazaar." }
+        {
+          "icon": "🏝",
+          "title": "Phuket & Krabi islands",
+          "text": "Phi Phi, James Bond Island, long-tail boat rides and emerald-green waters."
+        },
+        {
+          "icon": "🛕",
+          "title": "Bangkok's grand temples",
+          "text": "Wat Arun, the Grand Palace and floating markets along the Chao Phraya."
+        },
+        {
+          "icon": "🌶",
+          "title": "Street food capital",
+          "text": "Pad Thai, green curry, mango sticky rice — world's best street-food scene."
+        },
+        {
+          "icon": "🐘",
+          "title": "Chiang Mai hills",
+          "text": "Ethical elephant sanctuaries, hill-tribe villages and the famous night bazaar."
+        }
       ],
       "bestTime": "November – February (cool & dry)",
       "visa": "Visa on Arrival · 15 days · approx ₹2,000",
@@ -154,16 +333,82 @@
           "flights": "DEL 00:25 → HKT 06:35",
           "baggage": "25 KG + 7 KG",
           "fares": [
-            { "date": "16 Jan", "net": 18500 }, { "date": "26 Jan", "net": 18500 },
-            { "date": "02 Feb", "net": 18500 }, { "date": "06 Feb", "net": 18500 },
-            { "date": "10 Feb", "net": 18500 }, { "date": "13 Feb", "net": 18500 },
-            { "date": "19 Feb", "net": 18500 }, { "date": "21 Feb", "net": 18500 },
-            { "date": "23 Feb", "net": 18500 }, { "date": "27 Feb", "net": 18500 },
-            { "date": "02 Mar", "net": 18500 }, { "date": "06 Mar", "net": 18500 },
-            { "date": "09 Mar", "net": 18500 }, { "date": "13 Mar", "net": 18500 },
-            { "date": "16 Mar", "net": 18500 }, { "date": "20 Mar", "net": 18500 },
-            { "date": "23 Mar", "net": 18500 }, { "date": "27 Mar", "net": 18500 },
-            { "date": "30 Mar", "net": 18500 }
+            {
+              "date": "16 Jan",
+              "net": 18500
+            },
+            {
+              "date": "26 Jan",
+              "net": 18500
+            },
+            {
+              "date": "02 Feb",
+              "net": 18500
+            },
+            {
+              "date": "06 Feb",
+              "net": 18500
+            },
+            {
+              "date": "10 Feb",
+              "net": 18500
+            },
+            {
+              "date": "13 Feb",
+              "net": 18500
+            },
+            {
+              "date": "19 Feb",
+              "net": 18500
+            },
+            {
+              "date": "21 Feb",
+              "net": 18500
+            },
+            {
+              "date": "23 Feb",
+              "net": 18500
+            },
+            {
+              "date": "27 Feb",
+              "net": 18500
+            },
+            {
+              "date": "02 Mar",
+              "net": 18500
+            },
+            {
+              "date": "06 Mar",
+              "net": 18500
+            },
+            {
+              "date": "09 Mar",
+              "net": 18500
+            },
+            {
+              "date": "13 Mar",
+              "net": 18500
+            },
+            {
+              "date": "16 Mar",
+              "net": 18500
+            },
+            {
+              "date": "20 Mar",
+              "net": 18500
+            },
+            {
+              "date": "23 Mar",
+              "net": 18500
+            },
+            {
+              "date": "27 Mar",
+              "net": 18500
+            },
+            {
+              "date": "30 Mar",
+              "net": 18500
+            }
           ]
         },
         {
@@ -173,14 +418,70 @@
           "flights": "HKT 22:30 → DEL 01:55",
           "baggage": "25 KG + 7 KG",
           "fares": [
-            { "date": "03 Jan", "net": 25000 }, { "date": "21 Jan", "net": 20000 },
-            { "date": "31 Jan", "net": 20000 }, { "date": "07 Feb", "net": 20000 },
-            { "date": "11 Feb", "net": 20000 }, { "date": "16 Feb", "net": 20000 },
-            { "date": "24 Feb", "net": 20000 }, { "date": "26 Feb", "net": 20000 },
-            { "date": "28 Feb", "net": 20000 }, { "date": "04 Mar", "net": 20000 },
-            { "date": "07 Mar", "net": 20000 }, { "date": "11 Mar", "net": 20000 },
-            { "date": "14 Mar", "net": 20000 }, { "date": "18 Mar", "net": 20000 },
-            { "date": "25 Mar", "net": 20000 }, { "date": "28 Mar", "net": 20000 }
+            {
+              "date": "03 Jan",
+              "net": 25000
+            },
+            {
+              "date": "21 Jan",
+              "net": 20000
+            },
+            {
+              "date": "31 Jan",
+              "net": 20000
+            },
+            {
+              "date": "07 Feb",
+              "net": 20000
+            },
+            {
+              "date": "11 Feb",
+              "net": 20000
+            },
+            {
+              "date": "16 Feb",
+              "net": 20000
+            },
+            {
+              "date": "24 Feb",
+              "net": 20000
+            },
+            {
+              "date": "26 Feb",
+              "net": 20000
+            },
+            {
+              "date": "28 Feb",
+              "net": 20000
+            },
+            {
+              "date": "04 Mar",
+              "net": 20000
+            },
+            {
+              "date": "07 Mar",
+              "net": 20000
+            },
+            {
+              "date": "11 Mar",
+              "net": 20000
+            },
+            {
+              "date": "14 Mar",
+              "net": 20000
+            },
+            {
+              "date": "18 Mar",
+              "net": 20000
+            },
+            {
+              "date": "25 Mar",
+              "net": 20000
+            },
+            {
+              "date": "28 Mar",
+              "net": 20000
+            }
           ]
         },
         {
@@ -190,12 +491,50 @@
           "flights": "DEL 20:55 → DMK 02:40",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "05 Dec", "net": 13500 }, { "date": "06 Dec", "net": 13500 },
-            { "date": "10 Dec", "net": 13500 }, { "date": "12 Dec", "net": 14500 },
-            { "date": "13 Dec", "net": 14500 }, { "date": "17 Dec", "net": 16000 },
-            { "date": "19 Dec", "net": 17000 }, { "date": "20 Dec", "net": 17000 },
-            { "date": "24 Dec", "net": 17000 }, { "date": "26 Dec", "net": 17000 },
-            { "date": "29 Dec", "net": 17000 }
+            {
+              "date": "05 Dec",
+              "net": 13500
+            },
+            {
+              "date": "06 Dec",
+              "net": 13500
+            },
+            {
+              "date": "10 Dec",
+              "net": 13500
+            },
+            {
+              "date": "12 Dec",
+              "net": 14500
+            },
+            {
+              "date": "13 Dec",
+              "net": 14500
+            },
+            {
+              "date": "17 Dec",
+              "net": 16000
+            },
+            {
+              "date": "19 Dec",
+              "net": 17000
+            },
+            {
+              "date": "20 Dec",
+              "net": 17000
+            },
+            {
+              "date": "24 Dec",
+              "net": 17000
+            },
+            {
+              "date": "26 Dec",
+              "net": 17000
+            },
+            {
+              "date": "29 Dec",
+              "net": 17000
+            }
           ]
         },
         {
@@ -205,10 +544,38 @@
           "flights": "DMK 16:45 → DEL 19:40",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "13 Dec", "net": 17000 }, { "date": "15 Dec", "net": 17000 },
-            { "date": "17 Dec", "net": 18000 }, { "date": "20 Dec", "net": 18000 },
-            { "date": "22 Dec", "net": 18000 }, { "date": "24 Dec", "net": 18000 },
-            { "date": "27 Dec", "net": 18000 }, { "date": "29 Dec", "net": 18000 }
+            {
+              "date": "13 Dec",
+              "net": 17000
+            },
+            {
+              "date": "15 Dec",
+              "net": 17000
+            },
+            {
+              "date": "17 Dec",
+              "net": 18000
+            },
+            {
+              "date": "20 Dec",
+              "net": 18000
+            },
+            {
+              "date": "22 Dec",
+              "net": 18000
+            },
+            {
+              "date": "24 Dec",
+              "net": 18000
+            },
+            {
+              "date": "27 Dec",
+              "net": 18000
+            },
+            {
+              "date": "29 Dec",
+              "net": 18000
+            }
           ]
         }
       ]
@@ -221,10 +588,10 @@
       "flag": "🇦🇪",
       "heroImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=85",
       "gallery": [
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
         "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80",
-        "https://images.unsplash.com/photo-1582672060674-bc2bd808a8f5?w=800&q=80",
-        "https://images.unsplash.com/photo-1548783294-2b76ea32ab92?w=800&q=80",
-        "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80"
+        "https://images.unsplash.com/photo-1546412414-e1885259563a?w=800&q=80",
+        "https://images.unsplash.com/photo-1582672060674-bc2bd808a8f5?w=800&q=80"
       ],
       "seo": {
         "title": "Cheapest UAE Flights — Delhi/Chandigarh/Amritsar to Dubai, Abu Dhabi, Sharjah, Kuwait | Voyage-Ed",
@@ -233,10 +600,26 @@
       },
       "about": "The UAE is a 3.5-hour flight from Delhi — and the single most-booked international destination from north India for shopping, luxury hotels, desert safaris, and family-friendly attractions. Dubai, Abu Dhabi and Sharjah all accept Indian tourist visas on arrival for eligible passport holders, or e-visas within 2-3 days.",
       "whyVisit": [
-        { "icon": "🏙", "title": "Dubai skyline", "text": "Burj Khalifa, Dubai Mall, Palm Jumeirah and the world's only 7-star hotel." },
-        { "icon": "🐫", "title": "Desert safari", "text": "Dune bashing, camel rides and traditional Bedouin camps with belly dancing." },
-        { "icon": "🛍", "title": "Tax-free shopping", "text": "Dubai Mall, Mall of the Emirates and Global Village — world-class luxury at duty-free prices." },
-        { "icon": "🕌", "title": "Grand Mosque, Abu Dhabi", "text": "One of the world's largest mosques — pure white marble and gold-plated chandeliers." }
+        {
+          "icon": "🏙",
+          "title": "Dubai skyline",
+          "text": "Burj Khalifa, Dubai Mall, Palm Jumeirah and the world's only 7-star hotel."
+        },
+        {
+          "icon": "🐫",
+          "title": "Desert safari",
+          "text": "Dune bashing, camel rides and traditional Bedouin camps with belly dancing."
+        },
+        {
+          "icon": "🛍",
+          "title": "Tax-free shopping",
+          "text": "Dubai Mall, Mall of the Emirates and Global Village — world-class luxury at duty-free prices."
+        },
+        {
+          "icon": "🕌",
+          "title": "Grand Mosque, Abu Dhabi",
+          "text": "One of the world's largest mosques — pure white marble and gold-plated chandeliers."
+        }
       ],
       "bestTime": "November – March (cool & pleasant)",
       "visa": "e-Visa in 2-3 days · 30/90 days options",
@@ -248,10 +631,38 @@
           "flights": "AI 917 · DEL 09:50 → DXB 12:45",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "01 Dec", "net": 27400 }, { "date": "02-04 Dec", "net": 27400 },
-            { "date": "08-10 Dec", "net": 27400 }, { "date": "11-13 Dec", "net": 27400 },
-            { "date": "14-17 Dec", "net": 27400 }, { "date": "18-20 Dec", "net": 29900 },
-            { "date": "21-25 Dec", "net": 29900 }, { "date": "26-31 Dec", "net": 29900 }
+            {
+              "date": "01 Dec",
+              "net": 27400
+            },
+            {
+              "date": "02-04 Dec",
+              "net": 27400
+            },
+            {
+              "date": "08-10 Dec",
+              "net": 27400
+            },
+            {
+              "date": "11-13 Dec",
+              "net": 27400
+            },
+            {
+              "date": "14-17 Dec",
+              "net": 27400
+            },
+            {
+              "date": "18-20 Dec",
+              "net": 29900
+            },
+            {
+              "date": "21-25 Dec",
+              "net": 29900
+            },
+            {
+              "date": "26-31 Dec",
+              "net": 29900
+            }
           ]
         },
         {
@@ -261,10 +672,34 @@
           "flights": "AI 995 · DEL 19:20 → DXB 22:05",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "01-05 Dec", "net": 27400 }, { "date": "07-10 Dec", "net": 27400 },
-            { "date": "11-13 Dec", "net": 27400 }, { "date": "14-17 Dec", "net": 27400 },
-            { "date": "18-20 Dec", "net": 29900 }, { "date": "21-25 Dec", "net": 29900 },
-            { "date": "26-31 Dec", "net": 29900 }
+            {
+              "date": "01-05 Dec",
+              "net": 27400
+            },
+            {
+              "date": "07-10 Dec",
+              "net": 27400
+            },
+            {
+              "date": "11-13 Dec",
+              "net": 27400
+            },
+            {
+              "date": "14-17 Dec",
+              "net": 27400
+            },
+            {
+              "date": "18-20 Dec",
+              "net": 29900
+            },
+            {
+              "date": "21-25 Dec",
+              "net": 29900
+            },
+            {
+              "date": "26-31 Dec",
+              "net": 29900
+            }
           ]
         },
         {
@@ -274,10 +709,34 @@
           "flights": "AI 915 · DEL 16:10 → DXB 19:00",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "01-05 Dec", "net": 27400 }, { "date": "07-10 Dec", "net": 27400 },
-            { "date": "11-13 Dec", "net": 27400 }, { "date": "14-17 Dec", "net": 27400 },
-            { "date": "18-20 Dec", "net": 29900 }, { "date": "21-25 Dec", "net": 29900 },
-            { "date": "26-31 Dec", "net": 29900 }
+            {
+              "date": "01-05 Dec",
+              "net": 27400
+            },
+            {
+              "date": "07-10 Dec",
+              "net": 27400
+            },
+            {
+              "date": "11-13 Dec",
+              "net": 27400
+            },
+            {
+              "date": "14-17 Dec",
+              "net": 27400
+            },
+            {
+              "date": "18-20 Dec",
+              "net": 29900
+            },
+            {
+              "date": "21-25 Dec",
+              "net": 29900
+            },
+            {
+              "date": "26-31 Dec",
+              "net": 29900
+            }
           ]
         },
         {
@@ -287,10 +746,34 @@
           "flights": "AI 929 · DEL 07:30 → DXB 10:15",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "01-05 Dec", "net": 27400 }, { "date": "07-10 Dec", "net": 27400 },
-            { "date": "11-13 Dec", "net": 27400 }, { "date": "14-17 Dec", "net": 27400 },
-            { "date": "18-20 Dec", "net": 29900 }, { "date": "21-25 Dec", "net": 29900 },
-            { "date": "26-31 Dec", "net": 29900 }
+            {
+              "date": "01-05 Dec",
+              "net": 27400
+            },
+            {
+              "date": "07-10 Dec",
+              "net": 27400
+            },
+            {
+              "date": "11-13 Dec",
+              "net": 27400
+            },
+            {
+              "date": "14-17 Dec",
+              "net": 27400
+            },
+            {
+              "date": "18-20 Dec",
+              "net": 29900
+            },
+            {
+              "date": "21-25 Dec",
+              "net": 29900
+            },
+            {
+              "date": "26-31 Dec",
+              "net": 29900
+            }
           ]
         },
         {
@@ -300,11 +783,42 @@
           "flights": "Direct non-stop · see schedule",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "08 Dec", "net": 24000 }, { "date": "09 Dec", "net": 24000 },
-            { "date": "10 Dec", "net": 24000 }, { "date": "12 Dec", "net": 24000 },
-            { "date": "14 Dec", "net": 24000 }, { "date": "15 Dec", "net": 24000 },
-            { "date": "16 Dec", "net": 24000 }, { "date": "17 Dec", "net": 24000 },
-            { "date": "18 Dec", "net": 24000 }
+            {
+              "date": "08 Dec",
+              "net": 24000
+            },
+            {
+              "date": "09 Dec",
+              "net": 24000
+            },
+            {
+              "date": "10 Dec",
+              "net": 24000
+            },
+            {
+              "date": "12 Dec",
+              "net": 24000
+            },
+            {
+              "date": "14 Dec",
+              "net": 24000
+            },
+            {
+              "date": "15 Dec",
+              "net": 24000
+            },
+            {
+              "date": "16 Dec",
+              "net": 24000
+            },
+            {
+              "date": "17 Dec",
+              "net": 24000
+            },
+            {
+              "date": "18 Dec",
+              "net": 24000
+            }
           ]
         },
         {
@@ -314,9 +828,26 @@
           "flights": "DEL 07:45 → KWI 10:05",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "15 Dec", "net": 18700 }, { "date": "16 Dec", "net": 18200 },
-            { "date": "22 Dec", "net": 18700 }, { "date": "25 Dec", "net": 18200 },
-            { "date": "29 Dec", "net": 18700 }
+            {
+              "date": "15 Dec",
+              "net": 18700
+            },
+            {
+              "date": "16 Dec",
+              "net": 18200
+            },
+            {
+              "date": "22 Dec",
+              "net": 18700
+            },
+            {
+              "date": "25 Dec",
+              "net": 18200
+            },
+            {
+              "date": "29 Dec",
+              "net": 18700
+            }
           ]
         },
         {
@@ -326,11 +857,31 @@
           "flights": "6E-1427 · ATQ 03:00 → SHJ 08:10",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "07-08 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "09-11 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "12-15 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "16-17 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "18-19 Dec", "net": null, "note": "FARE ON CALL" }
+            {
+              "date": "07-08 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "09-11 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "12-15 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "16-17 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "18-19 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            }
           ]
         },
         {
@@ -340,11 +891,31 @@
           "flights": "Direct non-stop",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "06 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "08-12 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "13-19 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "20-26 Dec", "net": null, "note": "FARE ON CALL" },
-            { "date": "27-29 Dec", "net": null, "note": "FARE ON CALL" }
+            {
+              "date": "06 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "08-12 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "13-19 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "20-26 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            },
+            {
+              "date": "27-29 Dec",
+              "net": null,
+              "note": "FARE ON CALL"
+            }
           ]
         },
         {
@@ -354,7 +925,11 @@
           "flights": "Direct non-stop",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "02-31 Dec (all dates)", "net": null, "note": "FARE ON CALL" }
+            {
+              "date": "02-31 Dec (all dates)",
+              "net": null,
+              "note": "FARE ON CALL"
+            }
           ]
         },
         {
@@ -364,7 +939,11 @@
           "flights": "Direct non-stop",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "01-31 Dec (all dates)", "net": null, "note": "FARE ON CALL" }
+            {
+              "date": "01-31 Dec (all dates)",
+              "net": null,
+              "note": "FARE ON CALL"
+            }
           ]
         }
       ]
@@ -377,9 +956,9 @@
       "flag": "🇲🇾",
       "heroImage": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1920&q=85",
       "gallery": [
+        "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80",
         "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80",
         "https://images.unsplash.com/photo-1601351164925-1c56d2bfdd44?w=800&q=80",
-        "https://images.unsplash.com/photo-1601171293274-52b4ad9c0c8f?w=800&q=80",
         "https://images.unsplash.com/photo-1587843984660-1a58d03ab8c3?w=800&q=80"
       ],
       "seo": {
@@ -389,10 +968,26 @@
       },
       "about": "Malaysia offers visa on arrival for Indians (approx ₹2,500, 30 days) and is just a 5-hour direct flight from Amritsar. Kuala Lumpur is the gateway — from there, Langkawi, Penang and Borneo are a short hop away. Truly Asia, as they say.",
       "whyVisit": [
-        { "icon": "🏙", "title": "KL skyline", "text": "Petronas Twin Towers, Batu Caves and the vibrant Bukit Bintang nightlife district." },
-        { "icon": "🏝", "title": "Langkawi islands", "text": "Pristine beaches, duty-free shopping and the famous Sky Bridge cable car." },
-        { "icon": "🍜", "title": "Street food paradise", "text": "Char kway teow, nasi lemak, satay and the legendary Jalan Alor night market." },
-        { "icon": "🌴", "title": "Rainforest adventures", "text": "Taman Negara — one of the oldest rainforests on Earth, with canopy walks and wildlife safaris." }
+        {
+          "icon": "🏙",
+          "title": "KL skyline",
+          "text": "Petronas Twin Towers, Batu Caves and the vibrant Bukit Bintang nightlife district."
+        },
+        {
+          "icon": "🏝",
+          "title": "Langkawi islands",
+          "text": "Pristine beaches, duty-free shopping and the famous Sky Bridge cable car."
+        },
+        {
+          "icon": "🍜",
+          "title": "Street food paradise",
+          "text": "Char kway teow, nasi lemak, satay and the legendary Jalan Alor night market."
+        },
+        {
+          "icon": "🌴",
+          "title": "Rainforest adventures",
+          "text": "Taman Negara — one of the oldest rainforests on Earth, with canopy walks and wildlife safaris."
+        }
       ],
       "bestTime": "December – February (dry season on west coast)",
       "visa": "Visa on Arrival / e-Visa · 30 days · approx ₹2,500",
@@ -404,13 +999,58 @@
           "flights": "ATQ 22:30 → KUL 06:50",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "04 Dec", "net": 14800 }, { "date": "05 Dec", "net": 14800 },
-            { "date": "09 Dec", "net": 15800 }, { "date": "11 Dec", "net": 15800 },
-            { "date": "12 Dec", "net": 15800 }, { "date": "16 Dec", "net": 15800 },
-            { "date": "18 Dec", "net": 15800 }, { "date": "19 Dec", "net": 15800 },
-            { "date": "23 Dec", "net": 18800 }, { "date": "25 Dec", "net": 18800 },
-            { "date": "26 Dec", "net": 18800 }, { "date": "28 Dec", "net": 18800 },
-            { "date": "30 Dec", "net": 18800 }
+            {
+              "date": "04 Dec",
+              "net": 14800
+            },
+            {
+              "date": "05 Dec",
+              "net": 14800
+            },
+            {
+              "date": "09 Dec",
+              "net": 15800
+            },
+            {
+              "date": "11 Dec",
+              "net": 15800
+            },
+            {
+              "date": "12 Dec",
+              "net": 15800
+            },
+            {
+              "date": "16 Dec",
+              "net": 15800
+            },
+            {
+              "date": "18 Dec",
+              "net": 15800
+            },
+            {
+              "date": "19 Dec",
+              "net": 15800
+            },
+            {
+              "date": "23 Dec",
+              "net": 18800
+            },
+            {
+              "date": "25 Dec",
+              "net": 18800
+            },
+            {
+              "date": "26 Dec",
+              "net": 18800
+            },
+            {
+              "date": "28 Dec",
+              "net": 18800
+            },
+            {
+              "date": "30 Dec",
+              "net": 18800
+            }
           ]
         },
         {
@@ -420,9 +1060,26 @@
           "flights": "KUL 17:45 → ATQ 21:30",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "18 Dec", "net": 21800 }, { "date": "23 Dec", "net": 21800 },
-            { "date": "25 Dec", "net": 21800 }, { "date": "28 Dec", "net": 21800 },
-            { "date": "30 Dec", "net": 21800 }
+            {
+              "date": "18 Dec",
+              "net": 21800
+            },
+            {
+              "date": "23 Dec",
+              "net": 21800
+            },
+            {
+              "date": "25 Dec",
+              "net": 21800
+            },
+            {
+              "date": "28 Dec",
+              "net": 21800
+            },
+            {
+              "date": "30 Dec",
+              "net": 21800
+            }
           ]
         }
       ]
@@ -435,9 +1092,9 @@
       "flag": "🇨🇦",
       "heroImage": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=1920&q=85",
       "gallery": [
+        "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&q=80",
         "https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&q=80",
         "https://images.unsplash.com/photo-1519832979-6fa011b87667?w=800&q=80",
-        "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?w=800&q=80",
         "https://images.unsplash.com/photo-1609825488888-3a766db05542?w=800&q=80"
       ],
       "seo": {
@@ -447,10 +1104,26 @@
       },
       "about": "Canada remains the single largest emigration and visit destination from Punjab. Flight time is 14-20 hours depending on connection. Toronto (YYZ) is the East-Canada hub (Ontario/Quebec), Vancouver (YVR) for West (BC/Alberta), Calgary (YYC) for the Rockies, Montreal (YUL) for Quebec and family visits.",
       "whyVisit": [
-        { "icon": "🍁", "title": "Niagara Falls", "text": "The thundering Horseshoe Falls, boat rides under the spray and winter illumination shows." },
-        { "icon": "⛰", "title": "Canadian Rockies", "text": "Banff, Lake Louise, Jasper — turquoise glacier lakes and world-class ski resorts." },
-        { "icon": "🏙", "title": "Toronto & Vancouver", "text": "CN Tower, Stanley Park, Gastown — multicultural cities with huge Punjabi communities." },
-        { "icon": "👨‍👩‍👧", "title": "Visit family & PR tour", "text": "Our blocked inventory specialises in family visits, PR landing tickets and student returns." }
+        {
+          "icon": "🍁",
+          "title": "Niagara Falls",
+          "text": "The thundering Horseshoe Falls, boat rides under the spray and winter illumination shows."
+        },
+        {
+          "icon": "⛰",
+          "title": "Canadian Rockies",
+          "text": "Banff, Lake Louise, Jasper — turquoise glacier lakes and world-class ski resorts."
+        },
+        {
+          "icon": "🏙",
+          "title": "Toronto & Vancouver",
+          "text": "CN Tower, Stanley Park, Gastown — multicultural cities with huge Punjabi communities."
+        },
+        {
+          "icon": "👨‍👩‍👧",
+          "title": "Visit family & PR tour",
+          "text": "Our blocked inventory specialises in family visits, PR landing tickets and student returns."
+        }
       ],
       "bestTime": "June – September (summer), Dec-Feb for skiing",
       "visa": "Visitor Visa (TRV) · 15-30 working days · $100 CAD",
@@ -462,11 +1135,42 @@
           "flights": "ATQ 04:10 → DOH 06:00 · DOH 08:30 → YYZ 14:30",
           "baggage": "46 KG + 7 KG",
           "fares": [
-            { "date": "26 Dec", "net": 88000 }, { "date": "27 Dec", "net": 88000 },
-            { "date": "28 Dec", "net": 88000 }, { "date": "19 Jan", "net": 83000 },
-            { "date": "20 Jan", "net": 83000 }, { "date": "23 Jan", "net": 83000 },
-            { "date": "24 Jan", "net": 83000 }, { "date": "27 Jan", "net": 83000 },
-            { "date": "29 Jan", "net": 83000 }
+            {
+              "date": "26 Dec",
+              "net": 88000
+            },
+            {
+              "date": "27 Dec",
+              "net": 88000
+            },
+            {
+              "date": "28 Dec",
+              "net": 88000
+            },
+            {
+              "date": "19 Jan",
+              "net": 83000
+            },
+            {
+              "date": "20 Jan",
+              "net": 83000
+            },
+            {
+              "date": "23 Jan",
+              "net": 83000
+            },
+            {
+              "date": "24 Jan",
+              "net": 83000
+            },
+            {
+              "date": "27 Jan",
+              "net": 83000
+            },
+            {
+              "date": "29 Jan",
+              "net": 83000
+            }
           ]
         },
         {
@@ -476,15 +1180,78 @@
           "flights": "YYZ → DOH → ATQ",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "01 Dec", "net": 121000 }, { "date": "02 Dec", "net": 121000 },
-            { "date": "03 Dec", "net": 121000 }, { "date": "26 Dec", "net": 121000 },
-            { "date": "27 Dec", "net": 121000 }, { "date": "28 Dec", "net": 121000 },
-            { "date": "29 Dec", "net": 121000 }, { "date": "30 Dec", "net": 121000 },
-            { "date": "31 Dec", "net": 121000 }, { "date": "01 Jan", "net": 121000 },
-            { "date": "03 Jan", "net": 121000 }, { "date": "04 Jan", "net": 121000 },
-            { "date": "17 Jan", "net": 121000 }, { "date": "23 Jan", "net": 121000 },
-            { "date": "24 Jan", "net": 121000 }, { "date": "28 Jan", "net": 121000 },
-            { "date": "30 Jan", "net": 121000 }, { "date": "31 Jan", "net": 121000 }
+            {
+              "date": "01 Dec",
+              "net": 121000
+            },
+            {
+              "date": "02 Dec",
+              "net": 121000
+            },
+            {
+              "date": "03 Dec",
+              "net": 121000
+            },
+            {
+              "date": "26 Dec",
+              "net": 121000
+            },
+            {
+              "date": "27 Dec",
+              "net": 121000
+            },
+            {
+              "date": "28 Dec",
+              "net": 121000
+            },
+            {
+              "date": "29 Dec",
+              "net": 121000
+            },
+            {
+              "date": "30 Dec",
+              "net": 121000
+            },
+            {
+              "date": "31 Dec",
+              "net": 121000
+            },
+            {
+              "date": "01 Jan",
+              "net": 121000
+            },
+            {
+              "date": "03 Jan",
+              "net": 121000
+            },
+            {
+              "date": "04 Jan",
+              "net": 121000
+            },
+            {
+              "date": "17 Jan",
+              "net": 121000
+            },
+            {
+              "date": "23 Jan",
+              "net": 121000
+            },
+            {
+              "date": "24 Jan",
+              "net": 121000
+            },
+            {
+              "date": "28 Jan",
+              "net": 121000
+            },
+            {
+              "date": "30 Jan",
+              "net": 121000
+            },
+            {
+              "date": "31 Jan",
+              "net": 121000
+            }
           ]
         },
         {
@@ -494,11 +1261,42 @@
           "flights": "YYZ → DOH → DEL",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "07 Dec", "net": 106000 }, { "date": "26 Dec", "net": 106000 },
-            { "date": "27 Dec", "net": 106000 }, { "date": "28 Dec", "net": 106000 },
-            { "date": "29 Dec", "net": 106000 }, { "date": "30 Dec", "net": 106000 },
-            { "date": "31 Dec", "net": 106000 }, { "date": "01 Jan", "net": 106000 },
-            { "date": "04 Jan", "net": 106000 }
+            {
+              "date": "07 Dec",
+              "net": 106000
+            },
+            {
+              "date": "26 Dec",
+              "net": 106000
+            },
+            {
+              "date": "27 Dec",
+              "net": 106000
+            },
+            {
+              "date": "28 Dec",
+              "net": 106000
+            },
+            {
+              "date": "29 Dec",
+              "net": 106000
+            },
+            {
+              "date": "30 Dec",
+              "net": 106000
+            },
+            {
+              "date": "31 Dec",
+              "net": 106000
+            },
+            {
+              "date": "01 Jan",
+              "net": 106000
+            },
+            {
+              "date": "04 Jan",
+              "net": 106000
+            }
           ]
         },
         {
@@ -508,10 +1306,38 @@
           "flights": "YVR 19:10 → IST 17:10 · IST 20:15 → DEL 04:50",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "01 Dec", "net": 81000 }, { "date": "02 Dec", "net": 81000 },
-            { "date": "05 Dec", "net": 86000 }, { "date": "08 Dec", "net": 91000 },
-            { "date": "29 Dec", "net": 96000 }, { "date": "30 Dec", "net": 96000 },
-            { "date": "02 Jan", "net": 96000 }, { "date": "05 Jan", "net": 96000 }
+            {
+              "date": "01 Dec",
+              "net": 81000
+            },
+            {
+              "date": "02 Dec",
+              "net": 81000
+            },
+            {
+              "date": "05 Dec",
+              "net": 86000
+            },
+            {
+              "date": "08 Dec",
+              "net": 91000
+            },
+            {
+              "date": "29 Dec",
+              "net": 96000
+            },
+            {
+              "date": "30 Dec",
+              "net": 96000
+            },
+            {
+              "date": "02 Jan",
+              "net": 96000
+            },
+            {
+              "date": "05 Jan",
+              "net": 96000
+            }
           ]
         },
         {
@@ -521,8 +1347,18 @@
           "flights": "YUL → IST → DEL",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "04 Dec", "net": 81000 }, { "date": "06 Dec", "net": 81000 },
-            { "date": "09 Dec", "net": 81000 }
+            {
+              "date": "04 Dec",
+              "net": 81000
+            },
+            {
+              "date": "06 Dec",
+              "net": 81000
+            },
+            {
+              "date": "09 Dec",
+              "net": 81000
+            }
           ]
         },
         {
@@ -532,10 +1368,34 @@
           "flights": "YYZ 22:00 → IST 14:50 · IST 20:15 → DEL 04:50",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "06 Dec", "net": 91000 }, { "date": "07 Dec", "net": 91000 },
-            { "date": "04 Jan", "net": 96000 }, { "date": "05 Jan", "net": 96000 },
-            { "date": "06 Jan", "net": 96000 }, { "date": "07 Jan", "net": 96000 },
-            { "date": "10 Jan", "net": 96000 }
+            {
+              "date": "06 Dec",
+              "net": 91000
+            },
+            {
+              "date": "07 Dec",
+              "net": 91000
+            },
+            {
+              "date": "04 Jan",
+              "net": 96000
+            },
+            {
+              "date": "05 Jan",
+              "net": 96000
+            },
+            {
+              "date": "06 Jan",
+              "net": 96000
+            },
+            {
+              "date": "07 Jan",
+              "net": 96000
+            },
+            {
+              "date": "10 Jan",
+              "net": 96000
+            }
           ]
         },
         {
@@ -545,7 +1405,10 @@
           "flights": "YVR → CDG → DEL",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "03 Dec", "net": 81000 }
+            {
+              "date": "03 Dec",
+              "net": 81000
+            }
           ]
         },
         {
@@ -555,7 +1418,14 @@
           "flights": "YYZ → CDG → DEL",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "06 Dec", "net": 91000 }, { "date": "08 Dec", "net": 91000 }
+            {
+              "date": "06 Dec",
+              "net": 91000
+            },
+            {
+              "date": "08 Dec",
+              "net": 91000
+            }
           ]
         },
         {
@@ -565,10 +1435,38 @@
           "flights": "YYZ → AMS → DEL",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "07 Dec", "net": 91000 }, { "date": "10 Jan", "net": 91000 },
-            { "date": "11 Jan", "net": 91000 }, { "date": "12 Jan", "net": 91000 },
-            { "date": "14 Jan", "net": 91000 }, { "date": "16 Jan", "net": 91000 },
-            { "date": "17 Jan", "net": 91000 }, { "date": "18 Jan", "net": 91000 }
+            {
+              "date": "07 Dec",
+              "net": 91000
+            },
+            {
+              "date": "10 Jan",
+              "net": 91000
+            },
+            {
+              "date": "11 Jan",
+              "net": 91000
+            },
+            {
+              "date": "12 Jan",
+              "net": 91000
+            },
+            {
+              "date": "14 Jan",
+              "net": 91000
+            },
+            {
+              "date": "16 Jan",
+              "net": 91000
+            },
+            {
+              "date": "17 Jan",
+              "net": 91000
+            },
+            {
+              "date": "18 Jan",
+              "net": 91000
+            }
           ]
         },
         {
@@ -578,8 +1476,22 @@
           "flights": "YEG → AMS → DEL",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "01 Dec", "net": 81000 }, { "date": "06 Dec", "net": 81000 },
-            { "date": "08 Dec", "net": 86000 }, { "date": "15 Dec", "net": 101000 }
+            {
+              "date": "01 Dec",
+              "net": 81000
+            },
+            {
+              "date": "06 Dec",
+              "net": 81000
+            },
+            {
+              "date": "08 Dec",
+              "net": 86000
+            },
+            {
+              "date": "15 Dec",
+              "net": 101000
+            }
           ]
         },
         {
@@ -589,7 +1501,14 @@
           "flights": "DEL 03:35 → FRA 07:55 · FRA 13:30 → YYC 16:20",
           "baggage": "23 KG + 7 KG",
           "fares": [
-            { "date": "18 Dec", "net": 81000 }, { "date": "28 Dec", "net": 83000 }
+            {
+              "date": "18 Dec",
+              "net": 81000
+            },
+            {
+              "date": "28 Dec",
+              "net": 83000
+            }
           ]
         }
       ]
@@ -602,10 +1521,10 @@
       "flag": "🇪🇺",
       "heroImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1920&q=85",
       "gallery": [
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80",
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
         "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80",
         "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80",
-        "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&q=80"
+        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80"
       ],
       "seo": {
         "title": "Cheapest Europe Flights — Delhi to London, Rome, Paris | Voyage-Ed Special Blocked Fares",
@@ -614,10 +1533,26 @@
       },
       "about": "Direct flights from Delhi to London, Paris, Frankfurt, Rome and Amsterdam take 8-10 hours. Schengen countries need visa planning 15-20 working days ahead. UK requires a separate visitor visa. Summer (May-Sep) is peak, winter offers cheaper fares and Christmas markets.",
       "whyVisit": [
-        { "icon": "🗼", "title": "Icons of Europe", "text": "Eiffel Tower, Colosseum, Big Ben, Brandenburg Gate — bucket-list every one of them." },
-        { "icon": "🎨", "title": "Art & museums", "text": "Louvre, Vatican, British Museum, Van Gogh Museum — centuries of masterpieces." },
-        { "icon": "🏔", "title": "Swiss Alps & scenic trains", "text": "Jungfraujoch, Glacier Express, Interlaken — Europe's most photographed landscapes." },
-        { "icon": "🥐", "title": "Food capitals", "text": "Paris pastries, Roman pasta, London pubs, Berlin currywurst — each city a world of its own." }
+        {
+          "icon": "🗼",
+          "title": "Icons of Europe",
+          "text": "Eiffel Tower, Colosseum, Big Ben, Brandenburg Gate — bucket-list every one of them."
+        },
+        {
+          "icon": "🎨",
+          "title": "Art & museums",
+          "text": "Louvre, Vatican, British Museum, Van Gogh Museum — centuries of masterpieces."
+        },
+        {
+          "icon": "🏔",
+          "title": "Swiss Alps & scenic trains",
+          "text": "Jungfraujoch, Glacier Express, Interlaken — Europe's most photographed landscapes."
+        },
+        {
+          "icon": "🥐",
+          "title": "Food capitals",
+          "text": "Paris pastries, Roman pasta, London pubs, Berlin currywurst — each city a world of its own."
+        }
       ],
       "bestTime": "April – September (warm), Dec for Christmas markets",
       "visa": "Schengen / UK Visa · 15-20 working days",
@@ -629,12 +1564,54 @@
           "flights": "DEL 03:45 → FCO 08:15",
           "baggage": "2 PC + 7 KG · Meal included",
           "fares": [
-            { "date": "01 Jan", "net": 51000 }, { "date": "02-04 Jan", "net": 71000 },
-            { "date": "05-07 Jan", "net": 71000 }, { "date": "08-10 Jan", "net": 71000 },
-            { "date": "11-13 Jan", "net": 66000 }, { "date": "14-15 Jan", "net": 66000 },
-            { "date": "16-18 Jan", "net": 61000 }, { "date": "19-20 Jan", "net": 61000 },
-            { "date": "21-23 Jan", "net": 51000 }, { "date": "24-25 Jan", "net": 51000 },
-            { "date": "26-28 Jan", "net": 46000 }, { "date": "29-31 Jan", "net": 46000 }
+            {
+              "date": "01 Jan",
+              "net": 51000
+            },
+            {
+              "date": "02-04 Jan",
+              "net": 71000
+            },
+            {
+              "date": "05-07 Jan",
+              "net": 71000
+            },
+            {
+              "date": "08-10 Jan",
+              "net": 71000
+            },
+            {
+              "date": "11-13 Jan",
+              "net": 66000
+            },
+            {
+              "date": "14-15 Jan",
+              "net": 66000
+            },
+            {
+              "date": "16-18 Jan",
+              "net": 61000
+            },
+            {
+              "date": "19-20 Jan",
+              "net": 61000
+            },
+            {
+              "date": "21-23 Jan",
+              "net": 51000
+            },
+            {
+              "date": "24-25 Jan",
+              "net": 51000
+            },
+            {
+              "date": "26-28 Jan",
+              "net": 46000
+            },
+            {
+              "date": "29-31 Jan",
+              "net": 46000
+            }
           ]
         },
         {
@@ -644,9 +1621,30 @@
           "flights": "DEL 05:55 → LHR 11:30",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            { "date": "07 Dec", "net": 37000 }, { "date": "11 Dec", "net": 33000 },
-            { "date": "17 Dec", "net": 33000 }, { "date": "23 Dec", "net": 33000 },
-            { "date": "25 Dec", "net": 37000 }, { "date": "29 Dec", "net": 33000 }
+            {
+              "date": "07 Dec",
+              "net": 37000
+            },
+            {
+              "date": "11 Dec",
+              "net": 33000
+            },
+            {
+              "date": "17 Dec",
+              "net": 33000
+            },
+            {
+              "date": "23 Dec",
+              "net": 33000
+            },
+            {
+              "date": "25 Dec",
+              "net": 37000
+            },
+            {
+              "date": "29 Dec",
+              "net": 33000
+            }
           ]
         }
       ]
@@ -659,10 +1657,10 @@
       "flag": "🇦🇺",
       "heroImage": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1920&q=85",
       "gallery": [
+        "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80",
         "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&q=80",
-        "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800&q=80",
         "https://images.unsplash.com/photo-1506906731260-5e46d8d7c0f6?w=800&q=80",
-        "https://images.unsplash.com/photo-1528184039930-bd03972bd974?w=800&q=80"
+        "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800&q=80"
       ],
       "seo": {
         "title": "Cheapest Australia Flights — Delhi/Amritsar to Melbourne, Sydney | Voyage-Ed Special Blocked Fares",
@@ -671,10 +1669,26 @@
       },
       "about": "Direct flight time from Delhi to Sydney/Melbourne is 11-15 hours (often via Singapore or Kuala Lumpur). Big Punjabi community in Melbourne, Sydney and Brisbane. Australia is year-round — Dec-Feb is Australian summer (peak tourism), Jun-Aug is cheaper + cooler.",
       "whyVisit": [
-        { "icon": "🏖", "title": "Sydney Harbour", "text": "Opera House, Harbour Bridge climb, Bondi Beach — the iconic Australia postcard." },
-        { "icon": "🐠", "title": "Great Barrier Reef", "text": "World's largest coral reef system — snorkelling and scuba from Cairns or Port Douglas." },
-        { "icon": "🦘", "title": "Outback adventures", "text": "Uluru at sunset, Kangaroo Island wildlife and the Blue Mountains' mist-covered valleys." },
-        { "icon": "👨‍👩‍👧", "title": "Family & student visits", "text": "Huge Indian diaspora in Melbourne, Sydney, Brisbane — our blocked fares specialise in family + student runs." }
+        {
+          "icon": "🏖",
+          "title": "Sydney Harbour",
+          "text": "Opera House, Harbour Bridge climb, Bondi Beach — the iconic Australia postcard."
+        },
+        {
+          "icon": "🐠",
+          "title": "Great Barrier Reef",
+          "text": "World's largest coral reef system — snorkelling and scuba from Cairns or Port Douglas."
+        },
+        {
+          "icon": "🦘",
+          "title": "Outback adventures",
+          "text": "Uluru at sunset, Kangaroo Island wildlife and the Blue Mountains' mist-covered valleys."
+        },
+        {
+          "icon": "👨‍👩‍👧",
+          "title": "Family & student visits",
+          "text": "Huge Indian diaspora in Melbourne, Sydney, Brisbane — our blocked fares specialise in family + student runs."
+        }
       ],
       "bestTime": "October – April (Australian summer)",
       "visa": "Visitor Visa (600) · 15-30 working days",
@@ -686,12 +1700,54 @@
           "flights": "ATQ 22:30 → KUL 06:50 · KUL 12:45 → MEL 23:45",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "16 Dec", "net": 39900 }, { "date": "21 Dec", "net": 39900 },
-            { "date": "23 Dec", "net": 39900 }, { "date": "28 Dec", "net": 39900 },
-            { "date": "30 Dec", "net": 39900 }, { "date": "04 Jan", "net": 63000 },
-            { "date": "06 Jan", "net": 63000 }, { "date": "11 Jan", "net": 63000 },
-            { "date": "18 Jan", "net": 63000 }, { "date": "20 Jan", "net": 73000 },
-            { "date": "25 Jan", "net": 73000 }, { "date": "27 Jan", "net": 73000 }
+            {
+              "date": "16 Dec",
+              "net": 39900
+            },
+            {
+              "date": "21 Dec",
+              "net": 39900
+            },
+            {
+              "date": "23 Dec",
+              "net": 39900
+            },
+            {
+              "date": "28 Dec",
+              "net": 39900
+            },
+            {
+              "date": "30 Dec",
+              "net": 39900
+            },
+            {
+              "date": "04 Jan",
+              "net": 63000
+            },
+            {
+              "date": "06 Jan",
+              "net": 63000
+            },
+            {
+              "date": "11 Jan",
+              "net": 63000
+            },
+            {
+              "date": "18 Jan",
+              "net": 63000
+            },
+            {
+              "date": "20 Jan",
+              "net": 73000
+            },
+            {
+              "date": "25 Jan",
+              "net": 73000
+            },
+            {
+              "date": "27 Jan",
+              "net": 73000
+            }
           ]
         },
         {
@@ -701,12 +1757,50 @@
           "flights": "MEL 06:15 → KUL 11:35 · KUL 17:55 → ATQ 21:30",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "19 Dec", "net": 98000 }, { "date": "26 Dec", "net": 83000 },
-            { "date": "28 Dec", "net": 83000 }, { "date": "04 Jan", "net": 68000 },
-            { "date": "09 Jan", "net": 68000 }, { "date": "11 Jan", "net": 68000 },
-            { "date": "16 Jan", "net": 68000 }, { "date": "18 Jan", "net": 68000 },
-            { "date": "23 Jan", "net": 53000 }, { "date": "25 Jan", "net": 53000 },
-            { "date": "30 Jan", "net": 53000 }
+            {
+              "date": "19 Dec",
+              "net": 98000
+            },
+            {
+              "date": "26 Dec",
+              "net": 83000
+            },
+            {
+              "date": "28 Dec",
+              "net": 83000
+            },
+            {
+              "date": "04 Jan",
+              "net": 68000
+            },
+            {
+              "date": "09 Jan",
+              "net": 68000
+            },
+            {
+              "date": "11 Jan",
+              "net": 68000
+            },
+            {
+              "date": "16 Jan",
+              "net": 68000
+            },
+            {
+              "date": "18 Jan",
+              "net": 68000
+            },
+            {
+              "date": "23 Jan",
+              "net": 53000
+            },
+            {
+              "date": "25 Jan",
+              "net": 53000
+            },
+            {
+              "date": "30 Jan",
+              "net": 53000
+            }
           ]
         },
         {
@@ -716,11 +1810,42 @@
           "flights": "ATQ 15:45 → SIN 00:15 · SIN 01:45 → MEL 12:10",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "02 Dec", "net": 38900 }, { "date": "04 Dec", "net": 38900 },
-            { "date": "06 Dec", "net": 38900 }, { "date": "09 Dec", "net": 38900 },
-            { "date": "11 Dec", "net": 38900 }, { "date": "13 Dec", "net": 38900 },
-            { "date": "18 Dec", "net": 48000 }, { "date": "23 Dec", "net": 48000 },
-            { "date": "27 Dec", "net": 48000 }
+            {
+              "date": "02 Dec",
+              "net": 38900
+            },
+            {
+              "date": "04 Dec",
+              "net": 38900
+            },
+            {
+              "date": "06 Dec",
+              "net": 38900
+            },
+            {
+              "date": "09 Dec",
+              "net": 38900
+            },
+            {
+              "date": "11 Dec",
+              "net": 38900
+            },
+            {
+              "date": "13 Dec",
+              "net": 38900
+            },
+            {
+              "date": "18 Dec",
+              "net": 48000
+            },
+            {
+              "date": "23 Dec",
+              "net": 48000
+            },
+            {
+              "date": "27 Dec",
+              "net": 48000
+            }
           ]
         },
         {
@@ -730,11 +1855,42 @@
           "flights": "ATQ 15:45 → SIN 00:15 · SIN 01:15 → SYD 12:10",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "27 Nov", "net": 22900 }, { "date": "02 Dec", "net": 26900 },
-            { "date": "04 Dec", "net": 26900 }, { "date": "09 Dec", "net": 26900 },
-            { "date": "11 Dec", "net": 34900 }, { "date": "16 Dec", "net": 37900 },
-            { "date": "18 Dec", "net": 42900 }, { "date": "23 Dec", "net": 42900 },
-            { "date": "30 Dec", "net": 52900 }
+            {
+              "date": "27 Nov",
+              "net": 22900
+            },
+            {
+              "date": "02 Dec",
+              "net": 26900
+            },
+            {
+              "date": "04 Dec",
+              "net": 26900
+            },
+            {
+              "date": "09 Dec",
+              "net": 26900
+            },
+            {
+              "date": "11 Dec",
+              "net": 34900
+            },
+            {
+              "date": "16 Dec",
+              "net": 37900
+            },
+            {
+              "date": "18 Dec",
+              "net": 42900
+            },
+            {
+              "date": "23 Dec",
+              "net": 42900
+            },
+            {
+              "date": "30 Dec",
+              "net": 52900
+            }
           ]
         },
         {
@@ -744,7 +1900,10 @@
           "flights": "MEL 22:35 → SIN 03:30 · SIN 10:50 → ATQ 14:30",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            { "date": "02 Dec", "net": 71000 }
+            {
+              "date": "02 Dec",
+              "net": 71000
+            }
           ]
         },
         {
@@ -754,19 +1913,110 @@
           "flights": "DEL 03:00 → MEL 19:40",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            { "date": "02 Dec", "net": 27900 }, { "date": "03 Dec", "net": 27900 },
-            { "date": "04 Dec", "net": 31000 }, { "date": "05 Dec", "net": 34500 },
-            { "date": "06 Dec", "net": 36000 }, { "date": "08 Dec", "net": 36000 },
-            { "date": "09 Dec", "net": 36000 }, { "date": "10 Dec", "net": 36000 },
-            { "date": "11 Dec", "net": 36000 }, { "date": "12 Dec", "net": 36500 },
-            { "date": "13 Dec", "net": 36500 }, { "date": "14 Dec", "net": 36500 },
-            { "date": "15 Dec", "net": 36500 }, { "date": "16 Dec", "net": 38500 },
-            { "date": "17 Dec", "net": 38500 }, { "date": "18 Dec", "net": 38500 },
-            { "date": "19 Dec", "net": 38500 }, { "date": "20 Dec", "net": 38500 },
-            { "date": "21 Dec", "net": 40500 }, { "date": "22 Dec", "net": 40500 },
-            { "date": "23 Dec", "net": 40500 }, { "date": "24 Dec", "net": 40500 },
-            { "date": "26 Dec", "net": 49000 }, { "date": "27 Dec", "net": 49000 },
-            { "date": "28 Dec", "net": 49000 }, { "date": "29 Dec", "net": 49000 }
+            {
+              "date": "02 Dec",
+              "net": 27900
+            },
+            {
+              "date": "03 Dec",
+              "net": 27900
+            },
+            {
+              "date": "04 Dec",
+              "net": 31000
+            },
+            {
+              "date": "05 Dec",
+              "net": 34500
+            },
+            {
+              "date": "06 Dec",
+              "net": 36000
+            },
+            {
+              "date": "08 Dec",
+              "net": 36000
+            },
+            {
+              "date": "09 Dec",
+              "net": 36000
+            },
+            {
+              "date": "10 Dec",
+              "net": 36000
+            },
+            {
+              "date": "11 Dec",
+              "net": 36000
+            },
+            {
+              "date": "12 Dec",
+              "net": 36500
+            },
+            {
+              "date": "13 Dec",
+              "net": 36500
+            },
+            {
+              "date": "14 Dec",
+              "net": 36500
+            },
+            {
+              "date": "15 Dec",
+              "net": 36500
+            },
+            {
+              "date": "16 Dec",
+              "net": 38500
+            },
+            {
+              "date": "17 Dec",
+              "net": 38500
+            },
+            {
+              "date": "18 Dec",
+              "net": 38500
+            },
+            {
+              "date": "19 Dec",
+              "net": 38500
+            },
+            {
+              "date": "20 Dec",
+              "net": 38500
+            },
+            {
+              "date": "21 Dec",
+              "net": 40500
+            },
+            {
+              "date": "22 Dec",
+              "net": 40500
+            },
+            {
+              "date": "23 Dec",
+              "net": 40500
+            },
+            {
+              "date": "24 Dec",
+              "net": 40500
+            },
+            {
+              "date": "26 Dec",
+              "net": 49000
+            },
+            {
+              "date": "27 Dec",
+              "net": 49000
+            },
+            {
+              "date": "28 Dec",
+              "net": 49000
+            },
+            {
+              "date": "29 Dec",
+              "net": 49000
+            }
           ]
         }
       ]
