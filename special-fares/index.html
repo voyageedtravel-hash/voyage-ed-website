@@ -123,8 +123,10 @@
   @media(max-width:620px){ .sf-dgrid { grid-template-columns:1fr; } }
   .sf-dcard { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 14px rgba(13,27,62,.06); transition:all .3s cubic-bezier(.2,.8,.2,1); text-decoration:none; color:inherit; display:flex; flex-direction:column; border:1px solid var(--sf-gray-l); }
   .sf-dcard:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(13,27,62,.14); border-color:var(--sf-gold); }
-  .sf-dimg { height:220px; background-size:cover; background-position:center; position:relative; }
-  .sf-dimg::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, transparent 45%, rgba(13,27,62,.85) 100%); }
+  .sf-dimg { height:220px; position:relative; overflow:hidden; background:linear-gradient(135deg, var(--sf-navy) 0%, var(--sf-navy-2) 100%); }
+  .sf-dimg img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+  .sf-dimg::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, transparent 45%, rgba(13,27,62,.85) 100%); z-index:1; }
+  .sf-dflag, .sf-dcount, .sf-doverlay { z-index:2; }
   .sf-dflag { position:absolute; top:14px; left:14px; background:rgba(255,255,255,0.95); padding:6px 11px; border-radius:22px; font-size:17px; z-index:2; }
   .sf-dcount { position:absolute; top:14px; right:14px; background:var(--sf-gold); color:var(--sf-navy); padding:5px 11px; border-radius:22px; font-size:11px; font-weight:800; letter-spacing:.06em; z-index:2; text-transform:uppercase; }
   .sf-doverlay { position:absolute; bottom:16px; left:18px; right:18px; z-index:2; color:#fff; }
@@ -335,6 +337,17 @@
 </footer>
 
 <script>
+// Image proxy via weserv.nl — reliably serves/caches Unsplash
+function imgViaProxy(url, w) {
+  const clean = url.replace(/^https?:\/\//, '').split('?')[0];
+  return `https://images.weserv.nl/?url=${clean}&w=${w || 800}&output=jpg&q=80`;
+}
+function fallbackChain(url, slug, w) {
+  const srcW = w || 800;
+  const srcH = Math.round(srcW * 0.6);
+  return `onerror="if(this.dataset.r!='1'){this.dataset.r='1';this.src='${imgViaProxy(url, srcW)}';}else if(this.dataset.r!='2'){this.dataset.r='2';this.src='https://source.unsplash.com/${srcW}x${srcH}/?${slug}';}else{this.onerror=null;this.style.display='none';}"`;
+}
+
 (async function() {
   const res = await fetch('/special-fares/data.json?v=' + Date.now());
   const data = await res.json();
@@ -369,7 +382,8 @@
     const airs = [...new Set(d.sectors.map(s => s.airline))].slice(0, 3);
     return `
       <a class="sf-dcard" href="/special-fares/destination.html?slug=${d.slug}">
-        <div class="sf-dimg" style="background-image: url('${d.heroImage}')">
+        <div class="sf-dimg">
+          <img src="${d.heroImage}" alt="${d.name}" loading="lazy" ${fallbackChain(d.heroImage, d.slug, 800)}>
           <div class="sf-dflag">${d.flag}</div>
           <div class="sf-dcount">${count} fares</div>
           <div class="sf-doverlay"><h3>${d.name}</h3><div class="tag">${d.tagline}</div></div>

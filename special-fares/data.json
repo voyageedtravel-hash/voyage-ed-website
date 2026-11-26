@@ -288,11 +288,11 @@
       "country": "Thailand",
       "tagline": "Golden temples, white beaches, street food",
       "flag": "🇹🇭",
-      "heroImage": "https://images.unsplash.com/photo-1563492065-1a5c74e4d394?w=1920&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=85",
       "gallery": [
-        "https://images.unsplash.com/photo-1563492065-1a5c74e4d394?w=800&q=80",
-        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
         "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80",
+        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
+        "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=80",
         "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80"
       ],
       "seo": {
@@ -954,10 +954,10 @@
       "country": "Malaysia",
       "tagline": "Twin towers, rainforests, island beaches",
       "flag": "🇲🇾",
-      "heroImage": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1920&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1920&q=85",
       "gallery": [
-        "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80",
         "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80",
+        "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80",
         "https://images.unsplash.com/photo-1601351164925-1c56d2bfdd44?w=800&q=80",
         "https://images.unsplash.com/photo-1587843984660-1a58d03ab8c3?w=800&q=80"
       ],
@@ -1655,10 +1655,10 @@
       "country": "Australia",
       "tagline": "Reefs, cities, outback adventures",
       "flag": "🇦🇺",
-      "heroImage": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1920&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=1920&q=85",
       "gallery": [
-        "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80",
         "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&q=80",
+        "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80",
         "https://images.unsplash.com/photo-1506906731260-5e46d8d7c0f6?w=800&q=80",
         "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800&q=80"
       ],
