@@ -57,7 +57,8 @@
   .sfd-hero { position:relative; min-height:340px; display:flex; align-items:center; color:#fff; padding:40px 24px; overflow:hidden; background-size:cover; background-position:center center; background-repeat:no-repeat; background-color:var(--sf-navy-2); }
   .sfd-hero::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(13,27,62,.72) 0%, rgba(22,35,71,.55) 60%, rgba(13,27,62,.75) 100%); }
   .sfd-hero-wrap { max-width:1600px; margin:0 auto; width:100%; position:relative; z-index:2; }
-  .sfd-hero-eye { display:inline-block; background:rgba(13,27,62,0.72); border:1px solid rgba(232,201,122,0.55); padding:7px 14px; border-radius:24px; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--sf-gold-l); margin-bottom:16px; }
+  .sfd-hero-eye { display:inline-block; background:rgba(13,27,62,0.78); border:1px solid rgba(232,201,122,0.55); padding:6px 12px; border-radius:20px; font-size:10.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--sf-gold-l); margin-bottom:14px; white-space:nowrap; max-width:100%; overflow:hidden; text-overflow:ellipsis; }
+  @media(max-width:600px){ .sfd-hero-eye { font-size:9.5px; padding:5px 10px; letter-spacing:.08em; } }
   .sfd-flag { font-size:15px; margin-right:4px; }
   .sfd-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(30px, 5.5vw, 62px); font-weight:800; line-height:1.05; margin-bottom:12px; text-shadow:0 4px 24px rgba(0,0,0,.45); }
   .sfd-hero h1 .gold { color:var(--sf-gold-l); font-style:italic; }
@@ -313,33 +314,10 @@ function fallbackImg(slug, i, w, h) {
   return `https://source.unsplash.com/${w}x${h}/?${kw}`;
 }
 
-// Image proxy via weserv.nl — reliably serves/caches Unsplash
+// Image proxy via weserv.nl — serves Unsplash through reliable CDN cache
 function imgViaProxy(url, w) {
   const clean = url.replace(/^https?:\/\//, '').split('?')[0];
-  return `https://images.weserv.nl/?url=${clean}&w=${w || 800}&output=jpg&q=80`;
-}
-// Preload the hero image — if it fails, swap to proxy, then to a themed gradient
-function setHeroBg(elId, url, slug) {
-  const el = document.getElementById(elId);
-  const colors = {
-    bali:'#1e5f4a', thailand:'#f59e0b', uae:'#b45309', malaysia:'#047857',
-    canada:'#be123c', europe:'#1e40af', australia:'#ea580c'
-  };
-  const themed = colors[slug] || '#162347';
-  el.style.backgroundColor = themed;
-  function applyBg(bgUrl) { el.style.backgroundImage = `url('${bgUrl}')`; }
-
-  const tryUrls = [url, imgViaProxy(url, 1920),
-    `https://source.unsplash.com/1920x900/?${slug}`];
-  let idx = 0;
-  function tryNext() {
-    if (idx >= tryUrls.length) return;
-    const probe = new Image();
-    probe.onload = () => applyBg(tryUrls[idx]);
-    probe.onerror = () => { idx++; tryNext(); };
-    probe.src = tryUrls[idx];
-  }
-  tryNext();
+  return `https://images.weserv.nl/?url=${clean}&w=${w || 800}&output=jpg&q=82`;
 }
 
 (async function() {
@@ -397,8 +375,9 @@ function setHeroBg(elId, url, slug) {
   };
   document.getElementById('ldjson-dynamic').textContent = JSON.stringify(dynSchema);
 
-  // Hero — with JS preload + fallback chain
-  setHeroBg('hero', dest.heroImage, slug);
+  // Hero — set background with weserv-proxied image as primary (CDN cached), original as fallback
+  const heroProxy = imgViaProxy(dest.heroImage, 1920);
+  document.getElementById('hero').style.backgroundImage = `url('${heroProxy}'), url('${dest.heroImage}')`;
   document.getElementById('heroFlag').textContent = dest.flag;
   document.getElementById('heroCountry').textContent = dest.country;
   document.getElementById('heroTitle').innerHTML = `Cheapest <span class="gold">${dest.name}</span><br>Fares, Locked In.`;
@@ -426,15 +405,13 @@ function setHeroBg(elId, url, slug) {
   pills.push({ i:'🎫', t:totalFares + ' fare dates' });
   document.getElementById('aboutPills').innerHTML = pills.map(p => `<span class="sfd-pill">${p.i} ${p.t}</span>`).join('');
 
-  // Gallery with multi-tier fallback — primary → weserv proxy → unsplash keyword → hero
+  // Gallery — use weserv proxy as primary (CDN cached), with single-tier fallback to raw Unsplash
   const gal = (dest.gallery || []).slice(0, 4);
   while (gal.length < 4) gal.push(dest.heroImage);
   document.getElementById('aboutGallery').innerHTML = gal.map((img, i) => {
     const proxy = imgViaProxy(img, 800);
-    const keyword = fallbackImg(slug, i, 800, 600);
-    const hero = dest.heroImage;
-    const chain = `onerror="var r=this.dataset.r||0;r=parseInt(r)+1;this.dataset.r=r;if(r===1){this.src='${proxy}';}else if(r===2){this.src='${keyword}';}else if(r===3){this.src='${hero}';}else{this.onerror=null;}"`;
-    return `<img src="${img}" alt="${dest.name} ${i+1}" loading="eager" ${chain}>`;
+    const esc = img.replace(/'/g, "%27");
+    return `<img src="${proxy}" alt="${dest.name} ${i+1}" loading="lazy" onerror="if(this.dataset.r!='1'){this.dataset.r='1';this.src='${esc}';}else{this.onerror=null;}">`;
   }).join('');
 
   // Why
