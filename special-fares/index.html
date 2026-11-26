@@ -368,16 +368,29 @@ function imgViaProxy(url, w) {
   stats.children[0].querySelector('.num').textContent = totalFares + '+';
   stats.children[1].querySelector('.num').textContent = data.destinations.length;
 
+  // After cards render, preload each hero image — if primary fails, swap to weserv proxy
+  function wireImageFallbacks() {
+    document.querySelectorAll('.sf-dcard').forEach(card => {
+      const hero = card.dataset.hero;
+      if (!hero) return;
+      const dimg = card.querySelector('.sf-dimg');
+      const probe = new Image();
+      probe.onerror = () => {
+        dimg.style.backgroundImage = `url('${imgViaProxy(hero, 1000)}')`;
+      };
+      probe.src = hero;
+    });
+  }
+
   const grid = document.getElementById('dest-grid');
   grid.innerHTML = data.destinations.map(d => {
     const cheap = cheapestFinal(d);
     const count = countFares(d);
     const airs = [...new Set(d.sectors.map(s => s.airline))].slice(0, 3);
-    // Pre-wrap hero image through weserv proxy for reliability (always serves from CDN cache)
-    const safeHero = imgViaProxy(d.heroImage, 1000);
+    // Raw Unsplash primary (what used to work), weserv proxy as fallback
     return `
-      <a class="sf-dcard" href="/special-fares/destination.html?slug=${d.slug}">
-        <div class="sf-dimg" style="background-image: url('${safeHero}'), url('${d.heroImage}')">
+      <a class="sf-dcard" href="/special-fares/destination.html?slug=${d.slug}" data-slug="${d.slug}" data-hero="${d.heroImage}">
+        <div class="sf-dimg" style="background-image: url('${d.heroImage}')">
           <div class="sf-dflag">${d.flag}</div>
           <div class="sf-dcount">${count} fares</div>
           <div class="sf-doverlay"><h3>${d.name}</h3><div class="tag">${d.tagline}</div></div>
@@ -389,6 +402,7 @@ function imgViaProxy(url, w) {
         </div>
       </a>`;
   }).join('');
+  wireImageFallbacks();
 })();
 </script>
 

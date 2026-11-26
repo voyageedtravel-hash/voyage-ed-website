@@ -390,9 +390,16 @@ function formatFlights(flights) {
   };
   document.getElementById('ldjson-dynamic').textContent = JSON.stringify(dynSchema);
 
-  // Hero — set background with weserv-proxied image as primary (CDN cached), original as fallback
-  const heroProxy = imgViaProxy(dest.heroImage, 1920);
-  document.getElementById('hero').style.backgroundImage = `url('${heroProxy}'), url('${dest.heroImage}')`;
+  // Hero — raw Unsplash primary (fastest), weserv proxy as fallback via JS preload
+  const heroEl = document.getElementById('hero');
+  heroEl.style.backgroundColor = 'var(--sf-navy-2)';
+  heroEl.style.backgroundImage = `url('${dest.heroImage}')`;
+  // If primary fails, swap to proxy
+  const heroProbe = new Image();
+  heroProbe.onerror = function() {
+    heroEl.style.backgroundImage = `url('${imgViaProxy(dest.heroImage, 1920)}')`;
+  };
+  heroProbe.src = dest.heroImage;
   document.getElementById('heroFlag').textContent = dest.flag;
   document.getElementById('heroCountry').textContent = dest.country;
   document.getElementById('heroTitle').innerHTML = `Cheapest <span class="gold">${dest.name}</span><br>Fares, Locked In.`;
@@ -420,14 +427,27 @@ function formatFlights(flights) {
   pills.push({ i:'🎫', t:totalFares + ' fare dates' });
   document.getElementById('aboutPills').innerHTML = pills.map(p => `<span class="sfd-pill">${p.i} ${p.t}</span>`).join('');
 
-  // Gallery — use weserv proxy as primary (CDN cached), with single-tier fallback to raw Unsplash
+  // Gallery — use RAW Unsplash as primary (fastest), weserv proxy as fallback via data-attr (safe from escape issues)
   const gal = (dest.gallery || []).slice(0, 4);
   while (gal.length < 4) gal.push(dest.heroImage);
-  document.getElementById('aboutGallery').innerHTML = gal.map((img, i) => {
-    const proxy = imgViaProxy(img, 800);
-    const esc = img.replace(/'/g, "%27");
-    return `<img src="${proxy}" alt="${dest.name} ${i+1}" loading="lazy" onerror="if(this.dataset.r!='1'){this.dataset.r='1';this.src='${esc}';}else{this.onerror=null;}">`;
-  }).join('');
+  const galWrap = document.getElementById('aboutGallery');
+  galWrap.innerHTML = '';
+  gal.forEach((img, i) => {
+    const el = document.createElement('img');
+    el.alt = `${dest.name} ${i+1}`;
+    el.loading = 'lazy';
+    el.dataset.fallback = imgViaProxy(img, 800);
+    el.onerror = function() {
+      if (!this.dataset.tried) {
+        this.dataset.tried = '1';
+        this.src = this.dataset.fallback;
+      } else {
+        this.onerror = null;
+      }
+    };
+    el.src = img; // raw Unsplash first — this has been working
+    galWrap.appendChild(el);
+  });
 
   // Why
   document.getElementById('whyHead').innerHTML = `What makes <span class="gold" style="color:var(--sf-gold);font-style:italic">${dest.name}</span> worth it`;
