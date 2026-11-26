@@ -4,6 +4,9 @@
 <link rel="icon" type="image/png" href="/logo.png"/><link rel="apple-touch-icon" href="/logo.png"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title id="pageTitle">Special Blocked Fares | Voyage-Ed Travels</title>
 <meta name="description" id="metaDesc" content="Cheapest blocked airline fares, updated daily.">
 <meta name="keywords" id="metaKey" content="cheapest flights, blocked fares, Voyage-Ed">
@@ -390,16 +393,8 @@ function formatFlights(flights) {
   };
   document.getElementById('ldjson-dynamic').textContent = JSON.stringify(dynSchema);
 
-  // Hero — raw Unsplash primary (fastest), weserv proxy as fallback via JS preload
-  const heroEl = document.getElementById('hero');
-  heroEl.style.backgroundColor = 'var(--sf-navy-2)';
-  heroEl.style.backgroundImage = `url('${dest.heroImage}')`;
-  // If primary fails, swap to proxy
-  const heroProbe = new Image();
-  heroProbe.onerror = function() {
-    heroEl.style.backgroundImage = `url('${imgViaProxy(dest.heroImage, 1920)}')`;
-  };
-  heroProbe.src = dest.heroImage;
+  // Hero — raw Unsplash URL as background (what worked originally)
+  document.getElementById('hero').style.backgroundImage = `url('${dest.heroImage}')`;
   document.getElementById('heroFlag').textContent = dest.flag;
   document.getElementById('heroCountry').textContent = dest.country;
   document.getElementById('heroTitle').innerHTML = `Cheapest <span class="gold">${dest.name}</span><br>Fares, Locked In.`;
@@ -427,27 +422,12 @@ function formatFlights(flights) {
   pills.push({ i:'🎫', t:totalFares + ' fare dates' });
   document.getElementById('aboutPills').innerHTML = pills.map(p => `<span class="sfd-pill">${p.i} ${p.t}</span>`).join('');
 
-  // Gallery — use RAW Unsplash as primary (fastest), weserv proxy as fallback via data-attr (safe from escape issues)
+  // Gallery — simple <img> tags, raw Unsplash URLs (proven working)
   const gal = (dest.gallery || []).slice(0, 4);
   while (gal.length < 4) gal.push(dest.heroImage);
-  const galWrap = document.getElementById('aboutGallery');
-  galWrap.innerHTML = '';
-  gal.forEach((img, i) => {
-    const el = document.createElement('img');
-    el.alt = `${dest.name} ${i+1}`;
-    el.loading = 'lazy';
-    el.dataset.fallback = imgViaProxy(img, 800);
-    el.onerror = function() {
-      if (!this.dataset.tried) {
-        this.dataset.tried = '1';
-        this.src = this.dataset.fallback;
-      } else {
-        this.onerror = null;
-      }
-    };
-    el.src = img; // raw Unsplash first — this has been working
-    galWrap.appendChild(el);
-  });
+  document.getElementById('aboutGallery').innerHTML = gal.map((img, i) =>
+    `<img src="${img}" alt="${dest.name} ${i+1}" loading="eager" decoding="async" referrerpolicy="no-referrer">`
+  ).join('');
 
   // Why
   document.getElementById('whyHead').innerHTML = `What makes <span class="gold" style="color:var(--sf-gold);font-style:italic">${dest.name}</span> worth it`;
