@@ -426,7 +426,7 @@ function formatFlights(flights) {
   const gal = (dest.gallery || []).slice(0, 4);
   while (gal.length < 4) gal.push(dest.heroImage);
   document.getElementById('aboutGallery').innerHTML = gal.map((img, i) =>
-    `<img src="${img}" alt="${dest.name} ${i+1}" loading="eager" decoding="async" referrerpolicy="no-referrer">`
+    `<img src="${img}" alt="${dest.name} ${i+1}" loading="eager" decoding="async">`
   ).join('');
 
   // Why
