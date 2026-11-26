@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title id="pageTitle">Special Blocked Fares | Voyage-Ed Travels</title>
+<meta name="description" id="metaDesc" content="Cheapest blocked airline fares from Voyage-Ed Travels, updated daily.">
+<meta name="keywords" id="metaKey" content="cheapest flights, blocked fares, Voyage-Ed">
+<meta name="author" content="Voyage-Ed Travels">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="IN-PB">
+<meta name="geo.placename" content="Mohali, Chandigarh, Punjab">
+<meta name="geo.position" content="30.7046;76.7179">
+<link rel="canonical" id="canon" href="https://voyage-ed.com/special-fares/">
+<link rel="icon" type="image/png" href="/logo-mark.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" id="ogTitle" content="Special Blocked Fares | Voyage-Ed">
+<meta property="og:description" id="ogDesc" content="Cheapest blocked airline fares, updated daily.">
+<meta property="og:image" id="ogImg" content="https://voyage-ed.com/logo-mark.png">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; color: #1a1a1a; background: #faf7f2; line-height: 1.6; }
+
+  .top-banner { background: linear-gradient(135deg, #0a2540 0%, #122c4a 100%); color: #f5e8c8; text-align: center; padding: 8px 15px; font-size: 13px; font-weight: 500; }
+  .top-banner b { color: #c9961a; }
+  header { background: #fff; box-shadow: 0 2px 20px rgba(10,37,64,.08); position: sticky; top: 0; z-index: 100; }
+  .header-wrap { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0a2540; }
+  .logo img { height: 46px; }
+  .logo-text { font-weight: 800; font-size: 20px; letter-spacing: -0.3px; }
+  .logo-text span { color: #c9961a; }
+  nav ul { list-style: none; display: flex; gap: 22px; align-items: center; }
+  nav a { text-decoration: none; color: #0a2540; font-weight: 600; font-size: 14px; transition: color .2s; }
+  nav a:hover { color: #c9961a; }
+  .nav-cta { background: #c9961a; color: #fff !important; padding: 9px 20px; border-radius: 6px; }
+  .mobile-toggle { display: none; background: none; border: none; font-size: 24px; color: #0a2540; cursor: pointer; }
+
+  .breadcrumb { max-width: 1280px; margin: 14px auto 0; padding: 0 20px; font-size: 13px; color: #6b6b6b; }
+  .breadcrumb a { color: #0a2540; text-decoration: none; }
+  .breadcrumb a:hover { color: #c9961a; }
+
+  .hero { color: #fff; padding: 90px 20px 70px; text-align: center; position: relative; background-size: cover; background-position: center; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,37,64,.8), rgba(10,37,64,.68)); }
+  .hero > * { position: relative; z-index: 2; }
+  .hero .flag { font-size: 48px; margin-bottom: 12px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
+  .hero h1 .gold { color: #f5c842; }
+  .hero .tag { font-size: clamp(16px, 2vw, 20px); opacity: .95; margin-bottom: 24px; }
+  .hero-stats { display: inline-flex; gap: 30px; background: rgba(255,255,255,.14); backdrop-filter: blur(10px); padding: 18px 28px; border-radius: 12px; border: 1px solid rgba(245,200,66,.3); flex-wrap: wrap; justify-content: center; }
+  .hero-stat .num { font-size: 26px; font-weight: 800; color: #f5c842; display: block; line-height: 1; }
+  .hero-stat .lbl { font-size: 12px; opacity: .85; text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; display: block; }
+
+  .section { max-width: 1280px; margin: 0 auto; padding: 44px 20px; }
+
+  .about-box { background: #fff; padding: 28px 30px; border-radius: 14px; box-shadow: 0 6px 20px rgba(10,37,64,.07); margin-bottom: 36px; border-left: 4px solid #c9961a; }
+  .about-box h2 { color: #0a2540; font-size: 22px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .about-box p { color: #444; font-size: 15px; }
+
+  .sector { background: #fff; border-radius: 14px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 6px 20px rgba(10,37,64,.07); }
+  .sector-head { background: linear-gradient(135deg, #0a2540, #122c4a); color: #fff; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .sector-head .route { font-size: 18px; font-weight: 700; color: #f5c842; }
+  .sector-head .route-sub { font-size: 13px; opacity: .85; margin-top: 2px; }
+  .sector-head .airline { background: rgba(245,200,66,.2); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid rgba(245,200,66,.4); }
+  .sector-meta { padding: 14px 24px; background: #fdf3dc; font-size: 13px; color: #555; border-bottom: 1px solid #ecd9a8; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .sector-meta .flights { font-weight: 500; }
+  .sector-meta .bag { background: #fff; padding: 4px 10px; border-radius: 16px; font-weight: 600; color: #0a2540; border: 1px solid #ecd9a8; }
+
+  .fares-table { width: 100%; border-collapse: collapse; }
+  .fares-table th { background: #fbfbfb; text-align: left; padding: 14px 18px; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: #6b6b6b; font-weight: 600; border-bottom: 2px solid #ededed; }
+  .fares-table td { padding: 16px 18px; border-bottom: 1px solid #f0f0f0; font-size: 15px; }
+  .fares-table tr:last-child td { border-bottom: none; }
+  .fares-table tr:hover td { background: #faf7f2; }
+  .fares-table .date { font-weight: 600; color: #0a2540; }
+  .fares-table .price { font-weight: 800; color: #c9961a; font-size: 18px; }
+  .fares-table .price.on-call { font-size: 14px; color: #0a2540; font-weight: 600; }
+  .book-btn { background: #25d366; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; border: none; cursor: pointer; transition: all .2s; }
+  .book-btn:hover { background: #1fb858; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,211,102,.4); }
+
+  /* Mobile fare cards */
+  @media (max-width: 700px) {
+    .fares-table thead { display: none; }
+    .fares-table tr { display: block; padding: 14px; background: #faf7f2; border-radius: 10px; margin-bottom: 10px; border: 1px solid #ecd9a8; }
+    .fares-table td { display: flex; justify-content: space-between; padding: 6px 0; border: none; font-size: 14px; }
+    .fares-table td::before { content: attr(data-label); font-weight: 600; color: #6b6b6b; text-transform: uppercase; font-size: 11px; letter-spacing: .5px; align-self: center; }
+    .fares-table td.price-cell { padding-top: 10px; border-top: 1px solid #ecd9a8; margin-top: 6px; }
+    .fares-table td.book-cell { padding-top: 10px; }
+    .fares-table td.book-cell::before { display: none; }
+    .book-btn { width: 100%; justify-content: center; }
+  }
+
+  /* Call-to-action band */
+  .cta-band { background: linear-gradient(135deg, #0a2540, #122c4a); color: #fff; padding: 50px 20px; text-align: center; margin-top: 40px; border-radius: 16px; }
+  .cta-band h2 { font-size: clamp(22px, 3.5vw, 32px); margin-bottom: 14px; color: #f5c842; }
+  .cta-band p { font-size: 16px; margin-bottom: 24px; opacity: .92; }
+  .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { padding: 14px 28px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .2s; }
+  .btn-wa { background: #25d366; color: #fff; }
+  .btn-wa:hover { background: #1fb858; }
+  .btn-call { background: #c9961a; color: #fff; }
+  .btn-call:hover { background: #b8851a; }
+
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: #0a2540; text-decoration: none; margin-bottom: 20px; font-weight: 600; font-size: 14px; }
+  .back-link:hover { color: #c9961a; }
+
+  footer { background: #0a2540; color: #d9d9d9; padding: 36px 20px 20px; margin-top: 40px; }
+  .footer-wrap { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+  .footer-brand h4 { color: #f5c842; margin-bottom: 10px; font-size: 20px; }
+  .footer-col h5 { color: #f5c842; margin-bottom: 14px; font-size: 15px; text-transform: uppercase; letter-spacing: .5px; }
+  .footer-col a { display: block; color: #d9d9d9; text-decoration: none; margin-bottom: 8px; font-size: 14px; }
+  .footer-col a:hover { color: #f5c842; }
+  .footer-bot { max-width: 1280px; margin: 24px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.1); text-align: center; font-size: 13px; color: #999; }
+
+  @media (max-width: 860px) {
+    nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 20px; gap: 14px; box-shadow: 0 4px 20px rgba(0,0,0,.1); }
+    nav ul.open { display: flex; }
+    .mobile-toggle { display: block; }
+    .footer-wrap { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* Modal for confirmation */
+  .modal-bd { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+  .modal-bd.open { display: flex; }
+  .modal { background: #fff; border-radius: 14px; padding: 30px; max-width: 420px; width: 100%; text-align: center; }
+  .modal h3 { color: #0a2540; margin-bottom: 10px; font-size: 20px; }
+  .modal p { color: #555; margin-bottom: 20px; font-size: 14px; }
+  .modal .close-btn { background: #0a2540; color: #fff; border: none; padding: 10px 22px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="top-banner">✨ <b>Blocked Inventory</b> — Updated daily · <b>+91 7009 659 048</b></div>
+
+<header>
+  <div class="header-wrap">
+    <a href="/" class="logo">
+      <img src="/logo-mark.png" alt="Voyage-Ed Travels" onerror="this.style.display='none'">
+      <span class="logo-text">Voyage<span>-Ed</span></span>
+    </a>
+    <button class="mobile-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#destinations">Packages</a></li>
+        <li><a href="/special-fares/" style="color:#c9961a">Special Blocked Fares</a></li>
+        <li><a href="/visa.html">Visa</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html" class="nav-cta">Enquire Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Home</a> &rsaquo; <a href="/special-fares/">Special Blocked Fares</a> &rsaquo; <span id="crumb">Destination</span>
+</div>
+
+<section class="hero" id="hero">
+  <div class="flag" id="heroFlag"></div>
+  <h1 id="heroTitle">Loading…</h1>
+  <div class="tag" id="heroTag"></div>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num" id="statSectors">-</span><span class="lbl">Sectors</span></div>
+    <div class="hero-stat"><span class="num" id="statFares">-</span><span class="lbl">Fare Dates</span></div>
+    <div class="hero-stat"><span class="num" id="statCheap">-</span><span class="lbl">Starting From</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <a href="/special-fares/" class="back-link">← All Destinations</a>
+
+  <div class="about-box">
+    <h2>📍 <span id="aboutTitle"></span></h2>
+    <p id="aboutText"></p>
+  </div>
+
+  <div id="sectorsWrap"></div>
+
+  <div class="cta-band">
+    <h2>Need a different date or route?</h2>
+    <p>Tell us where and when — we'll negotiate a blocked fare for you.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-wa" id="waGeneric">💬 WhatsApp Vishal</a>
+      <a href="tel:+917009659048" class="btn btn-call">📞 Call +91 7009 659 048</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <h4>Voyage-Ed Travels</h4>
+      <p>Premium travel agency in Mohali-Chandigarh. Specialists in blocked airline inventory.</p>
+      <p style="margin-top: 12px; font-size: 13px;">📍 Suite 315, Regus, GMADA Aerocity, Mohali 140306<br>
+      📞 +91 7009 659 048<br>
+      ✉ enquiry@voyage-ed.com</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="/">Home</a>
+      <a href="/special-fares/">All Blocked Fares</a>
+      <a href="/visa.html">Visa Services</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>More Destinations</h5>
+      <a href="/special-fares/destination.html?slug=bali">Bali</a>
+      <a href="/special-fares/destination.html?slug=thailand">Thailand</a>
+      <a href="/special-fares/destination.html?slug=uae">UAE</a>
+      <a href="/special-fares/destination.html?slug=canada">Canada</a>
+      <a href="/special-fares/destination.html?slug=europe">Europe</a>
+      <a href="/special-fares/destination.html?slug=australia">Australia</a>
+    </div>
+  </div>
+  <div class="footer-bot">
+    © 2026 Voyage-Ed Travels · IATA Approved · All rights reserved
+  </div>
+</footer>
+
+<div class="modal-bd" id="modal">
+  <div class="modal">
+    <h3>✅ Enquiry Sent!</h3>
+    <p id="modalMsg">We've opened WhatsApp for you — hit send to let Vishal know. He'll confirm this fare within 30 minutes.</p>
+    <button class="close-btn" onclick="document.getElementById('modal').classList.remove('open')">Got it</button>
+  </div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('slug') || 'bali';
+
+(async function() {
+  const res = await fetch('/special-fares/data.json?v=' + Date.now());
+  const data = await res.json();
+  const dest = data.destinations.find(d => d.slug === slug);
+  if (!dest) {
+    document.body.innerHTML = '<div style="padding:60px 20px;text-align:center;"><h1>Destination not found</h1><p><a href="/special-fares/">← Back to all destinations</a></p></div>';
+    return;
+  }
+
+  // Markup
+  function applyMarkup(net) {
+    if (net == null) return null;
+    for (const rule of data.markupRules) {
+      if (net <= rule.upto) return net + rule.add;
+    }
+    return net;
+  }
+
+  // Meta tags
+  document.title = dest.seo.title;
+  document.getElementById('pageTitle').textContent = dest.seo.title;
+  document.getElementById('metaDesc').setAttribute('content', dest.seo.description);
+  document.getElementById('metaKey').setAttribute('content', dest.seo.keywords);
+  document.getElementById('canon').setAttribute('href', `https://voyage-ed.com/special-fares/destination.html?slug=${dest.slug}`);
+  document.getElementById('ogTitle').setAttribute('content', dest.seo.title);
+  document.getElementById('ogDesc').setAttribute('content', dest.seo.description);
+  document.getElementById('ogImg').setAttribute('content', dest.heroImage);
+
+  // Hero
+  document.getElementById('hero').style.backgroundImage = `url('${dest.heroImage}')`;
+  document.getElementById('heroFlag').textContent = dest.flag;
+  document.getElementById('heroTitle').innerHTML = `Cheapest <span class="gold">${dest.name}</span> Fares`;
+  document.getElementById('heroTag').textContent = dest.tagline;
+  document.getElementById('crumb').textContent = dest.name;
+
+  // Stats
+  let totalFares = 0, cheapest = Infinity;
+  for (const s of dest.sectors) {
+    totalFares += s.fares.length;
+    for (const f of s.fares) {
+      if (f.net != null) {
+        const final = applyMarkup(f.net);
+        if (final < cheapest) cheapest = final;
+      }
+    }
+  }
+  document.getElementById('statSectors').textContent = dest.sectors.length;
+  document.getElementById('statFares').textContent = totalFares;
+  document.getElementById('statCheap').textContent = cheapest === Infinity ? 'On Call' : '₹' + cheapest.toLocaleString('en-IN');
+
+  // About box
+  document.getElementById('aboutTitle').textContent = `About ${dest.name}`;
+  document.getElementById('aboutText').textContent = dest.about;
+
+  // Generic WA link
+  document.getElementById('waGeneric').href = `https://wa.me/917009659048?text=${encodeURIComponent(`Hi Voyage-Ed, I'm looking for a blocked fare to ${dest.name}. Can you help?`)}`;
+
+  // Render sectors
+  const wrap = document.getElementById('sectorsWrap');
+  wrap.innerHTML = dest.sectors.map((s, si) => {
+    const rows = s.fares.map(f => {
+      const final = applyMarkup(f.net);
+      const priceCell = f.net == null
+        ? `<span class="price on-call">${f.note || 'FARE ON CALL'}</span>`
+        : `<span class="price">₹${final.toLocaleString('en-IN')}</span>`;
+      const waText = f.net == null
+        ? `Hi Vishal, I want FARE ON CALL for ${s.airline} ${s.route} on ${f.date}. Please confirm.`
+        : `Hi Vishal, I want to book this blocked fare:\n\n✈ ${s.airline}\n📍 ${s.route}\n📅 ${f.date}\n💰 ₹${final.toLocaleString('en-IN')}\n\nPlease confirm availability.`;
+      const waUrl = `https://wa.me/917009659048?text=${encodeURIComponent(waText)}`;
+      const emailBody = `Dear Vishal,\n\nI'd like to book the following special blocked fare:\n\nAirline: ${s.airline}\nRoute: ${s.route}\nDate: ${f.date}\nFare: ${f.net == null ? (f.note || 'FARE ON CALL') : '₹' + final.toLocaleString('en-IN')}\n\nPlease confirm availability and send me the payment link.\n\nThanks`;
+      const emailUrl = `mailto:enquiry@voyage-ed.com?subject=${encodeURIComponent('Blocked Fare Booking — ' + dest.name + ' — ' + f.date)}&body=${encodeURIComponent(emailBody)}`;
+
+      return `
+        <tr>
+          <td class="date" data-label="Date">${f.date}</td>
+          <td class="price-cell" data-label="Fare">${priceCell}</td>
+          <td class="book-cell">
+            <a href="${waUrl}" target="_blank" class="book-btn" onclick="notifyEnquiry('${dest.slug}', ${si}, '${f.date.replace(/'/g, '\\\'')}', ${final || 0}, 'whatsapp')">
+              💬 Book
+            </a>
+          </td>
+        </tr>`;
+    }).join('');
+
+    return `
+      <div class="sector">
+        <div class="sector-head">
+          <div>
+            <div class="route">${s.route}</div>
+            <div class="route-sub">Starting from ₹${(() => {
+              let m = Infinity;
+              for (const f of s.fares) if (f.net != null) { const x = applyMarkup(f.net); if (x < m) m = x; }
+              return m === Infinity ? 'On Call' : m.toLocaleString('en-IN');
+            })()}</div>
+          </div>
+          <div class="airline">✈ ${s.airline}</div>
+        </div>
+        <div class="sector-meta">
+          <div class="flights">🕑 ${s.flights}</div>
+          <div class="bag">🧳 ${s.baggage}</div>
+        </div>
+        <table class="fares-table">
+          <thead>
+            <tr>
+              <th>Travel Date</th>
+              <th>All-inclusive Fare</th>
+              <th style="width: 120px;">Book Now</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    `;
+  }).join('');
+})();
+
+// Fire-and-forget enquiry ping to backend (best-effort)
+function notifyEnquiry(slug, sectorIdx, date, fare, channel) {
+  try {
+    fetch('https://voyage-crm.onrender.com/api/public/fare-enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug, sectorIdx, date, fare, channel, ts: new Date().toISOString(), ua: navigator.userAgent, ref: document.referrer })
+    }).catch(() => {});
+  } catch(e) {}
+  return true; // never block the WhatsApp open
+}
+</script>
+
+</body>
+</html>
