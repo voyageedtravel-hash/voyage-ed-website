@@ -109,15 +109,16 @@
   .sf-live b { color:var(--sf-gold); }
 
   /* Blocks */
-  .sf-block { max-width:1260px; margin:0 auto; padding:70px 20px; }
+  .sf-block { max-width:1600px; margin:0 auto; padding:70px 32px; }
   .sf-head { text-align:center; max-width:720px; margin:0 auto 46px; }
   .sf-eyebrow { color:var(--sf-gold); font-size:.72rem; font-weight:700; letter-spacing:.25em; text-transform:uppercase; margin-bottom:12px; display:block; }
   .sf-head h2 { font-family:'Playfair Display',serif; font-size:clamp(28px, 4vw, 42px); color:var(--sf-navy); margin-bottom:14px; font-weight:800; line-height:1.15; }
   .sf-head h2 em { color:var(--sf-rose); font-style:italic; }
   .sf-head p { color:var(--sf-gray); font-size:15.5px; line-height:1.6; }
 
-  /* Destination grid — 3 cols on desktop */
-  .sf-dgrid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  /* Destination grid — 4 cols on wide, 3 on med, 2 on tablet, 1 on mobile */
+  .sf-dgrid { display:grid; grid-template-columns:repeat(4, 1fr); gap:22px; }
+  @media(max-width:1400px){ .sf-dgrid { grid-template-columns:repeat(3, 1fr); } }
   @media(max-width:1000px){ .sf-dgrid { grid-template-columns:repeat(2, 1fr); } }
   @media(max-width:620px){ .sf-dgrid { grid-template-columns:1fr; } }
   .sf-dcard { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 14px rgba(13,27,62,.06); transition:all .3s cubic-bezier(.2,.8,.2,1); text-decoration:none; color:inherit; display:flex; flex-direction:column; border:1px solid var(--sf-gray-l); }
@@ -148,9 +149,10 @@
   .sf-step p { color:var(--sf-gray); font-size:14px; line-height:1.55; }
 
   /* Why */
-  .sf-why-g { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
-  @media(max-width:900px){ .sf-why-g { grid-template-columns:repeat(2, 1fr); } }
-  @media(max-width:580px){ .sf-why-g { grid-template-columns:1fr; } }
+  .sf-why-g { display:grid; grid-template-columns:repeat(6, 1fr); gap:18px; }
+  @media(max-width:1300px){ .sf-why-g { grid-template-columns:repeat(3, 1fr); } }
+  @media(max-width:860px){ .sf-why-g { grid-template-columns:repeat(2, 1fr); } }
+  @media(max-width:520px){ .sf-why-g { grid-template-columns:1fr; } }
   .sf-why { background:#fff; padding:24px 22px; border-radius:10px; border:1px solid var(--sf-gray-l); transition:all .25s; position:relative; overflow:hidden; }
   .sf-why::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--sf-gold); transform:scaleY(0); transform-origin:top; transition:transform .3s; }
   .sf-why:hover { transform:translateY(-3px); box-shadow:0 14px 28px rgba(13,27,62,.09); }
@@ -175,8 +177,8 @@
   .sf-bigcta .sf-btn-wa:hover { background:#1fb858; transform:translateY(-2px); }
 
   /* Footer same as site */
-  .sf-footer { background:var(--sf-navy); color:#c0c8d6; padding:50px 24px 22px; }
-  .sf-footer-wrap { max-width:1260px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:36px; }
+  .sf-footer { background:var(--sf-navy); color:#c0c8d6; padding:50px 32px 22px; }
+  .sf-footer-wrap { max-width:1600px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:36px; }
   .sf-footer-brand h4 { color:var(--sf-gold-l); margin-bottom:10px; font-size:22px; font-weight:800; font-family:'Playfair Display',serif; }
   .sf-footer-brand p { font-size:13.5px; opacity:.85; line-height:1.65; }
   .sf-footer-contact { font-size:12.5px; line-height:1.85; opacity:.85; margin-top:12px; }
@@ -184,7 +186,7 @@
   .sf-footer-col h5 { color:var(--sf-gold-l); margin-bottom:14px; font-size:12px; text-transform:uppercase; letter-spacing:.18em; font-weight:700; }
   .sf-footer-col a { display:block; color:#c0c8d6; text-decoration:none; margin-bottom:8px; font-size:13.5px; opacity:.85; }
   .sf-footer-col a:hover { opacity:1; color:var(--sf-gold-l); }
-  .sf-footer-bot { max-width:1260px; margin:36px auto 0; padding-top:18px; border-top:1px solid rgba(255,255,255,.08); text-align:center; font-size:12.5px; color:#8a94a6; }
+  .sf-footer-bot { max-width:1600px; margin:36px auto 0; padding-top:18px; border-top:1px solid rgba(255,255,255,.08); text-align:center; font-size:12.5px; color:#8a94a6; }
   @media(max-width:860px){ .sf-footer-wrap { grid-template-columns:1fr 1fr; gap:28px; } }
   @media(max-width:520px){ .sf-footer-wrap { grid-template-columns:1fr; } }
 </style>
