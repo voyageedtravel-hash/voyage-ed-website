@@ -2,26 +2,11 @@
   "lastUpdated": "2026-11-27",
   "updateNote": "Daily update workflow: edit the destinations array with the net fares Vishal receives from the consolidator. Keep structure, then commit + push. Markup is applied automatically by the frontend — always store NET.",
   "markupRules": [
-    {
-      "upto": 20000,
-      "add": 1000
-    },
-    {
-      "upto": 40000,
-      "add": 1500
-    },
-    {
-      "upto": 60000,
-      "add": 2000
-    },
-    {
-      "upto": 110000,
-      "add": 5000
-    },
-    {
-      "upto": 999999999,
-      "add": 7000
-    }
+    { "upto": 20000, "add": 1000 },
+    { "upto": 40000, "add": 1500 },
+    { "upto": 60000, "add": 2000 },
+    { "upto": 110000, "add": 5000 },
+    { "upto": 999999999, "add": 7000 }
   ],
   "destinations": [
     {
@@ -39,35 +24,36 @@
       ],
       "seo": {
         "title": "Cheapest Flights to Bali from India — Voyage-Ed Special Blocked Fares",
-        "description": "Book the cheapest Delhi-Bali and Amritsar-Bali flights starting ₹49,999 round trip. Malaysia Airlines, Singapore Airlines, Air India. Updated daily by Voyage-Ed Travels, Mohali.",
+        "description": "Book the cheapest Delhi-Bali and Amritsar-Bali flights starting ₹25,500 one-way (AI direct) / ₹49,999 round trip (MH). Air India, Malaysia Airlines, Singapore Airlines. Updated daily by Voyage-Ed Travels, Mohali.",
         "keywords": "cheapest Bali flights, Delhi to Bali fares, Amritsar to Bali flight, Bali return tickets India, Voyage-Ed Travels Bali"
       },
-      "about": "Bali is Indonesia's island of temples, rice terraces, and volcanic beaches — the darling of honeymooners and solo travellers alike. Direct from India via Kuala Lumpur or Singapore, typical flight time is 7-9 hours with one connection. Visa on arrival for Indians (approx ₹3,000, valid 30 days).",
+      "about": "Bali is Indonesia's island of temples, rice terraces, and volcanic beaches — the darling of honeymooners and solo travellers alike. Direct from India via Kuala Lumpur or Singapore, typical flight time is 7-9 hours with one connection, or Air India direct in 10 hours. Visa on arrival for Indians (approx ₹3,000, valid 30 days).",
       "whyVisit": [
-        {
-          "icon": "🏖",
-          "title": "World-class beaches",
-          "text": "Seminyak, Nusa Dua and Uluwatu — golden sand, warm water and spectacular surf breaks."
-        },
-        {
-          "icon": "🛕",
-          "title": "Ancient temples",
-          "text": "Tanah Lot, Besakih and Uluwatu temple perched on cliffs over the Indian Ocean."
-        },
-        {
-          "icon": "🌿",
-          "title": "Ubud rice terraces",
-          "text": "Emerald-green Tegalalang terraces, yoga retreats and the Sacred Monkey Forest."
-        },
-        {
-          "icon": "🌋",
-          "title": "Mount Batur sunrise",
-          "text": "Pre-dawn trek up an active volcano — the view at the summit is unforgettable."
-        }
+        { "icon": "🏖", "title": "World-class beaches", "text": "Seminyak, Nusa Dua and Uluwatu — golden sand, warm water and spectacular surf breaks." },
+        { "icon": "🛕", "title": "Ancient temples", "text": "Tanah Lot, Besakih and Uluwatu temple perched on cliffs over the Indian Ocean." },
+        { "icon": "🌿", "title": "Ubud rice terraces", "text": "Emerald-green Tegalalang terraces, yoga retreats and the Sacred Monkey Forest." },
+        { "icon": "🌋", "title": "Mount Batur sunrise", "text": "Pre-dawn trek up an active volcano — the view at the summit is unforgettable." }
       ],
       "bestTime": "April – October (dry season)",
       "visa": "Visa on Arrival · 30 days · approx ₹3,000",
       "sectors": [
+        {
+          "airline": "Air India",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
+          "route": "Delhi → Bali (direct one-way)",
+          "flights": "DEL 03:15 → DPS 13:50",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "27-28 Dec", "net": 30000 },
+            { "date": "03,09,16,17 Jan", "net": 25500 },
+            { "date": "18,23,24,25,30 Jan", "net": 25500 },
+            { "date": "01,06,07,08 Feb", "net": 25500 },
+            { "date": "13,14,15,20 Feb", "net": 25500 },
+            { "date": "21,22,27,28 Feb", "net": 25500 },
+            { "date": "01,13,14,21 Mar", "net": 25500 },
+            { "date": "27,28 Mar", "net": 25500 }
+          ]
+        },
         {
           "airline": "Malaysia Airlines",
           "airlineLogo": "https://logos-world.net/wp-content/uploads/2023/01/Malaysia-Airlines-Logo.png",
@@ -75,38 +61,14 @@
           "flights": "MH 191 DEL-KUL 23:00-06:55 · MH 715 KUL-DPS 09:00-12:05 · Return MH 714 DPS-KUL 13:05-16:00 · MH 190 KUL-DEL 18:50-21:50",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "16 Jan - 23 Jan",
-              "net": 49999
-            },
-            {
-              "date": "20 Jan - 27 Jan",
-              "net": 52999
-            },
-            {
-              "date": "23 Jan - 30 Jan",
-              "net": 52999
-            },
-            {
-              "date": "30 Jan - 06 Feb",
-              "net": 51999
-            },
-            {
-              "date": "10 Feb - 17 Feb",
-              "net": 49999
-            },
-            {
-              "date": "17 Feb - 24 Feb",
-              "net": 48999
-            },
-            {
-              "date": "20 Feb - 27 Feb",
-              "net": 48999
-            },
-            {
-              "date": "27 Feb - 06 Mar",
-              "net": 48999
-            }
+            { "date": "16 Jan - 23 Jan", "net": 49999 },
+            { "date": "20 Jan - 27 Jan", "net": 52999 },
+            { "date": "23 Jan - 30 Jan", "net": 52999 },
+            { "date": "30 Jan - 06 Feb", "net": 51999 },
+            { "date": "10 Feb - 17 Feb", "net": 49999 },
+            { "date": "17 Feb - 24 Feb", "net": 48999 },
+            { "date": "20 Feb - 27 Feb", "net": 48999 },
+            { "date": "27 Feb - 06 Mar", "net": 48999 }
           ]
         },
         {
@@ -116,91 +78,19 @@
           "flights": "MH 119 ATQ-KUL 23:15-06:10 · MH 715 KUL-DPS 09:00-12:05 · Return MH 714 DPS-KUL 12:55-16:00 · MH 118 KUL-ATQ 17:15-20:40",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "10 Dec - 17 Dec",
-              "net": 52999
-            },
-            {
-              "date": "24 Feb - 03 Mar",
-              "net": 49999
-            },
-            {
-              "date": "25 Feb - 04 Mar",
-              "net": 49999
-            },
-            {
-              "date": "27 Feb - 06 Mar",
-              "net": 49999
-            },
-            {
-              "date": "03 Mar - 10 Mar",
-              "net": 49999
-            },
-            {
-              "date": "04 Mar - 11 Mar",
-              "net": 49999
-            },
-            {
-              "date": "06 Mar - 13 Mar",
-              "net": 49999
-            },
-            {
-              "date": "10 Mar - 17 Mar",
-              "net": 49999
-            },
-            {
-              "date": "11 Mar - 18 Mar",
-              "net": 49999
-            },
-            {
-              "date": "13 Mar - 20 Mar",
-              "net": 49999
-            },
-            {
-              "date": "17 Mar - 24 Mar",
-              "net": 49999
-            },
-            {
-              "date": "18 Mar - 25 Mar",
-              "net": 49999
-            },
-            {
-              "date": "20 Mar - 27 Mar",
-              "net": 49999
-            },
-            {
-              "date": "24 Mar - 31 Mar",
-              "net": 49999
-            },
-            {
-              "date": "25 Mar - 01 Apr",
-              "net": 49999
-            },
-            {
-              "date": "27 Mar - 03 Apr",
-              "net": 49999
-            }
+            { "date": "10 Dec - 17 Dec", "net": 52999 }
           ]
         },
         {
           "airline": "Air India",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
-          "route": "Delhi → Bali → Delhi (direct)",
+          "route": "Delhi → Bali → Delhi (B2C round-trip)",
           "flights": "DEL 03:15 → DPS 13:50 · Return DPS 15:10 → DEL 20:45",
           "baggage": "25 KG + 7 KG",
           "fares": [
-            {
-              "date": "16 Jan - 22 Jan",
-              "net": 52999
-            },
-            {
-              "date": "23 Jan - 29 Jan",
-              "net": 54999
-            },
-            {
-              "date": "30 Jan - 05 Feb",
-              "net": 54999
-            }
+            { "date": "16 Jan - 22 Jan", "net": 52999 },
+            { "date": "23 Jan - 29 Jan", "net": 54999 },
+            { "date": "30 Jan - 05 Feb", "net": 54999 }
           ]
         },
         {
@@ -210,74 +100,23 @@
           "flights": "SQ 403 DEL 21:45 → SIN 05:55 · SQ 934 SIN 06:45 → DPS 09:30 · Return SQ 947 DPS 21:30 → SIN 00:20 · SQ 402 SIN 02:25 → DEL 05:40",
           "baggage": "25 KG + 7 KG",
           "fares": [
-            {
-              "date": "19 Jan - 26 Jan",
-              "net": 52999
-            },
-            {
-              "date": "22 Jan - 29 Jan",
-              "net": 52999
-            },
-            {
-              "date": "30 Jan - 06 Feb",
-              "net": 52999
-            },
-            {
-              "date": "04 Feb - 11 Feb",
-              "net": 52999
-            },
-            {
-              "date": "05 Feb - 12 Feb",
-              "net": 52999
-            },
-            {
-              "date": "09 Feb - 16 Feb",
-              "net": 52999
-            },
-            {
-              "date": "12 Feb - 19 Feb",
-              "net": 52999
-            },
-            {
-              "date": "13 Feb - 20 Feb",
-              "net": 52999
-            },
-            {
-              "date": "19 Feb - 26 Feb",
-              "net": 52999
-            },
-            {
-              "date": "25 Feb - 04 Mar",
-              "net": 52999
-            },
-            {
-              "date": "26 Feb - 05 Mar",
-              "net": 52999
-            },
-            {
-              "date": "04 Mar - 11 Mar",
-              "net": 52999
-            },
-            {
-              "date": "05 Mar - 12 Mar",
-              "net": 52999
-            },
-            {
-              "date": "09 Mar - 16 Mar",
-              "net": 52999
-            },
-            {
-              "date": "12 Mar - 19 Mar",
-              "net": 52999
-            },
-            {
-              "date": "25 Mar - 01 Apr",
-              "net": 52999
-            },
-            {
-              "date": "26 Mar - 02 Apr",
-              "net": 52999
-            }
+            { "date": "19 Jan - 26 Jan", "net": 52999 },
+            { "date": "22 Jan - 29 Jan", "net": 52999 },
+            { "date": "30 Jan - 06 Feb", "net": 52999 },
+            { "date": "04 Feb - 11 Feb", "net": 52999 },
+            { "date": "05 Feb - 12 Feb", "net": 52999 },
+            { "date": "09 Feb - 16 Feb", "net": 52999 },
+            { "date": "12 Feb - 19 Feb", "net": 52999 },
+            { "date": "13 Feb - 20 Feb", "net": 52999 },
+            { "date": "19 Feb - 26 Feb", "net": 52999 },
+            { "date": "25 Feb - 04 Mar", "net": 52999 },
+            { "date": "26 Feb - 05 Mar", "net": 52999 },
+            { "date": "04 Mar - 11 Mar", "net": 52999 },
+            { "date": "05 Mar - 12 Mar", "net": 52999 },
+            { "date": "09 Mar - 16 Mar", "net": 52999 },
+            { "date": "12 Mar - 19 Mar", "net": 52999 },
+            { "date": "25 Mar - 01 Apr", "net": 52999 },
+            { "date": "26 Mar - 02 Apr", "net": 52999 }
           ]
         }
       ]
@@ -297,122 +136,74 @@
       ],
       "seo": {
         "title": "Cheapest Thailand Flights — Delhi to Phuket & Bangkok | Voyage-Ed",
-        "description": "Book cheapest Delhi-Phuket (one-way from ₹18,500) and Delhi-Bangkok (from ₹13,500) flights. Air India, AirAsia X. Daily updated special blocked fares by Voyage-Ed Travels, Mohali.",
+        "description": "Book cheapest Delhi-Bangkok from ₹13,000 (AirAsia X), Delhi-Phuket from ₹20,000 (Air India). Daily updated special blocked fares by Voyage-Ed Travels, Mohali.",
         "keywords": "cheapest Thailand flights, Delhi Phuket flight, Delhi Bangkok fares, AirAsia Bangkok, Air India Phuket, Thailand visa on arrival"
       },
       "about": "Thailand is India's favourite beach + temple + street-food getaway — visa on arrival (~₹2,000, 15 days), 4-5 hour flight from Delhi, and the Thai Baht stretches far. Best time Nov-Feb (cool season).",
       "whyVisit": [
-        {
-          "icon": "🏝",
-          "title": "Phuket & Krabi islands",
-          "text": "Phi Phi, James Bond Island, long-tail boat rides and emerald-green waters."
-        },
-        {
-          "icon": "🛕",
-          "title": "Bangkok's grand temples",
-          "text": "Wat Arun, the Grand Palace and floating markets along the Chao Phraya."
-        },
-        {
-          "icon": "🌶",
-          "title": "Street food capital",
-          "text": "Pad Thai, green curry, mango sticky rice — world's best street-food scene."
-        },
-        {
-          "icon": "🐘",
-          "title": "Chiang Mai hills",
-          "text": "Ethical elephant sanctuaries, hill-tribe villages and the famous night bazaar."
-        }
+        { "icon": "🏝", "title": "Phuket & Krabi islands", "text": "Phi Phi, James Bond Island, long-tail boat rides and emerald-green waters." },
+        { "icon": "🛕", "title": "Bangkok's grand temples", "text": "Wat Arun, the Grand Palace and floating markets along the Chao Phraya." },
+        { "icon": "🌶", "title": "Street food capital", "text": "Pad Thai, green curry, mango sticky rice — world's best street-food scene." },
+        { "icon": "🐘", "title": "Chiang Mai hills", "text": "Ethical elephant sanctuaries, hill-tribe villages and the famous night bazaar." }
       ],
       "bestTime": "November – February (cool & dry)",
       "visa": "Visa on Arrival · 15 days · approx ₹2,000",
       "sectors": [
         {
+          "airline": "AirAsia X",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/512px-AirAsia_New_Logo.svg.png",
+          "route": "Delhi → Bangkok (one-way)",
+          "flights": "DEL 20:55 → DMK 02:40",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "29 Nov", "net": 13000 },
+            { "date": "03,05,06 Dec", "net": 14500 },
+            { "date": "10,12,13 Dec", "net": 14500 },
+            { "date": "17 Dec", "net": 16000 },
+            { "date": "19,20 Dec", "net": 17000 },
+            { "date": "24,26,29 Dec", "net": 17000 }
+          ]
+        },
+        {
+          "airline": "AirAsia X",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/512px-AirAsia_New_Logo.svg.png",
+          "route": "Bangkok → Delhi (one-way)",
+          "flights": "DMK 16:45 → DEL 19:40",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "08 Dec", "net": 17000 },
+            { "date": "10,13,15 Dec", "net": 17000 },
+            { "date": "17,20,22 Dec", "net": 18000 },
+            { "date": "24,27,29 Dec", "net": 18000 }
+          ]
+        },
+        {
           "airline": "Air India",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
           "route": "Delhi → Phuket (one-way)",
           "flights": "DEL 00:25 → HKT 06:35",
-          "baggage": "25 KG + 7 KG",
+          "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "29 Dec",
-              "net": 18500
-            },
-            {
-              "date": "16 Jan",
-              "net": 18500
-            },
-            {
-              "date": "26 Jan",
-              "net": 18500
-            },
-            {
-              "date": "02 Feb",
-              "net": 18500
-            },
-            {
-              "date": "06 Feb",
-              "net": 18500
-            },
-            {
-              "date": "10 Feb",
-              "net": 18500
-            },
-            {
-              "date": "13 Feb",
-              "net": 18500
-            },
-            {
-              "date": "19 Feb",
-              "net": 18500
-            },
-            {
-              "date": "21 Feb",
-              "net": 18500
-            },
-            {
-              "date": "23 Feb",
-              "net": 18500
-            },
-            {
-              "date": "27 Feb",
-              "net": 18500
-            },
-            {
-              "date": "02 Mar",
-              "net": 18500
-            },
-            {
-              "date": "06 Mar",
-              "net": 18500
-            },
-            {
-              "date": "09 Mar",
-              "net": 18500
-            },
-            {
-              "date": "13 Mar",
-              "net": 18500
-            },
-            {
-              "date": "16 Mar",
-              "net": 18500
-            },
-            {
-              "date": "20 Mar",
-              "net": 18500
-            },
-            {
-              "date": "23 Mar",
-              "net": 18500
-            },
-            {
-              "date": "27 Mar",
-              "net": 18500
-            },
-            {
-              "date": "30 Mar",
-              "net": 18500
-            }
+            { "date": "29 Dec", "net": 21000 },
+            { "date": "16 Jan", "net": 20000 },
+            { "date": "26 Jan", "net": 20000 },
+            { "date": "02 Feb", "net": 20000 },
+            { "date": "06 Feb", "net": 20000 },
+            { "date": "10 Feb", "net": 20000 },
+            { "date": "13 Feb", "net": 20000 },
+            { "date": "19 Feb", "net": 20000 },
+            { "date": "21 Feb", "net": 20000 },
+            { "date": "23 Feb", "net": 20000 },
+            { "date": "27 Feb", "net": 20000 },
+            { "date": "02 Mar", "net": 20000 },
+            { "date": "06 Mar", "net": 20000 },
+            { "date": "09 Mar", "net": 20000 },
+            { "date": "13 Mar", "net": 20000 },
+            { "date": "16 Mar", "net": 20000 },
+            { "date": "20 Mar", "net": 20000 },
+            { "date": "23 Mar", "net": 20000 },
+            { "date": "27 Mar", "net": 20000 },
+            { "date": "30 Mar", "net": 20000 }
           ]
         },
         {
@@ -420,72 +211,24 @@
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
           "route": "Phuket → Delhi (one-way)",
           "flights": "HKT 22:30 → DEL 01:55",
-          "baggage": "25 KG + 7 KG",
+          "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "03 Jan",
-              "net": 25000
-            },
-            {
-              "date": "21 Jan",
-              "net": 20000
-            },
-            {
-              "date": "31 Jan",
-              "net": 20000
-            },
-            {
-              "date": "07 Feb",
-              "net": 20000
-            },
-            {
-              "date": "11 Feb",
-              "net": 20000
-            },
-            {
-              "date": "16 Feb",
-              "net": 20000
-            },
-            {
-              "date": "24 Feb",
-              "net": 20000
-            },
-            {
-              "date": "26 Feb",
-              "net": 20000
-            },
-            {
-              "date": "28 Feb",
-              "net": 20000
-            },
-            {
-              "date": "04 Mar",
-              "net": 20000
-            },
-            {
-              "date": "07 Mar",
-              "net": 20000
-            },
-            {
-              "date": "11 Mar",
-              "net": 20000
-            },
-            {
-              "date": "14 Mar",
-              "net": 20000
-            },
-            {
-              "date": "18 Mar",
-              "net": 20000
-            },
-            {
-              "date": "25 Mar",
-              "net": 20000
-            },
-            {
-              "date": "28 Mar",
-              "net": 20000
-            }
+            { "date": "03 Jan", "net": 21000 },
+            { "date": "21 Jan", "net": 20000 },
+            { "date": "31 Jan", "net": 20000 },
+            { "date": "07 Feb", "net": 20000 },
+            { "date": "11 Feb", "net": 20000 },
+            { "date": "16 Feb", "net": 20000 },
+            { "date": "24 Feb", "net": 20000 },
+            { "date": "26 Feb", "net": 20000 },
+            { "date": "28 Feb", "net": 20000 },
+            { "date": "04 Mar", "net": 20000 },
+            { "date": "07 Mar", "net": 20000 },
+            { "date": "11 Mar", "net": 20000 },
+            { "date": "14 Mar", "net": 20000 },
+            { "date": "18 Mar", "net": 20000 },
+            { "date": "25 Mar", "net": 20000 },
+            { "date": "28 Mar", "net": 20000 }
           ]
         }
       ]
@@ -504,32 +247,16 @@
         "https://images.unsplash.com/photo-1582672060674-bc2bd808a8f5?w=800&q=80"
       ],
       "seo": {
-        "title": "Cheapest UAE Flights — Delhi/Chandigarh/Amritsar to Dubai, Abu Dhabi, Sharjah, Kuwait | Voyage-Ed",
-        "description": "Book cheapest Delhi-Dubai from ₹28,400, Chandigarh-Abu Dhabi ₹25,500, Delhi-Kuwait ₹19,700. Air India, IndiGo, Jazeera. Daily updated by Voyage-Ed Travels, Mohali.",
+        "title": "Cheapest UAE Flights — Delhi/Chandigarh to Dubai, Abu Dhabi, Kuwait | Voyage-Ed",
+        "description": "Book cheapest Delhi-Dubai from ₹24,400, Chandigarh-Abu Dhabi from ₹18,000, Delhi-Kuwait from ₹18,200. Air India, IndiGo, Jazeera. Daily updated by Voyage-Ed Travels, Mohali.",
         "keywords": "cheapest Dubai flights, Chandigarh Abu Dhabi, Delhi Kuwait fares, Amritsar Sharjah, UAE visa, Dubai packages"
       },
       "about": "The UAE is a 3.5-hour flight from Delhi — and the single most-booked international destination from north India for shopping, luxury hotels, desert safaris, and family-friendly attractions. Dubai, Abu Dhabi and Sharjah all accept Indian tourist visas on arrival for eligible passport holders, or e-visas within 2-3 days.",
       "whyVisit": [
-        {
-          "icon": "🏙",
-          "title": "Dubai skyline",
-          "text": "Burj Khalifa, Dubai Mall, Palm Jumeirah and the world's only 7-star hotel."
-        },
-        {
-          "icon": "🐫",
-          "title": "Desert safari",
-          "text": "Dune bashing, camel rides and traditional Bedouin camps with belly dancing."
-        },
-        {
-          "icon": "🛍",
-          "title": "Tax-free shopping",
-          "text": "Dubai Mall, Mall of the Emirates and Global Village — world-class luxury at duty-free prices."
-        },
-        {
-          "icon": "🕌",
-          "title": "Grand Mosque, Abu Dhabi",
-          "text": "One of the world's largest mosques — pure white marble and gold-plated chandeliers."
-        }
+        { "icon": "🏙", "title": "Dubai skyline", "text": "Burj Khalifa, Dubai Mall, Palm Jumeirah and the world's only 7-star hotel." },
+        { "icon": "🐫", "title": "Desert safari", "text": "Dune bashing, camel rides and traditional Bedouin camps with belly dancing." },
+        { "icon": "🛍", "title": "Tax-free shopping", "text": "Dubai Mall, Mall of the Emirates and Global Village — world-class luxury at duty-free prices." },
+        { "icon": "🕌", "title": "Grand Mosque, Abu Dhabi", "text": "One of the world's largest mosques — pure white marble and gold-plated chandeliers." }
       ],
       "bestTime": "November – March (cool & pleasant)",
       "visa": "e-Visa in 2-3 days · 30/90 days options",
@@ -537,198 +264,88 @@
         {
           "airline": "Air India",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
-          "route": "Delhi → Dubai (AI 917, morning)",
+          "route": "Delhi → Dubai (AI 917 · morning)",
           "flights": "AI 917 · DEL 09:50 → DXB 12:45",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "01 Dec",
-              "net": 27400
-            },
-            {
-              "date": "02-04 Dec",
-              "net": 27400
-            },
-            {
-              "date": "08-10 Dec",
-              "net": 27400
-            },
-            {
-              "date": "11-13 Dec",
-              "net": 27400
-            },
-            {
-              "date": "14-17 Dec",
-              "net": 27400
-            },
-            {
-              "date": "18-20 Dec",
-              "net": 29900
-            },
-            {
-              "date": "21-25 Dec",
-              "net": 29900
-            },
-            {
-              "date": "26-31 Dec",
-              "net": 29900
-            }
+            { "date": "24,25 Nov", "net": 24900 },
+            { "date": "26-30 Nov", "net": 24400 },
+            { "date": "01-05 Dec", "net": 24400 },
+            { "date": "06-10 Dec", "net": 24400 },
+            { "date": "11-13 Dec", "net": 24400 },
+            { "date": "14-17 Dec", "net": 24900 },
+            { "date": "18-20 Dec", "net": 29900 },
+            { "date": "21-25 Dec", "net": 29900 },
+            { "date": "26-31 Dec", "net": 29900 }
           ]
         },
         {
           "airline": "Air India",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
-          "route": "Delhi → Dubai (AI 995, evening)",
+          "route": "Delhi → Dubai (AI 995 · evening)",
           "flights": "AI 995 · DEL 19:20 → DXB 22:05",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "01-05 Dec",
-              "net": 27400
-            },
-            {
-              "date": "07-10 Dec",
-              "net": 27400
-            },
-            {
-              "date": "11-13 Dec",
-              "net": 27400
-            },
-            {
-              "date": "14-17 Dec",
-              "net": 27400
-            },
-            {
-              "date": "18-20 Dec",
-              "net": 29900
-            },
-            {
-              "date": "21-25 Dec",
-              "net": 29900
-            },
-            {
-              "date": "26-31 Dec",
-              "net": 29900
-            }
+            { "date": "25 Nov", "net": 24900 },
+            { "date": "26-30 Nov", "net": 24400 },
+            { "date": "01-05 Dec", "net": 24400 },
+            { "date": "06-10 Dec", "net": 24400 },
+            { "date": "11-13 Dec", "net": 24400 },
+            { "date": "14-17 Dec", "net": 24900 },
+            { "date": "18-20 Dec", "net": 29900 },
+            { "date": "21-25 Dec", "net": 29900 },
+            { "date": "26-31 Dec", "net": 29900 }
           ]
         },
         {
           "airline": "Air India",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
-          "route": "Delhi → Dubai (AI 915, afternoon)",
+          "route": "Delhi → Dubai (AI 915 · afternoon)",
           "flights": "AI 915 · DEL 16:10 → DXB 19:00",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "01-05 Dec",
-              "net": 27400
-            },
-            {
-              "date": "07-10 Dec",
-              "net": 27400
-            },
-            {
-              "date": "11-13 Dec",
-              "net": 27400
-            },
-            {
-              "date": "14-17 Dec",
-              "net": 27400
-            },
-            {
-              "date": "18-20 Dec",
-              "net": 29900
-            },
-            {
-              "date": "21-25 Dec",
-              "net": 29900
-            },
-            {
-              "date": "26-31 Dec",
-              "net": 29900
-            }
+            { "date": "25 Nov", "net": 24900 },
+            { "date": "26-30 Nov", "net": 24400 },
+            { "date": "01-05 Dec", "net": 24400 },
+            { "date": "06-10 Dec", "net": 24400 },
+            { "date": "11-13 Dec", "net": 24400 },
+            { "date": "14-17 Dec", "net": 24900 },
+            { "date": "18-20 Dec", "net": 29900 },
+            { "date": "21-25 Dec", "net": 29900 },
+            { "date": "26-31 Dec", "net": 29900 }
           ]
         },
         {
           "airline": "Air India",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
-          "route": "Delhi → Dubai (AI 929, early morning)",
+          "route": "Delhi → Dubai (AI 929 · early morning)",
           "flights": "AI 929 · DEL 07:30 → DXB 10:15",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "01-05 Dec",
-              "net": 27400
-            },
-            {
-              "date": "07-10 Dec",
-              "net": 27400
-            },
-            {
-              "date": "11-13 Dec",
-              "net": 27400
-            },
-            {
-              "date": "14-17 Dec",
-              "net": 27400
-            },
-            {
-              "date": "18-20 Dec",
-              "net": 29900
-            },
-            {
-              "date": "21-25 Dec",
-              "net": 29900
-            },
-            {
-              "date": "26-31 Dec",
-              "net": 29900
-            }
+            { "date": "26 Nov", "net": 24400 },
+            { "date": "27-30 Nov", "net": 24400 },
+            { "date": "01-05 Dec", "net": 24400 },
+            { "date": "06-10 Dec", "net": 24400 },
+            { "date": "11-13 Dec", "net": 24400 },
+            { "date": "14-17 Dec", "net": 24900 },
+            { "date": "18-20 Dec", "net": 29900 },
+            { "date": "21-25 Dec", "net": 29900 },
+            { "date": "26-31 Dec", "net": 29900 }
           ]
         },
         {
           "airline": "IndiGo",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/IndiGo_logo.svg/512px-IndiGo_logo.svg.png",
           "route": "Chandigarh → Abu Dhabi (direct)",
-          "flights": "Direct non-stop · see schedule",
+          "flights": "Direct non-stop",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "08 Dec",
-              "net": 24000
-            },
-            {
-              "date": "09 Dec",
-              "net": 24000
-            },
-            {
-              "date": "10 Dec",
-              "net": 24000
-            },
-            {
-              "date": "12 Dec",
-              "net": 24000
-            },
-            {
-              "date": "14 Dec",
-              "net": 24000
-            },
-            {
-              "date": "15 Dec",
-              "net": 24000
-            },
-            {
-              "date": "16 Dec",
-              "net": 24000
-            },
-            {
-              "date": "17 Dec",
-              "net": 24000
-            },
-            {
-              "date": "18 Dec",
-              "net": 24000
-            }
+            { "date": "25,26 Nov", "net": 18000 },
+            { "date": "27 Nov", "net": 18000 },
+            { "date": "01,03,07 Dec", "net": 20500 },
+            { "date": "08,09,10 Dec", "net": 20500 },
+            { "date": "12,14 Dec", "net": 20500 },
+            { "date": "15,16,17,18 Dec", "net": 21500 }
           ]
         },
         {
@@ -738,26 +355,12 @@
           "flights": "DEL 07:45 → KWI 10:05",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            {
-              "date": "15 Dec",
-              "net": 18700
-            },
-            {
-              "date": "16 Dec",
-              "net": 18200
-            },
-            {
-              "date": "22 Dec",
-              "net": 18700
-            },
-            {
-              "date": "25 Dec",
-              "net": 18200
-            },
-            {
-              "date": "29 Dec",
-              "net": 18700
-            }
+            { "date": "04 Dec", "net": 20700 },
+            { "date": "09,15 Dec", "net": 18700 },
+            { "date": "16 Dec", "net": 18200 },
+            { "date": "22 Dec", "net": 18700 },
+            { "date": "25 Dec", "net": 18200 },
+            { "date": "29 Dec", "net": 18700 }
           ]
         },
         {
@@ -767,31 +370,60 @@
           "flights": "6E-1427 · ATQ 03:00 → SHJ 08:10",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "07-08 Dec",
-              "net": null,
-              "note": "FARE ON CALL"
-            },
-            {
-              "date": "09-11 Dec",
-              "net": null,
-              "note": "FARE ON CALL"
-            },
-            {
-              "date": "12-15 Dec",
-              "net": null,
-              "note": "FARE ON CALL"
-            },
-            {
-              "date": "16-17 Dec",
-              "net": null,
-              "note": "FARE ON CALL"
-            },
-            {
-              "date": "18-19 Dec",
-              "net": null,
-              "note": "FARE ON CALL"
-            }
+            { "date": "07-08 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "09-11 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "12-15 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "16-17 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "18-19 Dec", "net": null, "note": "FARE ON CALL" }
+          ]
+        },
+        {
+          "airline": "Air India Express",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Air_India_Express_Logo.svg/512px-Air_India_Express_Logo.svg.png",
+          "route": "Amritsar → Abu Dhabi",
+          "flights": "Non-stop · GCC Fixed Departures",
+          "baggage": "30 KG + 7 KG",
+          "fares": [
+            { "date": "26 Nov", "net": null, "note": "FARE ON CALL" },
+            { "date": "28-29 Nov", "net": null, "note": "FARE ON CALL" },
+            { "date": "03-06 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "10-13 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "17-20 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "24-31 Dec", "net": null, "note": "FARE ON CALL" }
+          ]
+        },
+        {
+          "airline": "Air India Express",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Air_India_Express_Logo.svg/512px-Air_India_Express_Logo.svg.png",
+          "route": "Amritsar → Dubai",
+          "flights": "Non-stop · GCC Fixed Departures",
+          "baggage": "30 KG + 7 KG",
+          "fares": [
+            { "date": "24-28 Nov", "net": null, "note": "FARE ON CALL" },
+            { "date": "29-30 Nov", "net": null, "note": "FARE ON CALL" },
+            { "date": "01-05 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "06-10 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "11-15 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "16-20 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "21-25 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "26-31 Dec", "net": null, "note": "FARE ON CALL" }
+          ]
+        },
+        {
+          "airline": "Air India Express",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Air_India_Express_Logo.svg/512px-Air_India_Express_Logo.svg.png",
+          "route": "Amritsar → Sharjah",
+          "flights": "Non-stop · GCC Fixed Departures",
+          "baggage": "30 KG + 7 KG",
+          "fares": [
+            { "date": "23-27 Nov", "net": null, "note": "FARE ON CALL" },
+            { "date": "28-30 Nov", "net": null, "note": "FARE ON CALL" },
+            { "date": "01-05 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "06-10 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "11-15 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "16-20 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "21-25 Dec", "net": null, "note": "FARE ON CALL" },
+            { "date": "26-31 Dec", "net": null, "note": "FARE ON CALL" }
           ]
         }
       ]
@@ -811,31 +443,15 @@
       ],
       "seo": {
         "title": "Cheapest Malaysia Flights — Amritsar to Kuala Lumpur | Voyage-Ed Special Blocked Fares",
-        "description": "Book the cheapest Amritsar-Kuala Lumpur flights from ₹15,800 one-way. AirAsia X direct blocked inventory. Updated daily by Voyage-Ed Travels, Mohali.",
+        "description": "Book the cheapest Amritsar-Kuala Lumpur flights from ₹14,800 one-way. AirAsia X direct blocked inventory. Updated daily by Voyage-Ed Travels, Mohali.",
         "keywords": "cheapest Kuala Lumpur flights, Amritsar KL flight, Punjab Malaysia fares, AirAsia Amritsar KL, Malaysia visa on arrival"
       },
       "about": "Malaysia offers visa on arrival for Indians (approx ₹2,500, 30 days) and is just a 5-hour direct flight from Amritsar. Kuala Lumpur is the gateway — from there, Langkawi, Penang and Borneo are a short hop away. Truly Asia, as they say.",
       "whyVisit": [
-        {
-          "icon": "🏙",
-          "title": "KL skyline",
-          "text": "Petronas Twin Towers, Batu Caves and the vibrant Bukit Bintang nightlife district."
-        },
-        {
-          "icon": "🏝",
-          "title": "Langkawi islands",
-          "text": "Pristine beaches, duty-free shopping and the famous Sky Bridge cable car."
-        },
-        {
-          "icon": "🍜",
-          "title": "Street food paradise",
-          "text": "Char kway teow, nasi lemak, satay and the legendary Jalan Alor night market."
-        },
-        {
-          "icon": "🌴",
-          "title": "Rainforest adventures",
-          "text": "Taman Negara — one of the oldest rainforests on Earth, with canopy walks and wildlife safaris."
-        }
+        { "icon": "🏙", "title": "KL skyline", "text": "Petronas Twin Towers, Batu Caves and the vibrant Bukit Bintang nightlife district." },
+        { "icon": "🏝", "title": "Langkawi islands", "text": "Pristine beaches, duty-free shopping and the famous Sky Bridge cable car." },
+        { "icon": "🍜", "title": "Street food paradise", "text": "Char kway teow, nasi lemak, satay and the legendary Jalan Alor night market." },
+        { "icon": "🌴", "title": "Rainforest adventures", "text": "Taman Negara — one of the oldest rainforests on Earth, with canopy walks and wildlife safaris." }
       ],
       "bestTime": "December – February (dry season on west coast)",
       "visa": "Visa on Arrival / e-Visa · 30 days · approx ₹2,500",
@@ -847,58 +463,14 @@
           "flights": "ATQ 22:30 → KUL 06:50",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            {
-              "date": "04 Dec",
-              "net": 14800
-            },
-            {
-              "date": "05 Dec",
-              "net": 14800
-            },
-            {
-              "date": "09 Dec",
-              "net": 15800
-            },
-            {
-              "date": "11 Dec",
-              "net": 15800
-            },
-            {
-              "date": "12 Dec",
-              "net": 15800
-            },
-            {
-              "date": "16 Dec",
-              "net": 15800
-            },
-            {
-              "date": "18 Dec",
-              "net": 15800
-            },
-            {
-              "date": "19 Dec",
-              "net": 15800
-            },
-            {
-              "date": "23 Dec",
-              "net": 18800
-            },
-            {
-              "date": "25 Dec",
-              "net": 18800
-            },
-            {
-              "date": "26 Dec",
-              "net": 18800
-            },
-            {
-              "date": "28 Dec",
-              "net": 18800
-            },
-            {
-              "date": "30 Dec",
-              "net": 18800
-            }
+            { "date": "04 Dec", "net": 14800 },
+            { "date": "05,09 Dec", "net": 14800 },
+            { "date": "11,12 Dec", "net": 14800 },
+            { "date": "16,18 Dec", "net": 14800 },
+            { "date": "19 Dec", "net": 14800 },
+            { "date": "23,25 Dec", "net": 14800 },
+            { "date": "26,28 Dec", "net": 14800 },
+            { "date": "30 Dec", "net": 14800 }
           ]
         },
         {
@@ -908,26 +480,11 @@
           "flights": "KUL 17:45 → ATQ 21:30",
           "baggage": "20 KG + 7 KG",
           "fares": [
-            {
-              "date": "18 Dec",
-              "net": 21800
-            },
-            {
-              "date": "23 Dec",
-              "net": 21800
-            },
-            {
-              "date": "25 Dec",
-              "net": 21800
-            },
-            {
-              "date": "28 Dec",
-              "net": 21800
-            },
-            {
-              "date": "30 Dec",
-              "net": 21800
-            }
+            { "date": "11,14 Dec", "net": 19800 },
+            { "date": "16,18 Dec", "net": 19800 },
+            { "date": "21,23 Dec", "net": 19800 },
+            { "date": "25,28 Dec", "net": 19800 },
+            { "date": "30 Dec", "net": 21500 }
           ]
         }
       ]
@@ -947,31 +504,15 @@
       ],
       "seo": {
         "title": "Cheapest Flights to Canada — Toronto, Vancouver, Calgary, Montreal | Voyage-Ed Special Blocked Fares",
-        "description": "Book the cheapest Delhi-Toronto, Delhi-Vancouver, Amritsar-Toronto, Delhi-Calgary flights. Qatar, Turkish, Lufthansa, KLM, Air France. Daily updated blocked inventory by Voyage-Ed Travels, Mohali.",
-        "keywords": "cheapest Canada flights, Delhi Toronto fare, Amritsar Toronto flight, Delhi Vancouver, Delhi Calgary, cheap flights to Canada from Punjab"
+        "description": "Book the cheapest Delhi/Amritsar to Toronto, Vancouver, Calgary, Montreal, Edmonton flights. Qatar, Turkish, Lufthansa, KLM, Air France. Daily updated blocked inventory by Voyage-Ed Travels, Mohali.",
+        "keywords": "cheapest Canada flights, Delhi Toronto fare, Amritsar Toronto flight, Delhi Vancouver, Delhi Calgary, Delhi Edmonton, cheap flights to Canada from Punjab"
       },
-      "about": "Canada remains the single largest emigration and visit destination from Punjab. Flight time is 14-20 hours depending on connection. Toronto (YYZ) is the East-Canada hub (Ontario/Quebec), Vancouver (YVR) for West (BC/Alberta), Calgary (YYC) for the Rockies, Montreal (YUL) for Quebec and family visits.",
+      "about": "Canada remains the single largest emigration and visit destination from Punjab. Flight time is 14-20 hours depending on connection. Toronto (YYZ) is the East-Canada hub (Ontario/Quebec), Vancouver (YVR) for West (BC/Alberta), Calgary (YYC) for the Rockies, Montreal (YUL) for Quebec, Edmonton (YEG) for Alberta.",
       "whyVisit": [
-        {
-          "icon": "🍁",
-          "title": "Niagara Falls",
-          "text": "The thundering Horseshoe Falls, boat rides under the spray and winter illumination shows."
-        },
-        {
-          "icon": "⛰",
-          "title": "Canadian Rockies",
-          "text": "Banff, Lake Louise, Jasper — turquoise glacier lakes and world-class ski resorts."
-        },
-        {
-          "icon": "🏙",
-          "title": "Toronto & Vancouver",
-          "text": "CN Tower, Stanley Park, Gastown — multicultural cities with huge Punjabi communities."
-        },
-        {
-          "icon": "👨‍👩‍👧",
-          "title": "Visit family & PR tour",
-          "text": "Our blocked inventory specialises in family visits, PR landing tickets and student returns."
-        }
+        { "icon": "🍁", "title": "Niagara Falls", "text": "The thundering Horseshoe Falls, boat rides under the spray and winter illumination shows." },
+        { "icon": "⛰", "title": "Canadian Rockies", "text": "Banff, Lake Louise, Jasper — turquoise glacier lakes and world-class ski resorts." },
+        { "icon": "🏙", "title": "Toronto & Vancouver", "text": "CN Tower, Stanley Park, Gastown — multicultural cities with huge Punjabi communities." },
+        { "icon": "👨‍👩‍👧", "title": "Visit family & PR tour", "text": "Our blocked inventory specialises in family visits, PR landing tickets and student returns." }
       ],
       "bestTime": "June – September (summer), Dec-Feb for skiing",
       "visa": "Visitor Visa (TRV) · 15-30 working days · $100 CAD",
@@ -983,168 +524,50 @@
           "flights": "ATQ 04:10 → DOH 06:00 · DOH 08:30 → YYZ 14:30",
           "baggage": "46 KG + 7 KG",
           "fares": [
-            {
-              "date": "26 Dec",
-              "net": 88000
-            },
-            {
-              "date": "27 Dec",
-              "net": 88000
-            },
-            {
-              "date": "28 Dec",
-              "net": 88000
-            },
-            {
-              "date": "19 Jan",
-              "net": 83000
-            },
-            {
-              "date": "20 Jan",
-              "net": 83000
-            },
-            {
-              "date": "23 Jan",
-              "net": 83000
-            },
-            {
-              "date": "24 Jan",
-              "net": 83000
-            },
-            {
-              "date": "27 Jan",
-              "net": 83000
-            },
-            {
-              "date": "29 Jan",
-              "net": 83000
-            }
+            { "date": "26 Dec", "net": 88000 },
+            { "date": "27 Dec", "net": 88000 },
+            { "date": "28 Dec", "net": 88000 },
+            { "date": "29 Dec", "net": 88000 },
+            { "date": "18,19 Jan", "net": 83000 },
+            { "date": "20,23 Jan", "net": 83000 },
+            { "date": "24,27,29 Jan", "net": 83000 }
           ]
         },
         {
           "airline": "Qatar Airways",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Qatar_Airways_Logo.svg/512px-Qatar_Airways_Logo.svg.png",
-          "route": "Toronto → Amritsar (return via Doha)",
+          "route": "Toronto → Amritsar (via Doha)",
           "flights": "YYZ → DOH → ATQ",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            {
-              "date": "01 Dec",
-              "net": 121000
-            },
-            {
-              "date": "02 Dec",
-              "net": 121000
-            },
-            {
-              "date": "03 Dec",
-              "net": 121000
-            },
-            {
-              "date": "26 Dec",
-              "net": 121000
-            },
-            {
-              "date": "27 Dec",
-              "net": 121000
-            },
-            {
-              "date": "28 Dec",
-              "net": 121000
-            },
-            {
-              "date": "29 Dec",
-              "net": 121000
-            },
-            {
-              "date": "30 Dec",
-              "net": 121000
-            },
-            {
-              "date": "31 Dec",
-              "net": 121000
-            },
-            {
-              "date": "01 Jan",
-              "net": 121000
-            },
-            {
-              "date": "03 Jan",
-              "net": 121000
-            },
-            {
-              "date": "04 Jan",
-              "net": 121000
-            },
-            {
-              "date": "17 Jan",
-              "net": 121000
-            },
-            {
-              "date": "23 Jan",
-              "net": 121000
-            },
-            {
-              "date": "24 Jan",
-              "net": 121000
-            },
-            {
-              "date": "28 Jan",
-              "net": 121000
-            },
-            {
-              "date": "30 Jan",
-              "net": 121000
-            },
-            {
-              "date": "31 Jan",
-              "net": 121000
-            }
+            { "date": "23,24 Nov", "net": 96000 },
+            { "date": "25,26 Nov", "net": 101000 },
+            { "date": "29 Nov", "net": 111000 },
+            { "date": "02,03 Dec", "net": 116000 },
+            { "date": "26,27 Dec", "net": 116000 },
+            { "date": "28,29 Dec", "net": 116000 },
+            { "date": "30,31 Dec", "net": 116000 },
+            { "date": "01 Jan", "net": 121000 },
+            { "date": "03 Jan", "net": 121000 },
+            { "date": "04 Jan", "net": 121000 }
           ]
         },
         {
           "airline": "Qatar Airways",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Qatar_Airways_Logo.svg/512px-Qatar_Airways_Logo.svg.png",
-          "route": "Toronto → Delhi (return via Doha)",
+          "route": "Toronto → Delhi (via Doha)",
           "flights": "YYZ → DOH → DEL",
           "baggage": "2 PC + 7 KG",
           "fares": [
-            {
-              "date": "07 Dec",
-              "net": 106000
-            },
-            {
-              "date": "26 Dec",
-              "net": 106000
-            },
-            {
-              "date": "27 Dec",
-              "net": 106000
-            },
-            {
-              "date": "28 Dec",
-              "net": 106000
-            },
-            {
-              "date": "29 Dec",
-              "net": 106000
-            },
-            {
-              "date": "30 Dec",
-              "net": 106000
-            },
-            {
-              "date": "31 Dec",
-              "net": 106000
-            },
-            {
-              "date": "01 Jan",
-              "net": 106000
-            },
-            {
-              "date": "04 Jan",
-              "net": 106000
-            }
+            { "date": "07 Dec", "net": 106000 },
+            { "date": "26 Dec", "net": 106000 },
+            { "date": "27 Dec", "net": 106000 },
+            { "date": "28 Dec", "net": 106000 },
+            { "date": "29 Dec", "net": 106000 },
+            { "date": "30 Dec", "net": 106000 },
+            { "date": "31 Dec", "net": 106000 },
+            { "date": "01 Jan", "net": 106000 },
+            { "date": "04 Jan", "net": 106000 }
           ]
         },
         {
@@ -1154,14 +577,113 @@
           "flights": "DEL 03:35 → FRA 07:55 · FRA 13:30 → YYC 16:20",
           "baggage": "23 KG + 7 KG",
           "fares": [
-            {
-              "date": "18 Dec",
-              "net": 81000
-            },
-            {
-              "date": "28 Dec",
-              "net": 83000
-            }
+            { "date": "18 Dec", "net": 83000 },
+            { "date": "28 Dec", "net": 83000 }
+          ]
+        },
+        {
+          "airline": "Turkish Airlines",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Turkish_Airlines_logo.svg/512px-Turkish_Airlines_logo.svg.png",
+          "route": "Vancouver → Delhi (via Istanbul)",
+          "flights": "YVR 19:10 → IST 17:10 · IST 20:15 → DEL 04:50",
+          "baggage": "2 PC + 7 KG",
+          "fares": [
+            { "date": "01 Dec", "net": 96000 },
+            { "date": "02 Dec", "net": 91000 },
+            { "date": "05 Dec", "net": 96000 },
+            { "date": "08 Dec", "net": 96000 },
+            { "date": "29,30 Dec", "net": 96000 },
+            { "date": "02,05 Jan", "net": 96000 },
+            { "date": "06 Jan", "net": 96000 }
+          ]
+        },
+        {
+          "airline": "Turkish Airlines",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Turkish_Airlines_logo.svg/512px-Turkish_Airlines_logo.svg.png",
+          "route": "Montreal → Delhi (via Istanbul)",
+          "flights": "YUL → IST → DEL",
+          "baggage": "2 PC + 7 KG",
+          "fares": [
+            { "date": "27 Nov", "net": 86000 },
+            { "date": "04 Dec", "net": 91000 },
+            { "date": "06 Dec", "net": 91000 },
+            { "date": "09 Dec", "net": 96000 }
+          ]
+        },
+        {
+          "airline": "Turkish Airlines",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Turkish_Airlines_logo.svg/512px-Turkish_Airlines_logo.svg.png",
+          "route": "Toronto → Delhi (via Istanbul)",
+          "flights": "YYZ 22:00 → IST 14:50 · IST 20:15 → DEL 04:50",
+          "baggage": "2 PC + 7 KG",
+          "fares": [
+            { "date": "26 Nov", "net": 96000 },
+            { "date": "03 Dec", "net": 96000 },
+            { "date": "06 Dec", "net": 96000 },
+            { "date": "07 Dec", "net": 96000 },
+            { "date": "09 Dec", "net": 96000 },
+            { "date": "03 Jan", "net": 96000 },
+            { "date": "04 Jan", "net": 96000 },
+            { "date": "05 Jan", "net": 96000 },
+            { "date": "06 Jan", "net": 96000 },
+            { "date": "07 Jan", "net": 96000 },
+            { "date": "10 Jan", "net": 96000 }
+          ]
+        },
+        {
+          "airline": "Air France",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/512px-Air_France_Logo.svg.png",
+          "route": "Vancouver → Delhi (via Paris)",
+          "flights": "YVR → CDG → DEL",
+          "baggage": "2 PC + 7 KG",
+          "fares": [
+            { "date": "03 Dec", "net": 91000 },
+            { "date": "10 Dec", "net": 96000 }
+          ]
+        },
+        {
+          "airline": "Air France",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/512px-Air_France_Logo.svg.png",
+          "route": "Toronto → Delhi (via Paris)",
+          "flights": "YYZ → CDG → DEL",
+          "baggage": "2 PC + 7 KG",
+          "fares": [
+            { "date": "24 Nov", "net": 96000 },
+            { "date": "30 Nov", "net": 96000 },
+            { "date": "01 Dec", "net": 96000 },
+            { "date": "06 Dec", "net": 96000 },
+            { "date": "08 Dec", "net": 96000 }
+          ]
+        },
+        {
+          "airline": "KLM",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/KLM_logo.svg/512px-KLM_logo.svg.png",
+          "route": "Toronto → Delhi (via Amsterdam)",
+          "flights": "YYZ → AMS → DEL",
+          "baggage": "2 PC + 7 KG",
+          "fares": [
+            { "date": "07 Dec", "net": 96000 },
+            { "date": "10 Jan", "net": 91000 },
+            { "date": "11 Jan", "net": 91000 },
+            { "date": "12 Jan", "net": 91000 },
+            { "date": "14 Jan", "net": 91000 },
+            { "date": "16 Jan", "net": 91000 },
+            { "date": "17 Jan", "net": 91000 },
+            { "date": "18 Jan", "net": 91000 }
+          ]
+        },
+        {
+          "airline": "KLM",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/KLM_logo.svg/512px-KLM_logo.svg.png",
+          "route": "Edmonton → Delhi (via Amsterdam)",
+          "flights": "YEG → AMS → DEL",
+          "baggage": "2 PC + 7 KG",
+          "fares": [
+            { "date": "28 Nov", "net": 96000 },
+            { "date": "01 Dec", "net": 96000 },
+            { "date": "06 Dec", "net": 96000 },
+            { "date": "08 Dec", "net": 96000 },
+            { "date": "15 Dec", "net": 111000 }
           ]
         }
       ]
@@ -1180,32 +702,16 @@
         "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80"
       ],
       "seo": {
-        "title": "Cheapest Europe Flights — Delhi to London, Rome, Paris | Voyage-Ed Special Blocked Fares",
-        "description": "Book cheapest Delhi-London from ₹33,000, Delhi-Rome from ₹46,000 (meal included). Air India, ITA Airways. Daily updated Europe blocked fares by Voyage-Ed Travels, Mohali.",
-        "keywords": "cheapest Europe flights, Delhi London fare, Delhi Rome, Air India Europe, ITA Airways Delhi Rome, Schengen visa"
+        "title": "Cheapest Europe Flights — Delhi to Rome | Voyage-Ed Special Blocked Fares",
+        "description": "Book cheapest Delhi-Rome from ₹46,000 one-way on ITA Airways with 46KG baggage. Daily updated Europe blocked fares by Voyage-Ed Travels, Mohali.",
+        "keywords": "cheapest Europe flights, Delhi Rome fare, ITA Airways Delhi Rome, Schengen visa, Europe blocked inventory"
       },
-      "about": "Direct flights from Delhi to London, Paris, Frankfurt, Rome and Amsterdam take 8-10 hours. Schengen countries need visa planning 15-20 working days ahead. UK requires a separate visitor visa. Summer (May-Sep) is peak, winter offers cheaper fares and Christmas markets.",
+      "about": "Direct flights from Delhi to Rome take 8 hours on ITA Airways with 46 KG baggage — ideal for immigrating families, long stays, and Schengen-visa holders flying into Italy. Schengen countries need visa planning 15-20 working days ahead. Winter (Jan-Mar) offers the cheapest fares and smaller crowds.",
       "whyVisit": [
-        {
-          "icon": "🗼",
-          "title": "Icons of Europe",
-          "text": "Eiffel Tower, Colosseum, Big Ben, Brandenburg Gate — bucket-list every one of them."
-        },
-        {
-          "icon": "🎨",
-          "title": "Art & museums",
-          "text": "Louvre, Vatican, British Museum, Van Gogh Museum — centuries of masterpieces."
-        },
-        {
-          "icon": "🏔",
-          "title": "Swiss Alps & scenic trains",
-          "text": "Jungfraujoch, Glacier Express, Interlaken — Europe's most photographed landscapes."
-        },
-        {
-          "icon": "🥐",
-          "title": "Food capitals",
-          "text": "Paris pastries, Roman pasta, London pubs, Berlin currywurst — each city a world of its own."
-        }
+        { "icon": "🗼", "title": "Icons of Europe", "text": "Colosseum, Trevi Fountain, Vatican City, Eiffel Tower, Big Ben — bucket-list every one of them." },
+        { "icon": "🎨", "title": "Art & museums", "text": "Louvre, Vatican, British Museum, Van Gogh Museum — centuries of masterpieces." },
+        { "icon": "🏔", "title": "Swiss Alps & scenic trains", "text": "Jungfraujoch, Glacier Express, Interlaken — Europe's most photographed landscapes." },
+        { "icon": "🥐", "title": "Food capitals", "text": "Paris pastries, Roman pasta, London pubs, Berlin currywurst — each city a world of its own." }
       ],
       "bestTime": "April – September (warm), Dec for Christmas markets",
       "visa": "Schengen / UK Visa · 15-20 working days",
@@ -1214,90 +720,21 @@
           "airline": "ITA Airways",
           "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/ITA_Airways_logo.svg/512px-ITA_Airways_logo.svg.png",
           "route": "Delhi → Rome (one-way, meal included)",
-          "flights": "DEL 03:45 → FCO 08:15",
-          "baggage": "2 PC + 7 KG · Meal included",
+          "flights": "DEL 03:00 → FCO 08:10",
+          "baggage": "46 KG + 7 KG · Meal included",
           "fares": [
-            {
-              "date": "01 Jan",
-              "net": 51000
-            },
-            {
-              "date": "02-04 Jan",
-              "net": 71000
-            },
-            {
-              "date": "05-07 Jan",
-              "net": 71000
-            },
-            {
-              "date": "08-10 Jan",
-              "net": 71000
-            },
-            {
-              "date": "11-13 Jan",
-              "net": 66000
-            },
-            {
-              "date": "14-15 Jan",
-              "net": 66000
-            },
-            {
-              "date": "16-18 Jan",
-              "net": 61000
-            },
-            {
-              "date": "19-20 Jan",
-              "net": 61000
-            },
-            {
-              "date": "21-23 Jan",
-              "net": 51000
-            },
-            {
-              "date": "24-25 Jan",
-              "net": 51000
-            },
-            {
-              "date": "26-28 Jan",
-              "net": 46000
-            },
-            {
-              "date": "29-31 Jan",
-              "net": 46000
-            }
-          ]
-        },
-        {
-          "airline": "Air India",
-          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Air_India_Logo.svg/512px-Air_India_Logo.svg.png",
-          "route": "Delhi → London (one-way)",
-          "flights": "DEL 05:55 → LHR 11:30",
-          "baggage": "2 PC + 7 KG",
-          "fares": [
-            {
-              "date": "07 Dec",
-              "net": 37000
-            },
-            {
-              "date": "11 Dec",
-              "net": 33000
-            },
-            {
-              "date": "17 Dec",
-              "net": 33000
-            },
-            {
-              "date": "23 Dec",
-              "net": 33000
-            },
-            {
-              "date": "25 Dec",
-              "net": 37000
-            },
-            {
-              "date": "29 Dec",
-              "net": 33000
-            }
+            { "date": "01 Jan", "net": 51000 },
+            { "date": "02,03,04 Jan", "net": 71000 },
+            { "date": "05,06,07 Jan", "net": 71000 },
+            { "date": "08,09,10 Jan", "net": 71000 },
+            { "date": "11,12,13 Jan", "net": 66000 },
+            { "date": "14,15 Jan", "net": 66000 },
+            { "date": "16,17,18 Jan", "net": 61000 },
+            { "date": "19,20 Jan", "net": 61000 },
+            { "date": "21,22,23 Jan", "net": 51000 },
+            { "date": "24,25 Jan", "net": 51000 },
+            { "date": "26,27,28 Jan", "net": 46000 },
+            { "date": "29,30,31 Jan", "net": 46000 }
           ]
         }
       ]
@@ -1317,31 +754,15 @@
       ],
       "seo": {
         "title": "Cheapest Australia Flights — Delhi/Amritsar to Melbourne, Sydney | Voyage-Ed Special Blocked Fares",
-        "description": "Book cheapest Delhi-Melbourne from ₹28,900, Amritsar-Sydney from ₹23,900, Amritsar-Melbourne from ₹40,900. Scoot, AirAsia X, Air India. Daily updated by Voyage-Ed Travels, Mohali.",
+        "description": "Book cheapest Delhi-Melbourne from ₹24,000 (direct), Amritsar-Melbourne from ₹33,400 (Scoot), Amritsar-Sydney from ₹27,900. Daily updated blocked inventory by Voyage-Ed Travels, Mohali.",
         "keywords": "cheapest Australia flights, Delhi Melbourne flight, Amritsar Sydney, Scoot Amritsar Melbourne, Air India Melbourne, Australia PR visa"
       },
       "about": "Direct flight time from Delhi to Sydney/Melbourne is 11-15 hours (often via Singapore or Kuala Lumpur). Big Punjabi community in Melbourne, Sydney and Brisbane. Australia is year-round — Dec-Feb is Australian summer (peak tourism), Jun-Aug is cheaper + cooler.",
       "whyVisit": [
-        {
-          "icon": "🏖",
-          "title": "Sydney Harbour",
-          "text": "Opera House, Harbour Bridge climb, Bondi Beach — the iconic Australia postcard."
-        },
-        {
-          "icon": "🐠",
-          "title": "Great Barrier Reef",
-          "text": "World's largest coral reef system — snorkelling and scuba from Cairns or Port Douglas."
-        },
-        {
-          "icon": "🦘",
-          "title": "Outback adventures",
-          "text": "Uluru at sunset, Kangaroo Island wildlife and the Blue Mountains' mist-covered valleys."
-        },
-        {
-          "icon": "👨‍👩‍👧",
-          "title": "Family & student visits",
-          "text": "Huge Indian diaspora in Melbourne, Sydney, Brisbane — our blocked fares specialise in family + student runs."
-        }
+        { "icon": "🏖", "title": "Sydney Harbour", "text": "Opera House, Harbour Bridge climb, Bondi Beach — the iconic Australia postcard." },
+        { "icon": "🐠", "title": "Great Barrier Reef", "text": "World's largest coral reef system — snorkelling and scuba from Cairns or Port Douglas." },
+        { "icon": "🦘", "title": "Outback adventures", "text": "Uluru at sunset, Kangaroo Island wildlife and the Blue Mountains' mist-covered valleys." },
+        { "icon": "👨‍👩‍👧", "title": "Family & student visits", "text": "Huge Indian diaspora in Melbourne, Sydney, Brisbane — our blocked fares specialise in family + student runs." }
       ],
       "bestTime": "October – April (Australian summer)",
       "visa": "Visitor Visa (600) · 15-30 working days",
@@ -1353,110 +774,118 @@
           "flights": "DEL 03:00 → MEL 19:40",
           "baggage": "30 KG + 7 KG",
           "fares": [
-            {
-              "date": "02 Dec",
-              "net": 27900
-            },
-            {
-              "date": "03 Dec",
-              "net": 27900
-            },
-            {
-              "date": "04 Dec",
-              "net": 31000
-            },
-            {
-              "date": "05 Dec",
-              "net": 34500
-            },
-            {
-              "date": "06 Dec",
-              "net": 36000
-            },
-            {
-              "date": "08 Dec",
-              "net": 36000
-            },
-            {
-              "date": "09 Dec",
-              "net": 36000
-            },
-            {
-              "date": "10 Dec",
-              "net": 36000
-            },
-            {
-              "date": "11 Dec",
-              "net": 36000
-            },
-            {
-              "date": "12 Dec",
-              "net": 36500
-            },
-            {
-              "date": "13 Dec",
-              "net": 36500
-            },
-            {
-              "date": "14 Dec",
-              "net": 36500
-            },
-            {
-              "date": "15 Dec",
-              "net": 36500
-            },
-            {
-              "date": "16 Dec",
-              "net": 38500
-            },
-            {
-              "date": "17 Dec",
-              "net": 38500
-            },
-            {
-              "date": "18 Dec",
-              "net": 38500
-            },
-            {
-              "date": "19 Dec",
-              "net": 38500
-            },
-            {
-              "date": "20 Dec",
-              "net": 38500
-            },
-            {
-              "date": "21 Dec",
-              "net": 40500
-            },
-            {
-              "date": "22 Dec",
-              "net": 40500
-            },
-            {
-              "date": "23 Dec",
-              "net": 40500
-            },
-            {
-              "date": "24 Dec",
-              "net": 40500
-            },
-            {
-              "date": "26 Dec",
-              "net": 49000
-            },
-            {
-              "date": "27 Dec",
-              "net": 49000
-            },
-            {
-              "date": "28 Dec",
-              "net": 49000
-            },
-            {
-              "date": "29 Dec",
-              "net": 49000
-            }
+            { "date": "25 Nov", "net": 24000 },
+            { "date": "26 Nov", "net": 27000 },
+            { "date": "28 Nov", "net": 28000 },
+            { "date": "29 Nov", "net": 29000 },
+            { "date": "30 Nov", "net": 29000 },
+            { "date": "01 Dec", "net": 30000 },
+            { "date": "02,03,04 Dec", "net": 32000 },
+            { "date": "05 Dec", "net": 35500 },
+            { "date": "06,07,08 Dec", "net": 37000 },
+            { "date": "09,10,11 Dec", "net": 37000 },
+            { "date": "12,13,14,15 Dec", "net": 37500 },
+            { "date": "16,17,18 Dec", "net": 39500 },
+            { "date": "19,20,21,22 Dec", "net": 39500 },
+            { "date": "23,24,25 Dec", "net": 39500 },
+            { "date": "26,27,28,29 Dec", "net": 49000 }
+          ]
+        },
+        {
+          "airline": "Scoot",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Scoot_logo.svg/512px-Scoot_logo.svg.png",
+          "route": "Sydney → Amritsar (via Singapore)",
+          "flights": "SYD 20:05 → SIN 01:20 · SIN 10:50 → ATQ 14:30",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "03 Dec", "net": 58000 }
+          ]
+        },
+        {
+          "airline": "Scoot",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Scoot_logo.svg/512px-Scoot_logo.svg.png",
+          "route": "Amritsar → Melbourne (via Singapore)",
+          "flights": "ATQ 15:45 → SIN 00:15 · SIN 01:45 → MEL 12:10",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "27 Nov", "net": 33400 },
+            { "date": "02,04,06,09 Dec", "net": 38900 },
+            { "date": "11,13,16 Dec", "net": 38900 },
+            { "date": "18,23,27 Dec", "net": 48000 }
+          ]
+        },
+        {
+          "airline": "Scoot",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Scoot_logo.svg/512px-Scoot_logo.svg.png",
+          "route": "Amritsar → Sydney (via Singapore)",
+          "flights": "ATQ 15:45 → SIN 00:15 · SIN 01:15 → SYD 12:10",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "25 Nov", "net": 27900 },
+            { "date": "27 Nov", "net": 32900 },
+            { "date": "02,04,09 Dec", "net": 37900 },
+            { "date": "11,16 Dec", "net": 37900 },
+            { "date": "18,23 Dec", "net": 45900 },
+            { "date": "30 Dec", "net": 52900 }
+          ]
+        },
+        {
+          "airline": "Scoot",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Scoot_logo.svg/512px-Scoot_logo.svg.png",
+          "route": "Melbourne → Amritsar (via Singapore)",
+          "flights": "MEL 22:35 → SIN 03:30 · SIN 10:50 → ATQ 14:30",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "02 Dec", "net": 71000 }
+          ]
+        },
+        {
+          "airline": "AirAsia X",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/512px-AirAsia_New_Logo.svg.png",
+          "route": "Amritsar → Melbourne (via Kuala Lumpur)",
+          "flights": "ATQ 22:30 → KUL 06:50 · KUL 12:45 → MEL 23:45",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "16 Dec", "net": 39900 },
+            { "date": "21 Dec", "net": 39900 },
+            { "date": "23 Dec", "net": 39900 },
+            { "date": "28 Dec", "net": 39900 },
+            { "date": "30 Dec", "net": 39900 },
+            { "date": "04 Jan", "net": 63000 },
+            { "date": "06 Jan", "net": 63000 },
+            { "date": "11 Jan", "net": 63000 },
+            { "date": "18 Jan", "net": 63000 },
+            { "date": "20 Jan", "net": 63000 },
+            { "date": "25,27 Jan", "net": 63000 }
+          ]
+        },
+        {
+          "airline": "AirAsia X",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/512px-AirAsia_New_Logo.svg.png",
+          "route": "Melbourne → Amritsar (via Kuala Lumpur)",
+          "flights": "MEL 06:15 → KUL 11:35 · KUL 17:55 → ATQ 21:30",
+          "baggage": "20 KG + 7 KG",
+          "fares": [
+            { "date": "19 Dec", "net": 98000 },
+            { "date": "26 Dec", "net": 83000 },
+            { "date": "28 Dec", "net": 83000 },
+            { "date": "04 Jan", "net": 68000 },
+            { "date": "09 Jan", "net": 68000 },
+            { "date": "11 Jan", "net": 68000 },
+            { "date": "16 Jan", "net": 68000 },
+            { "date": "18 Jan", "net": 68000 },
+            { "date": "23 Jan", "net": 53000 },
+            { "date": "25,30 Jan", "net": 53000 }
+          ]
+        },
+        {
+          "airline": "Singapore Airlines",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Singapore_Airlines_Logo_2.svg/512px-Singapore_Airlines_Logo_2.svg.png",
+          "route": "Delhi → Melbourne (via Singapore)",
+          "flights": "DEL 09:00 → SIN 17:15 · SIN 19:20 → MEL 04:40",
+          "baggage": "25 KG + 7 KG",
+          "fares": [
+            { "date": "30 Nov", "net": null, "note": "FARE ON CALL" }
           ]
         }
       ]
