@@ -10,6 +10,78 @@
   ],
   "destinations": [
     {
+      "slug": "domestic",
+      "name": "Domestic India",
+      "country": "India",
+      "tagline": "Pre-purchase block seats — Goa & Mumbai from Chandigarh",
+      "flag": "🇮🇳",
+      "heroImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1920&q=85",
+      "gallery": [
+        "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80",
+        "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
+        "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80",
+        "https://images.unsplash.com/photo-1572188863110-46d457c9234d?w=800&q=80"
+      ],
+      "seo": {
+        "title": "Cheapest Chandigarh to Goa & Mumbai Flights — Voyage-Ed Pre-Purchase Block Seats",
+        "description": "Book the cheapest Chandigarh-Goa from ₹8,500, Goa-Chandigarh from ₹7,900, Chandigarh-Mumbai from ₹8,000. GoFlySmart pre-purchase inventory. Updated daily by Voyage-Ed Travels, Mohali.",
+        "keywords": "Chandigarh to Goa cheap flight, Goa to Chandigarh fare, Chandigarh Mumbai flight, pre-purchase air fare, GoFlySmart Voyage-Ed"
+      },
+      "about": "Our domestic pre-purchase block-seat inventory from GoFlySmart — fixed-price seats locked in advance for peak demand sectors. These are B2B rates not shown on any OTA. Ideal for weekend trips (Goa) and business travel (Mumbai). Pay only ₹500 markup over our NET — the lowest in the market.",
+      "whyVisit": [
+        { "icon": "🏖", "title": "Goa beaches & nightlife", "text": "Baga, Calangute, Anjuna — sun, sand and beach shacks all winter long." },
+        { "icon": "🏙", "title": "Mumbai business + leisure", "text": "Financial capital, Marine Drive sunsets, Bollywood, street food and Gateway of India." },
+        { "icon": "💰", "title": "Only ₹500 markup", "text": "Lowest markup on the site — a flat ₹500 per ticket, not percentage-based." },
+        { "icon": "⚡", "title": "Pre-purchase advantage", "text": "Seats locked at today's rate — no last-minute airline fare hikes." }
+      ],
+      "bestTime": "October – March (Goa) · Year-round (Mumbai)",
+      "visa": "Not required · Domestic travel",
+      "sectors": [
+        {
+          "airline": "GoFlySmart Pre-Purchase",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/India_Flag.svg/512px-India_Flag.svg.png",
+          "route": "Chandigarh → Goa",
+          "flights": "Direct one-way · Pre-purchase block seat",
+          "baggage": "15 KG + 7 KG (standard)",
+          "fixedMarkup": 500,
+          "fares": [
+            { "date": "12 Dec 2026", "net": 8000 },
+            { "date": "14 Dec 2026", "net": 8150 },
+            { "date": "15 Dec 2026", "net": 8150 },
+            { "date": "19 Dec 2026", "net": 8150 }
+          ]
+        },
+        {
+          "airline": "GoFlySmart Pre-Purchase",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/India_Flag.svg/512px-India_Flag.svg.png",
+          "route": "Goa → Chandigarh",
+          "flights": "Direct one-way · Pre-purchase block seat",
+          "baggage": "15 KG + 7 KG (standard)",
+          "fixedMarkup": 500,
+          "fares": [
+            { "date": "08 Dec 2026", "net": 7800 },
+            { "date": "09 Dec 2026", "net": 7400 },
+            { "date": "14 Dec 2026", "net": 9000 },
+            { "date": "15 Dec 2026", "net": 8400 }
+          ]
+        },
+        {
+          "airline": "GoFlySmart Pre-Purchase",
+          "airlineLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/India_Flag.svg/512px-India_Flag.svg.png",
+          "route": "Chandigarh → Mumbai",
+          "flights": "Direct one-way · Pre-purchase block seat",
+          "baggage": "15 KG + 7 KG (standard)",
+          "fixedMarkup": 500,
+          "fares": [
+            { "date": "06 Jan 2027", "net": 7500 },
+            { "date": "07 Jan 2027", "net": 7700 },
+            { "date": "09 Jan 2027", "net": 7700 },
+            { "date": "12 Jan 2027", "net": 7700 }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "bali",
       "name": "Bali",
       "country": "Indonesia",

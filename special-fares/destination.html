@@ -347,8 +347,10 @@ function formatFlights(flights) {
     return;
   }
 
-  function applyMarkup(net) {
+  function applyMarkup(net, sector) {
     if (net == null) return null;
+    // Sector-level override (e.g. domestic sectors use flat ₹500)
+    if (sector && typeof sector.fixedMarkup === 'number') return net + sector.fixedMarkup;
     for (const rule of data.markupRules) if (net <= rule.upto) return net + rule.add;
     return net;
   }
@@ -358,7 +360,7 @@ function formatFlights(flights) {
   for (const s of dest.sectors) {
     totalFares += s.fares.length;
     for (const f of s.fares) if (f.net != null) {
-      const v = applyMarkup(f.net); if (v < cheapest) cheapest = v;
+      const v = applyMarkup(f.net, s); if (v < cheapest) cheapest = v;
     }
   }
 
@@ -376,7 +378,7 @@ function formatFlights(flights) {
   const offers = [];
   for (const s of dest.sectors) for (const f of s.fares) {
     if (f.net == null) continue;
-    offers.push({"@type":"Offer","name":`${s.airline} — ${s.route} on ${f.date}`,"priceCurrency":"INR","price":String(applyMarkup(f.net)),"availability":"https://schema.org/InStock","url":`https://voyage-ed.com/special-fares/destination.html?slug=${dest.slug}`});
+    offers.push({"@type":"Offer","name":`${s.airline} — ${s.route} on ${f.date}`,"priceCurrency":"INR","price":String(applyMarkup(f.net, s)),"availability":"https://schema.org/InStock","url":`https://voyage-ed.com/special-fares/destination.html?slug=${dest.slug}`});
   }
   const dynSchema = {
     "@context":"https://schema.org",
@@ -446,12 +448,12 @@ function formatFlights(flights) {
   wrap.innerHTML = dest.sectors.map((s, si) => {
     const sectorCheap = (() => {
       let m = Infinity;
-      for (const f of s.fares) if (f.net != null) { const x = applyMarkup(f.net); if (x < m) m = x; }
+      for (const f of s.fares) if (f.net != null) { const x = applyMarkup(f.net, s); if (x < m) m = x; }
       return m === Infinity ? 'On Call' : '₹' + m.toLocaleString('en-IN');
     })();
 
     const rows = s.fares.map(f => {
-      const final = applyMarkup(f.net);
+      const final = applyMarkup(f.net, s);
       const priceCell = f.net == null
         ? `<span class="pr oncall">${f.note || 'ON CALL'}</span>`
         : `<span class="pr">₹${final.toLocaleString('en-IN')}</span>`;

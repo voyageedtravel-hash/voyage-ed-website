@@ -349,15 +349,16 @@ function imgViaProxy(url, w) {
   const dt = new Date(data.lastUpdated);
   document.getElementById('last-updated').textContent = dt.toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric' });
 
-  function applyMarkup(net) {
+  function applyMarkup(net, sector) {
     if (net == null) return null;
+    if (sector && typeof sector.fixedMarkup === 'number') return net + sector.fixedMarkup;
     for (const rule of data.markupRules) if (net <= rule.upto) return net + rule.add;
     return net;
   }
   function cheapestFinal(dest) {
     let min = Infinity;
     for (const s of dest.sectors) for (const f of s.fares) if (f.net != null) {
-      const v = applyMarkup(f.net); if (v < min) min = v;
+      const v = applyMarkup(f.net, s); if (v < min) min = v;
     }
     return min === Infinity ? null : min;
   }
